@@ -1,3 +1,5 @@
+import HomePage from "./pages/HomePage"
+
 function App() {
 
   return (
@@ -5,6 +7,7 @@ function App() {
       <h1 className="text-3xl font-bold underline text-center">
         IBlog Project
       </h1>
+      <HomePage />
     </>
   )
 }
