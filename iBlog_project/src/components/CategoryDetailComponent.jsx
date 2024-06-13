@@ -86,7 +86,7 @@ export default function CategoryDetailComponent(props) {
                 className="title hidden sm:flex items-center justify-center w-[150px] h-[40px] border-b-[2px] border-orange-500">
                 <p className="text-[18px] font-bold">{props.title}</p>
             </div>
-            <div className="flex sm:justify-end items-center flex-wrap w-full overflow-x-scroll pb-2">
+            <div className="flex sm:justify-end items-center flex-wrap w-full pb-2">
                 <div className="flex gap-[8px] sm:gap-[22px] flex-wrap px-[20px]">
                     {cardsData &&
                         cardsData.map((data, index) => {

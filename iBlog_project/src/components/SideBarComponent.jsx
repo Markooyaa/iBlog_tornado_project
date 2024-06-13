@@ -49,17 +49,8 @@ function HomeLink({url}){
 
 function SidebarLink(props){
     return (
-        <a href={props.url} className="text-[14px] px-[16px] py-[8px]">{props.title}</a>
+        <a href={props.url} className="text-[14px] px-[16px] py-[8px] hover:bg-orange-500 hover:text-white">{props.title}</a>
     )
-}
-
-
-function changeColor() {
-    console.log("clicked")
-    toggle = true
-}
-function removeColor(event) {
-    event.classList.remove('bg-orange-500', 'text-white');
 }
 
 /*function sideMenu() {
