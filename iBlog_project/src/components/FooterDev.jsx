@@ -5,7 +5,7 @@ export default function Login_Create_footer(){
        <div class="footer flex justify-between w-[600px] pt-[20px]">
         <div class="logo">
             <div class="relative logo flex items-center w-[170px]">
-                <img src="../Group.png" alt="logo" class="w-[20px] h-[27px] "/>
+                <img src="images/Group.png" alt="logo" class="w-[20px] h-[27px] "/>
                 <h2 class="text-orange-400 text-3xl font-normal"><span class="text-[#F77268]">i</span>blog</h2>
             </div>
             <div class="text-[9px]">

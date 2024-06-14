@@ -13,7 +13,7 @@ export function Gmail_button() {
         <div class="nevtreh">
 
         <button class="text-black bg-orange-30 border-[#F9D9BD] border-[1.5px] pl-4 pr-4 py-[10px] pr-[30px] pl-[30px] lg:rounded-lg rounded-2xl lg:w-[478px] w-[335px] h-[50px] my-[8px]">
-            <p class=" flex items-center justify-center "> <img src="../home/images/google.png" alt="" class="pr-[10px]" />   Gmail-ээр нэвтрэх</p>
+            <p class=" flex items-center justify-center "> <img src="images/google.png" alt="" class="pr-[10px]" />   Gmail-ээр нэвтрэх</p>
         </button>
     </div>
     )
@@ -24,7 +24,7 @@ export function Fb_button() {
         <div class="nevtreh">
 
         <button class="text-black bg-orange-30 border-[#F9D9BD] border-[1.5px]  pl-4 pr-4 py-[10px] pr-[30px] pl-[30px] lg:rounded-lg rounded-2xl lg:w-[478px] w-[335px] h-[50px] my-[8px] ">
-            <p class=" flex items-center justify-center "> <img src="../home/images/fb.png" alt="" class="pr-[10px]" />   Facebook-ээр нэвтрэх</p>
+            <p class=" flex items-center justify-center "> <img src="images/fb.png" alt="" class="pr-[10px]" />   Facebook-ээр нэвтрэх</p>
         </button>
     </div>
     )
