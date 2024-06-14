@@ -11,12 +11,13 @@ export default function HeaderComponent() {
                         name="Бүртгүүлэх"
                         class="px-7 py-2.5 border-[1px] border-solid rounded-[10px] text-orange-500 text-base font-semibold leading-[21px]"
                     />
-                    <Button 
+                    <Button
                         url="#"
                         name="Нэвтрэх"
-                        class="px-7 py-2.5 border-[1px] border-solid rounded-[10px] bg-orange-500 text-white text-base font-semibold leading-[21px]"/>
+                        class="px-7 py-2.5 border-[1px] border-solid rounded-[10px] bg-orange-500 text-white text-base font-semibold leading-[21px]" />
                 </div>
             </div>
+            
         </div>
     )
 }
@@ -28,3 +29,4 @@ function Button(props) {
         </a>
     )
 }
+
