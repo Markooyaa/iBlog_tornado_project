@@ -1,13 +1,17 @@
-import HomePage from "./pages/HomePage"
+import MyProfile from "./pages/MyProfile"
+import AddPost from "./pages/AddPost"
+import FilledPost from "./pages/FilledPost"
+
+
 
 function App() {
 
   return (
     <>
-      <h1 className="text-3xl font-bold underline text-center">
-        IBlog Project
-      </h1>
-      <HomePage />
+    <MyProfile />
+    {/* <FilledPost /> */}
+      {/* <AddPost /> */}
+      
     </>
   )
 }
