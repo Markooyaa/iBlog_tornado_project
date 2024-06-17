@@ -31,7 +31,9 @@ function LikeShare() {
     return (
         <div className="flex justify-between items-center w-full">
             <div className="flex items-center gap-[10px] w-">
-                <i className="fa-regular fa-heart"></i>
+                <button>
+                    <i className="fa-regular fa-heart"></i>
+                </button>
                 <p className="text-[20px] leading-[26px]">23</p>
             </div>
             <div className="flex p-[5px] items-center">

@@ -1,16 +1,19 @@
 import Footer from "../components/Footer"
 import HeaderComponent from "../components/Header"
 import MainPage from "../components/MainPage"
-import Posts from "../components/Posts"
+import SidebarMobile from "../components/SideBarMobile";
 import SideBarComponent from "../components/SideBarComponent"
+import MobileFooter from "../components/MobileFooter";
+import { useState } from "react";
 export default function HomePage() {
+    const [showSidebar, setShowSidebar] = useState(false);
     return (
-        <div className="flex m-auto sm:w-[1440px] w-[375px]">
-            <SideBarComponent />
+        <div className="flex w-full">
+            
             <div className="w-full flex flex-col border-l-[1px] border-solid">
-                <HeaderComponent />
+                
+                
                 <MainPage />
-                <Footer />
             </div>
         </div>
     )

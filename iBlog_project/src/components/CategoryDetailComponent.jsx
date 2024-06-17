@@ -71,15 +71,15 @@ export default function CategoryDetailComponent(props) {
             <div className="hidden sm:flex items-center gap-[5px] h-[75px]">
                 <div className="flex items-center gap-[5px] px-[16px] py-10px]">
                     <a href="./home.html" className="text-[18px] text-gray-600">Нүүр хуудас</a>
-                    <i class="fa-solid fa-angle-right"></i>
+                    <i className="fa-solid fa-angle-right"></i>
                 </div>
                 <div className="flex items-center gap-[5px] px-[16px] py-10px]">
                     <p className="text-[18px] text-gray-600">{props.category}</p>
-                    <i class="fa-solid fa-angle-right"></i>
+                    <i className="fa-solid fa-angle-right"></i>
                 </div>
                 <div className="flex items-center gap-[5px] px-[16px] py-10px]">
                     <p className="text-[18px] font-bold text-gray-600">{props.title}</p>
-                    <i class="fa-solid fa-angle-right"></i>
+                    <i className="fa-solid fa-angle-right"></i>
                 </div>
             </div>
             <div className="sm:hidden flex items-center px-[20px] py-[12px] gap-[10px]">

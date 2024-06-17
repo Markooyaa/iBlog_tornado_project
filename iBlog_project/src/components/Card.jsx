@@ -17,7 +17,9 @@ export default function Card(props){
             </div>
             <div className="flex justify-between items-center px-[10px] sm:p-0">
                 <div className="flex items-center gap-[4px]">
-                    <p className="text-[16px] leading-[20px]">{props.likes}</p>
+                    <p className="text-[16px] leading-[20px]"><button>
+                    <i className="fa-regular fa-heart"></i>
+                </button>{props.likes}</p>
                 </div>
                 <div className="flex p-[5px] items-center">
                     <button className="text-[15px] leading-[20px] flex p-[5px] items-center gap-[4px] rounded-[5px] bg-blue-600 text-gray-50">
