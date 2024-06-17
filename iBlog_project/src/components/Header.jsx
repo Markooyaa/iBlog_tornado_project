@@ -8,9 +8,14 @@ function Header({ button, setButton }) {
     setButton(!false);
   }
 
+  function handleProfile() {
+    setButton(!button);
+    console.log("Profile")
+  }
+
   return (
     <header
-      onClick={() => setButton(false)}
+      onClick={() => setButton(!button)}
       className="border-b-[1px] sm:w-full sm:h-[74px] h-[56px] sm:flex hidden sm:px-[50px] px-[16px] justify-between  items-center ">
       <div
         className="mobile-icon sm:hidden flex sm:items-center ">
@@ -105,7 +110,7 @@ function Header({ button, setButton }) {
           </svg>
         </button>
         <button
-          onClick={() => setButton(!button)}
+          onClick={handleProfile}
           id="dropdownBtn"
           className="sm:flex relative text-[#E86B02] border border-[#DCE3EA]  rounded-lg pt-[10px] px-[10px]  gap-1">
           <svg
@@ -121,14 +126,10 @@ function Header({ button, setButton }) {
             />
           </svg>
           <div className="cursor-pointer ">Профайл</div>
-          <div className=" extend-profile  absolute rounded-lg bg-slate-200 w-[300px] top-[60px] right-0 ">
+          {button && <div className=" extend-profile  absolute rounded-lg bg-slate-200 w-[300px] top-[60px] right-0 ">
             <div
               id="dropdown"
-              className={
-                button
-                  ? "flex flex-col w-full text-[14px] text-black font-semibold"
-                  : "hidden"
-              }>
+              className="flex flex-col w-full text-[14px] text-black font-semibold">
               <div className="extra 1 flex w-full h-[43px] gap-2  bg-slate-200 rounded-t-md items-center text-center pl-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -190,7 +191,7 @@ function Header({ button, setButton }) {
                 <div className="text-center">гарах</div>
               </div>
             </div>
-          </div>
+          </div>}
         </button>
       </div>
       {/* <!-----------------------Mobile svg---------------------------------> */}

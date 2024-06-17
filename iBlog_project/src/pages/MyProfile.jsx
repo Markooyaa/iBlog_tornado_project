@@ -5,19 +5,19 @@ import Note from "../components/Note";
 import Category from "../components/Category";
 import { useState } from "react";
 export default function MyProfile(){
-  const [button, setButton] = useState(false);
-  function Click(){
+  const [button, setButton] = useState(true);
+  function click(){
     setButton(false)
   }
     return (
       <div>
         <Header button={button} setButton={setButton} />
-        <div onClick={Click} className="main w-full sm:h-[710px] h-full sm:px-12 sm:pt-12 sm:flex">
+        <div onClick={click} className="main w-full sm:h-[710px] h-full sm:px-12 sm:pt-12 sm:flex">
           <SideBar />
           
             
             <Content />
-            <Note />
+            
           
         </div>
       </div>
