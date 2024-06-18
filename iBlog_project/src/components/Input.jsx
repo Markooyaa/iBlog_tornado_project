@@ -1,10 +1,10 @@
 
 
 
-export function Input({ type, placeholder, id, minlength }) {
+export function Input({ type, placeholder, id, minLength }) {
     return (
 
-        <input id={id} type={type} required className="  rounded-lg  pl-4 pr-12 py-2 lg:w-[478px] w-[335px] h-[50px] focus:outline-none focus:-blue-500 lg:my-[12px] my-[8px] bg-[#F5F7F9]" placeholder={placeholder} minLength={minlength} />
+        <input id={id} type={type} required className="  rounded-lg  pl-4 pr-12 py-2 lg:w-[478px] w-[335px] h-[50px] focus:outline-none focus:-blue-500 lg:my-[12px] my-[8px] bg-[#F5F7F9]" placeholder={placeholder} minLength={minLength} />
 
     )
 }

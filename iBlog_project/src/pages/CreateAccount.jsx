@@ -86,9 +86,9 @@ export function CreateAccount2() {
                     <Input type={'email'} placeholder={"И-мэйл эсвэл утасны дугаар"} />
 
 
-                    <PasswordInput id={'password'} type={password ? 'text' : 'password'} placeholder={"Нууц үг зохиох"} onClick_button={togglePasswordVisibility} />
+                    <PasswordInput id={''} type={password ? 'text' : 'password'} placeholder={"Нууц үг зохиох"} onClick_button={togglePasswordVisibility} />
 
-                    <PasswordInput id={'password'} type={rePassword ? 'text' : 'password'} placeholder={"Нууц үг давтах"} onClick_button={toggleRePasswordVisibility} />
+                    <PasswordInput id={''} type={rePassword ? 'text' : 'password'} placeholder={"Нууц үг давтах"} onClick_button={toggleRePasswordVisibility} />
 
                     <Link to='/login'  >
                         <Full_colored_button text={'Бүртгүүлэх'} />
