@@ -1,5 +1,6 @@
 import {
   createBrowserRouter,
+  Outlet,
   RouterProvider,
 } from "react-router-dom";
 import { LoginPage } from "./LoginPage";
@@ -38,10 +39,10 @@ export default function CreateLoginLayout() {
 
   return (
     <div>
-      <RouterProvider router={router}>
+      {/* <RouterProvider router={router}> */}
+<Outlet/>
 
-
-      </RouterProvider>
+      {/* </RouterProvider> */}
 
     </div>
   )

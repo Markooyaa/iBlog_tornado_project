@@ -12,18 +12,34 @@ import {
   RouterProvider,
 } from "react-router-dom";
 
-
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Layout />,
+    children:[
+      {
+        path: "/",
+        element: <HomePage />,
+      }
+    ]
+  },{
+    path: '/login',
+    element: <LoginPage />,
+  },
+  {
+    path: "/createAccount",
+    element:<div>registerPage</div>
+  }
+]);
 
 
 function App() {
 
   return (
-    <>
     
-   <Layout/>
-
-    </>
-  )
+      <RouterProvider router={router} />
+    
+  );
 }
 
 export default App
