@@ -6,7 +6,7 @@ import SidebarMobile from "../components/SideBarMobile";
 import Footer from "../components/Footer";
 import MobileFooter from "../components/MobileFooter";
 
-export default function BlogLayout({ maxwidth }) {
+export default function BlogLayout() {
     const [showSidebar, setShowSidebar] = useState(false);
     return (
         <div className="flex w-full">

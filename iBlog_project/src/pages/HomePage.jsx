@@ -1,9 +1,5 @@
-import Footer from "../components/Footer"
-import HeaderComponent from "../components/Header"
+
 import MainPage from "../components/MainPage"
-import SidebarMobile from "../components/SideBarMobile";
-import SideBarComponent from "../components/SideBarComponent"
-import MobileFooter from "../components/MobileFooter";
 
 import { useState } from "react";
 export default function HomePage() {

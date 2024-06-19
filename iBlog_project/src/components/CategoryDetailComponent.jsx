@@ -1,71 +1,11 @@
 import Card from "./Card"
-export default function CategoryDetailComponent(props) {
-    const cardsData = [
-        {
-            url: "/img/Rectangle 39.jpg",
-            title: 'The Impact of Technology on the Workplace',
-            username: 'Tracey Wilson',
-            date: 'Aug 20 2022',
-            likes: '23',
-            profile: '/img/Image 2.jpg',
-        },
-        {
-            url: "/img/Rectangle 39.jpg",
-            title: 'The Impact of Technology on the Workplace',
-            username: 'Tracey Wilson',
-            date: 'Aug 20 2022',
-            likes: '23',
-            profile: '/img/Image 2.jpg',
-        },
-        {
-            url: "/img/Rectangle 39.jpg",
-            title: 'The Impact of Technology on the Workplace',
-            username: 'Tracey Wilson',
-            date: 'Aug 20 2022',
-            likes: '23',
-            profile: '/img/Image 2.jpg',
-        },
-        {
-            url: "/img/Rectangle 39.jpg",
-            title: 'The Impact of Technology on the Workplace',
-            username: 'Tracey Wilson',
-            date: 'Aug 20 2022',
-            likes: '23',
-            profile: '/img/Image 2.jpg',
-        },
-        {
-            url: "/img/Rectangle 39.jpg",
-            title: 'The Impact of Technology on the Workplace',
-            username: 'Tracey Wilson',
-            date: 'Aug 20 2022',
-            likes: '23',
-            profile: '/img/Image 2.jpg',
-        },
-        {
-            url: "/img/Rectangle 39.jpg",
-            title: 'The Impact of Technology on the Workplace',
-            username: 'Tracey Wilson',
-            date: 'Aug 20 2022',
-            likes: '23',
-            profile: '/img/Image 2.jpg',
-        },
-        {
-            url: "/img/Rectangle 39.jpg",
-            title: 'The Impact of Technology on the Workplace',
-            username: 'Tracey Wilson',
-            date: 'Aug 20 2022',
-            likes: '23',
-            profile: '/img/Image 2.jpg',
-        },
-        {
-            url: "/img/Rectangle 39.jpg",
-            title: 'The Impact of Technology on the Workplace',
-            username: 'Tracey Wilson',
-            date: 'Aug 20 2022',
-            likes: '23',
-            profile: '/img/Image 2.jpg',
-        },
-    ]
+import { menus, cardsData } from "../data/data"
+import { useParams } from "react-router-dom"
+
+
+export default function CategoryDetailComponent() {
+    const params = useParams()
+   
     return (
         <div className="flex flex-col items-start sm:justify-center gap-[16px] sm:m-[30px] w-full">
             <div className="hidden sm:flex items-center gap-[5px] h-[75px]">
@@ -74,20 +14,20 @@ export default function CategoryDetailComponent(props) {
                     <i className="fa-solid fa-angle-right"></i>
                 </div>
                 <div className="flex items-center gap-[5px] px-[16px] py-10px]">
-                    <p className="text-[18px] text-gray-600">{props.category}</p>
+                    <p className="text-[18px] text-gray-600 capitalize">{params.category}</p>
                     <i className="fa-solid fa-angle-right"></i>
                 </div>
                 <div className="flex items-center gap-[5px] px-[16px] py-10px]">
-                    <p className="text-[18px] font-bold text-gray-600">{props.title}</p>
+                    <p className="text-[18px] font-bold text-gray-600 capitalize">{params.id}</p>
                     <i className="fa-solid fa-angle-right"></i>
                 </div>
             </div>
             <div className="sm:hidden flex items-center px-[20px] py-[12px] gap-[10px]">
-                <p className="leading-[21px] font-semibold">LIFESTYLE</p>
+                <p className="leading-[21px] font-semibold uppercase">{params.category}</p>
             </div>
             <div
                 className="title hidden sm:flex items-center justify-center w-[150px] h-[40px] border-b-[2px] border-orange-500">
-                <p className="text-[18px] font-bold">{props.title}</p>
+                <p className="text-[18px] font-bold capitalize">{params.id}</p>
             </div>
             <div className="flex sm:justify-end items-center flex-wrap w-full pb-2">
                 <div className="flex gap-[8px] sm:gap-[22px] flex-wrap px-[20px]">
@@ -100,7 +40,9 @@ export default function CategoryDetailComponent(props) {
                                     username={data.username}
                                     date={data.date}
                                     likes={data.likes}
-                                    profile={data.profile} />)
+                                    profile={data.profile} 
+                                />
+                            )
                         })
                     }
                 </div>
