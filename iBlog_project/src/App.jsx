@@ -1,6 +1,18 @@
-import MyProfile from "./pages/MyProfile"
-import AddPost from "./pages/AddPost"
-import FilledPost from "./pages/FilledPost"
+
+
+import {ChangePassword, ChangePassword2,ChangePassword3} from "./pages/ChangePassword"
+import Layout from "./pages/CreateLoginLayout"
+import { CreateAccount , CreateAccount2} from "./pages/CreateAccount"
+
+import { LoginPage } from "./pages/LoginPage"
+
+
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+import MyProfile from "./pages/AddPost";
+
 
 
 
@@ -8,10 +20,9 @@ function App() {
 
   return (
     <>
-    <MyProfile />
-    {/* <FilledPost /> */}
-      {/* <AddPost /> */}
-      
+    
+   <Layout/>
+
     </>
   )
 }

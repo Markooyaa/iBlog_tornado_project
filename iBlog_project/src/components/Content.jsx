@@ -1,6 +1,7 @@
 // import Images from ".public/Images";
 import Note from "./Note.jsx";
-import { Outlet } from "./Outlet.jsx";
+import { Outlet } from "react-router-dom";
+
 export default function Content() { 
     
     return(
@@ -16,7 +17,8 @@ export default function Content() {
                 <div>
                     
                 </div>
-                <Outlet />
+                
+                <Note/>
                 </div>
     )
 

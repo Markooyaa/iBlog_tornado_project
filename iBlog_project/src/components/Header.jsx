@@ -1,6 +1,7 @@
 // import Images from './Images/Index.js'
 import { useState } from "react";
-
+import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom"
 function Header({ button, setButton }) {
   // const [Button, SetButton] = useState(false);
 
@@ -13,12 +14,27 @@ function Header({ button, setButton }) {
     console.log("Profile")
   }
 
+  function PostButton() {
+    return(
+      navigate("/profile/add")
+    )
+  }
+//  {
+//   const userIsInactive = useFakeInactiveUser();
+//   const navigate = useNavigate();
+
+//   useEffect(() => {
+//     if (userIsInactive) {
+//       fake.logout();
+//       navigate("/session-timed-out");
+//     }
+//   }, [userIsInactive]);
+// }
   return (
     <header
       onClick={() => setButton(!button)}
-      className="border-b-[1px] sm:w-full sm:h-[74px] h-[56px] sm:flex hidden sm:px-[50px] px-[16px] justify-between  items-center ">
-      <div
-        className="mobile-icon sm:hidden flex sm:items-center ">
+      className="border-b-[1px] sm:w-full sm:h-[74px] h-[56px] flex sm:px-[50px] px-[16px] justify-between  items-center ">
+      <div className="mobile-icon sm:hidden flex sm:items-center ">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"
@@ -48,8 +64,7 @@ function Header({ button, setButton }) {
           />
         </svg>
       </div>
-      <div
-        className="relative-logo flex items-center">
+      <Link to="/profile" className="relative-logo flex items-center">
         <img
           src="Images/Logo.jpg"
           alt="logo"
@@ -58,10 +73,9 @@ function Header({ button, setButton }) {
         <h2 className="text-orange-400 text-3xl font-normal">
           <span className="text-[#F77268]">i</span>blog
         </h2>
-      </div>
+      </Link>
 
-      <div
-        className="search relative sm:flex hidden">
+      <div className="search relative sm:flex hidden">
         <input
           type="text"
           className="border border-gray-300 rounded-2xl pl-4 pr-12 py-2 w-[572px] h-[39px] focus:outline-none focus:border-blue-500"
@@ -94,7 +108,9 @@ function Header({ button, setButton }) {
           />
         </svg>
 
-        <button className="flex text-white bg-[#E86B02] rounded-lg pl-4 pr-4 py-[10px] sm:pr-[30px] sm:pl-[30px] gap-1">
+        <Link
+          to="/profile/add"
+          className="flex text-white bg-[#E86B02] rounded-lg pl-4 pr-4 py-[10px] sm:pr-[30px] sm:pl-[30px] gap-1">
           Post
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -108,7 +124,7 @@ function Header({ button, setButton }) {
               fill="white"
             />
           </svg>
-        </button>
+        </Link>
         <button
           onClick={handleProfile}
           id="dropdownBtn"
@@ -126,76 +142,78 @@ function Header({ button, setButton }) {
             />
           </svg>
           <div className="cursor-pointer ">Профайл</div>
-          {button && <div className=" extend-profile  absolute rounded-lg bg-slate-200 w-[300px] top-[60px] right-0 ">
-            <div
-              id="dropdown"
-              className="flex flex-col w-full text-[14px] text-black font-semibold">
-              <div className="extra 1 flex w-full h-[43px] gap-2  bg-slate-200 rounded-t-md items-center text-center pl-2">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 20 20"
-                  fill="none"
-                  className="">
-                  <path
-                    d="M13.0917 10.5917C13.9087 9.94891 14.505 9.06746 14.7977 8.06997C15.0904 7.07249 15.0649 6.00858 14.7248 5.02625C14.3847 4.04391 13.7469 3.19202 12.9001 2.58907C12.0532 1.98612 11.0395 1.66211 10 1.66211C8.96045 1.66211 7.94676 1.98612 7.09994 2.58907C6.25312 3.19202 5.61528 4.04391 5.27517 5.02625C4.93506 6.00858 4.90959 7.07249 5.2023 8.06997C5.49501 9.06746 6.09134 9.94891 6.90833 10.5917C5.5084 11.1526 4.2869 12.0828 3.37407 13.2833C2.46125 14.4838 1.8913 15.9094 1.725 17.4084C1.71296 17.5178 1.72259 17.6285 1.75335 17.7342C1.78411 17.8399 1.83539 17.9386 1.90426 18.0245C2.04335 18.1979 2.24565 18.309 2.46666 18.3334C2.68768 18.3577 2.9093 18.2932 3.08277 18.1541C3.25624 18.015 3.36735 17.8127 3.39166 17.5917C3.57465 15.9627 4.3514 14.4582 5.57351 13.3657C6.79562 12.2732 8.37741 11.6692 10.0167 11.6692C11.6559 11.6692 13.2377 12.2732 14.4598 13.3657C15.6819 14.4582 16.4587 15.9627 16.6417 17.5917C16.6643 17.7965 16.762 17.9856 16.9159 18.1225C17.0698 18.2595 17.269 18.3346 17.475 18.3334H17.5667C17.7851 18.3082 17.9848 18.1978 18.1221 18.0261C18.2595 17.8544 18.3234 17.6353 18.3 17.4167C18.1329 15.9135 17.5599 14.4842 16.6424 13.2819C15.7249 12.0795 14.4974 11.1496 13.0917 10.5917ZM10 10C9.34073 10 8.69626 9.80453 8.1481 9.43825C7.59993 9.07198 7.17269 8.55139 6.9204 7.9423C6.66811 7.33321 6.6021 6.66299 6.73071 6.01639C6.85933 5.36979 7.1768 4.77584 7.64297 4.30967C8.10915 3.84349 8.70309 3.52602 9.3497 3.39741C9.9963 3.26879 10.6665 3.3348 11.2756 3.58709C11.8847 3.83938 12.4053 4.26662 12.7716 4.81479C13.1378 5.36295 13.3333 6.00742 13.3333 6.66669C13.3333 7.55074 12.9821 8.39859 12.357 9.02371C11.7319 9.64883 10.8841 10 10 10Z"
-                    fill="#E86B02"
-                  />
-                </svg>
-                <div className="text-center">Миний мэдээлэл</div>
-              </div>
-              <div className="extra 2 flex w-full h-[43px] gap-2  bg-slate-200 items-center text-center pl-2">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 20 20"
-                  fill="none">
-                  <path
-                    d="M16.8001 4.16672C15.9167 3.28106 14.7457 2.74051 13.4987 2.6427C12.2516 2.54489 11.0107 2.89628 10.0001 3.63339C8.93978 2.84475 7.62006 2.48715 6.30667 2.63259C4.99327 2.77803 3.78377 3.4157 2.92171 4.41721C2.05966 5.41872 1.60909 6.70966 1.66073 8.03007C1.71238 9.35048 2.26242 10.6023 3.20007 11.5334L8.37507 16.7167C8.80842 17.1432 9.39206 17.3822 10.0001 17.3822C10.6081 17.3822 11.1917 17.1432 11.6251 16.7167L16.8001 11.5334C17.7731 10.5544 18.3192 9.23028 18.3192 7.85006C18.3192 6.46983 17.7731 5.14567 16.8001 4.16672ZM15.6251 10.3834L10.4501 15.5584C10.3912 15.6179 10.3211 15.6651 10.2439 15.6973C10.1666 15.7295 10.0838 15.7461 10.0001 15.7461C9.91638 15.7461 9.83352 15.7295 9.75628 15.6973C9.67904 15.6651 9.60896 15.6179 9.55007 15.5584L4.37507 10.3584C3.72153 9.69034 3.35558 8.79294 3.35558 7.85839C3.35558 6.92384 3.72153 6.02644 4.37507 5.35839C5.04103 4.70088 5.93921 4.3322 6.87507 4.3322C7.81092 4.3322 8.7091 4.70088 9.37507 5.35839C9.45254 5.4365 9.5447 5.49849 9.64625 5.5408C9.7478 5.58311 9.85672 5.60489 9.96673 5.60489C10.0767 5.60489 10.1857 5.58311 10.2872 5.5408C10.3888 5.49849 10.4809 5.4365 10.5584 5.35839C11.2244 4.70088 12.1225 4.3322 13.0584 4.3322C13.9943 4.3322 14.8924 4.70088 15.5584 5.35839C16.2209 6.01768 16.5989 6.91022 16.6114 7.84479C16.6238 8.77937 16.2698 9.68167 15.6251 10.3584V10.3834Z"
-                    fill="#E86B02"
-                  />
-                </svg>
-                <div className="text-center">Таалагдсан</div>
-              </div>
-              <div className="extra 3 flex w-full h-[43px] gap-2 rounded-b-md bg-slate-200 items-center text-center pl-2 ">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 20 20"
-                  fill="none">
-                  <path
-                    d="M12.5 14.1666L16.6667 9.99992L12.5 5.83325"
-                    stroke="#E86B02"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                  <path
-                    d="M16.6666 10L8.33325 10"
-                    stroke="#E86B02"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                  <path
-                    d="M9.16675 16.6666H5.83341C5.39139 16.6666 4.96746 16.5105 4.6549 16.2327C4.34234 15.9548 4.16675 15.578 4.16675 15.1851V4.81473C4.16675 4.42182 4.34234 4.045 4.6549 3.76717C4.96746 3.48934 5.39139 3.33325 5.83341 3.33325H9.16675"
-                    stroke="#E86B02"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-                <div className="text-center">гарах</div>
+          {button && (
+            <div className=" extend-profile  absolute rounded-lg bg-slate-200 w-[300px] top-[60px] right-0 ">
+              <div
+                id="dropdown"
+                className="flex flex-col w-full text-[14px] text-black font-semibold">
+                <div className="extra 1 flex w-full h-[43px] gap-2  bg-slate-200 rounded-t-md items-center text-center pl-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    className="">
+                    <path
+                      d="M13.0917 10.5917C13.9087 9.94891 14.505 9.06746 14.7977 8.06997C15.0904 7.07249 15.0649 6.00858 14.7248 5.02625C14.3847 4.04391 13.7469 3.19202 12.9001 2.58907C12.0532 1.98612 11.0395 1.66211 10 1.66211C8.96045 1.66211 7.94676 1.98612 7.09994 2.58907C6.25312 3.19202 5.61528 4.04391 5.27517 5.02625C4.93506 6.00858 4.90959 7.07249 5.2023 8.06997C5.49501 9.06746 6.09134 9.94891 6.90833 10.5917C5.5084 11.1526 4.2869 12.0828 3.37407 13.2833C2.46125 14.4838 1.8913 15.9094 1.725 17.4084C1.71296 17.5178 1.72259 17.6285 1.75335 17.7342C1.78411 17.8399 1.83539 17.9386 1.90426 18.0245C2.04335 18.1979 2.24565 18.309 2.46666 18.3334C2.68768 18.3577 2.9093 18.2932 3.08277 18.1541C3.25624 18.015 3.36735 17.8127 3.39166 17.5917C3.57465 15.9627 4.3514 14.4582 5.57351 13.3657C6.79562 12.2732 8.37741 11.6692 10.0167 11.6692C11.6559 11.6692 13.2377 12.2732 14.4598 13.3657C15.6819 14.4582 16.4587 15.9627 16.6417 17.5917C16.6643 17.7965 16.762 17.9856 16.9159 18.1225C17.0698 18.2595 17.269 18.3346 17.475 18.3334H17.5667C17.7851 18.3082 17.9848 18.1978 18.1221 18.0261C18.2595 17.8544 18.3234 17.6353 18.3 17.4167C18.1329 15.9135 17.5599 14.4842 16.6424 13.2819C15.7249 12.0795 14.4974 11.1496 13.0917 10.5917ZM10 10C9.34073 10 8.69626 9.80453 8.1481 9.43825C7.59993 9.07198 7.17269 8.55139 6.9204 7.9423C6.66811 7.33321 6.6021 6.66299 6.73071 6.01639C6.85933 5.36979 7.1768 4.77584 7.64297 4.30967C8.10915 3.84349 8.70309 3.52602 9.3497 3.39741C9.9963 3.26879 10.6665 3.3348 11.2756 3.58709C11.8847 3.83938 12.4053 4.26662 12.7716 4.81479C13.1378 5.36295 13.3333 6.00742 13.3333 6.66669C13.3333 7.55074 12.9821 8.39859 12.357 9.02371C11.7319 9.64883 10.8841 10 10 10Z"
+                      fill="#E86B02"
+                    />
+                  </svg>
+                  <div className="text-center">Миний мэдээлэл</div>
+                </div>
+                <div className="extra 2 flex w-full h-[43px] gap-2  bg-slate-200 items-center text-center pl-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none">
+                    <path
+                      d="M16.8001 4.16672C15.9167 3.28106 14.7457 2.74051 13.4987 2.6427C12.2516 2.54489 11.0107 2.89628 10.0001 3.63339C8.93978 2.84475 7.62006 2.48715 6.30667 2.63259C4.99327 2.77803 3.78377 3.4157 2.92171 4.41721C2.05966 5.41872 1.60909 6.70966 1.66073 8.03007C1.71238 9.35048 2.26242 10.6023 3.20007 11.5334L8.37507 16.7167C8.80842 17.1432 9.39206 17.3822 10.0001 17.3822C10.6081 17.3822 11.1917 17.1432 11.6251 16.7167L16.8001 11.5334C17.7731 10.5544 18.3192 9.23028 18.3192 7.85006C18.3192 6.46983 17.7731 5.14567 16.8001 4.16672ZM15.6251 10.3834L10.4501 15.5584C10.3912 15.6179 10.3211 15.6651 10.2439 15.6973C10.1666 15.7295 10.0838 15.7461 10.0001 15.7461C9.91638 15.7461 9.83352 15.7295 9.75628 15.6973C9.67904 15.6651 9.60896 15.6179 9.55007 15.5584L4.37507 10.3584C3.72153 9.69034 3.35558 8.79294 3.35558 7.85839C3.35558 6.92384 3.72153 6.02644 4.37507 5.35839C5.04103 4.70088 5.93921 4.3322 6.87507 4.3322C7.81092 4.3322 8.7091 4.70088 9.37507 5.35839C9.45254 5.4365 9.5447 5.49849 9.64625 5.5408C9.7478 5.58311 9.85672 5.60489 9.96673 5.60489C10.0767 5.60489 10.1857 5.58311 10.2872 5.5408C10.3888 5.49849 10.4809 5.4365 10.5584 5.35839C11.2244 4.70088 12.1225 4.3322 13.0584 4.3322C13.9943 4.3322 14.8924 4.70088 15.5584 5.35839C16.2209 6.01768 16.5989 6.91022 16.6114 7.84479C16.6238 8.77937 16.2698 9.68167 15.6251 10.3584V10.3834Z"
+                      fill="#E86B02"
+                    />
+                  </svg>
+                  <div className="text-center">Таалагдсан</div>
+                </div>
+                <div className="extra 3 flex w-full h-[43px] gap-2 rounded-b-md bg-slate-200 items-center text-center pl-2 ">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none">
+                    <path
+                      d="M12.5 14.1666L16.6667 9.99992L12.5 5.83325"
+                      stroke="#E86B02"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                    <path
+                      d="M16.6666 10L8.33325 10"
+                      stroke="#E86B02"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                    <path
+                      d="M9.16675 16.6666H5.83341C5.39139 16.6666 4.96746 16.5105 4.6549 16.2327C4.34234 15.9548 4.16675 15.578 4.16675 15.1851V4.81473C4.16675 4.42182 4.34234 4.045 4.6549 3.76717C4.96746 3.48934 5.39139 3.33325 5.83341 3.33325H9.16675"
+                      stroke="#E86B02"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                  <div className="text-center">гарах</div>
+                </div>
               </div>
             </div>
-          </div>}
+          )}
         </button>
       </div>
       {/* <!-----------------------Mobile svg---------------------------------> */}
-      <div className="sm:hidden flex sm: items-center ">
+      <div className="Mobile-search-icon flex sm:hidden  sm: items-center ">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"
