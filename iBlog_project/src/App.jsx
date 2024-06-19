@@ -1,13 +1,20 @@
-import BlogLayout from "./pages/BlogLayout";
-import CategoryDetailComponent from "./components/CategoryDetailComponent"
-import HomePage from "./pages/HomePage"
 
-import PostDetail from "./pages/PostDetail"
+
+import {ChangePassword, ChangePassword2,ChangePassword3} from "./pages/ChangePassword"
+import Layout from "./pages/CreateLoginLayout"
+
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+
+
 import {
   createBrowserRouter,
   Outlet,
   RouterProvider,
 } from "react-router-dom";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -43,8 +50,9 @@ function App() {
 
   return (
     <>
-     
-      <RouterProvider router={router}/>
+    
+   <Layout/>
+
     </>
   )
 }
