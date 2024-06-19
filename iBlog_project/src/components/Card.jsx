@@ -23,6 +23,7 @@ export default function Card(props){
                 </div>
                 <div className="flex p-[5px] items-center">
                     <button className="text-[15px] leading-[20px] flex p-[5px] items-center gap-[4px] rounded-[5px] bg-blue-600 text-gray-50">
+                    <i class="fa-brands fa-facebook-f"></i>
                         Share
                     </button>
                 </div>
