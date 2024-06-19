@@ -1,19 +1,12 @@
-
-
-import {ChangePassword, ChangePassword2,ChangePassword3} from "./pages/ChangePassword"
-import Layout from "./pages/CreateLoginLayout"
-
+import BlogLayout from "./pages/BlogLayout";
+import HomePage from "./pages/HomePage";
+import CategoryDetailComponent from "./components/CategoryDetailComponent";
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
 
-
-import {
-  createBrowserRouter,
-  Outlet,
-  RouterProvider,
-} from "react-router-dom";
+import menus from "./data/data";
 
 const router = createBrowserRouter([
   {
@@ -50,9 +43,8 @@ function App() {
 
   return (
     <>
+    <RouterProvider router={router}/>
     
-   <Layout/>
-
     </>
   )
 }
