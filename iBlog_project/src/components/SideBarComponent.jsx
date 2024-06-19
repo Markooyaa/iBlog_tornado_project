@@ -65,4 +65,3 @@ function SidebarLink(props) {
         <Link to={props.url} className="text-[14px] px-[16px] py-[8px] hover:bg-orange-500 hover:text-white">{props.title}</Link>
     )
 }
-

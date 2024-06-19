@@ -5,6 +5,7 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import MyProfile from "./pages/AddPost";
 
 import menus from "./data/data";
 
