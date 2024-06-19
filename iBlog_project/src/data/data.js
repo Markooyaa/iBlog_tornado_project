@@ -1,61 +1,134 @@
 const menus = [
     {
         id: 1,
-        name: 'LifeStyle',
+        name: 'lifestyle',
+        title: "Lifestyle",
         path: '/lifestyle',
         children: [
             {
                 id: 1,
                 name: 'Hobby',
-                path: '/hobby'
+                path: '/lifestyle/hobby'
             },
             {
                 id: 2,
                 name: 'Travel',
-                path: '/travel'
+                path: '/lifestyle/travel'
             },
             {
                 id: 3,
                 name: 'Food&Beverage',
-                path: '/food'
+                path: '/lifestyle/food'
             },
             {
                 id: 4,
                 name: 'Home&Decor',
-                path: "/home"
+                path: "/lifestyle/home"
             }
         ]
 
     },
     {
         id: 2,
-        name: 'Sport',
+        name: 'sport',
+        title: "Sport",
         path: '/sport',
         children: [
             {
                 id: 1,
                 name: 'Soccer',
-                path: '/soccer'
+                path: '/sport/soccer'
             },
             {
                 id: 2,
                 name: 'Volleyball',
-                path: '/volleyball'
+                path: '/sport/volleyball'
             }
         ]
     },
     {
         id: 3,
-        name: 'Technology',
+        name: 'technology',
+        title: "Technology",
         path: '/technology',
         children: []
     },
     {
         id: 4,
-        name: 'Entertainment',
-        path: '/entertainmen',
+        name: 'entertainment',
+        title: 'Entertainment',
+        path: '/entertainment',
         children: []
     }
 ]
 
-export default menus
+
+
+const cardsData = [
+    {
+        url: "/img/Rectangle 39.jpg",
+        title: 'The Impact of Technology on the Workplace',
+        username: 'Tracey Wilson',
+        date: 'Aug 20 2022',
+        likes: '23',
+        profile: '/img/Image 2.jpg',
+    },
+    {
+        url: "/img/Rectangle 39.jpg",
+        title: 'The Impact of Technology on the Workplace',
+        username: 'Tracey Wilson',
+        date: 'Aug 20 2022',
+        likes: '23',
+        profile: '/img/Image 2.jpg',
+    },
+    {
+        url: "/img/Rectangle 39.jpg",
+        title: 'The Impact of Technology on the Workplace',
+        username: 'Tracey Wilson',
+        date: 'Aug 20 2022',
+        likes: '23',
+        profile: '/img/Image 2.jpg',
+    },
+    {
+        url: "/img/Rectangle 39.jpg",
+        title: 'The Impact of Technology on the Workplace',
+        username: 'Tracey Wilson',
+        date: 'Aug 20 2022',
+        likes: '23',
+        profile: '/img/Image 2.jpg',
+    },
+    {
+        url: "/img/Rectangle 39.jpg",
+        title: 'The Impact of Technology on the Workplace',
+        username: 'Tracey Wilson',
+        date: 'Aug 20 2022',
+        likes: '23',
+        profile: '/img/Image 2.jpg',
+    },
+    {
+        url: "/img/Rectangle 39.jpg",
+        title: 'The Impact of Technology on the Workplace',
+        username: 'Tracey Wilson',
+        date: 'Aug 20 2022',
+        likes: '23',
+        profile: '/img/Image 2.jpg',
+    },
+    {
+        url: "/img/Rectangle 39.jpg",
+        title: 'The Impact of Technology on the Workplace',
+        username: 'Tracey Wilson',
+        date: 'Aug 20 2022',
+        likes: '23',
+        profile: '/img/Image 2.jpg',
+    },
+    {
+        url: "/img/Rectangle 39.jpg",
+        title: 'The Impact of Technology on the Workplace',
+        username: 'Tracey Wilson',
+        date: 'Aug 20 2022',
+        likes: '23',
+        profile: '/img/Image 2.jpg',
+    },
+]
+
+export {menus, cardsData} 

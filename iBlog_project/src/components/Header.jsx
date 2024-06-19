@@ -8,12 +8,12 @@ export default function HeaderComponent() {
                 </div>
                 <div className="flex justify-end items-start gap-3.5">
                     <Button
-                        url="#"
+                        url="/createAccount"
                         name="Бүртгүүлэх"
                         className="px-7 py-2.5 border-[1px] border-solid rounded-[10px] text-orange-500 text-base font-semibold leading-[21px]"
                     />
                     <Button
-                        url="#"
+                        url="/login"
                         name="Нэвтрэх"
                         className="px-7 py-2.5 border-[1px] border-solid rounded-[10px] bg-orange-500 text-white text-base font-semibold leading-[21px]" />
                 </div>

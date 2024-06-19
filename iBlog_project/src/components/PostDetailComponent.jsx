@@ -7,11 +7,11 @@ export default function PostDetailComponent(props) {
                     <i className="fa-solid fa-angle-right"></i>
                 </div>
                 <div className="flex items-center gap-[5px] px-[16px] py-10px]">
-                    <p className="text-[18px] text-gray-600">{props.category}</p>
+                    <p className="text-[18px] text-gray-600 capitalize">{props.category}</p>
                     <i className="fa-solid fa-angle-right"></i>
                 </div>
                 <div className="flex items-center gap-[5px] px-[16px] py-10px]">
-                    <p className="text-[18px] text-gray-600">{props.title}</p>
+                    <p className="text-[18px] text-gray-600 capitalize">{props.title}</p>
                     <i className="fa-solid fa-angle-right"></i>
                 </div>
                 <div className="flex items-center gap-[5px] px-[16px] py-10px]">
