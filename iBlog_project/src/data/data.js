@@ -57,5 +57,79 @@ const menus = [
         children: []
     }
 ]
+const cardsData = [
+    {
+        id: 1,
+        url: "/img/Rectangle 39.jpg",
+        title: 'The Impact of Technology on the Workplace',
+        username: 'Tracey Wilson',
+        date: 'Aug 20 2022',
+        likes: '23',
+        profile: '/img/Image 2.jpg',
+    },
+    {
+        id: 2,
+        url: "/img/Rectangle 39.jpg",
+        title: 'The Impact of Technology on the Workplace',
+        username: 'Tracey Wilson',
+        date: 'Aug 20 2022',
+        likes: '23',
+        profile: '/img/Image 2.jpg',
+    },
+    {
+        id: 3,
+        url: "/img/Rectangle 39.jpg",
+        title: 'The Impact of Technology on the Workplace',
+        username: 'Tracey Wilson',
+        date: 'Aug 20 2022',
+        likes: '23',
+        profile: '/img/Image 2.jpg',
+    },
+    {
+        id: 4,
+        url: "/img/Rectangle 39.jpg",
+        title: 'The Impact of Technology on the Workplace',
+        username: 'Tracey Wilson',
+        date: 'Aug 20 2022',
+        likes: '23',
+        profile: '/img/Image 2.jpg',
+    },
+    {
+        id: 5,
+        url: "/img/Rectangle 39.jpg",
+        title: 'The Impact of Technology on the Workplace',
+        username: 'Tracey Wilson',
+        date: 'Aug 20 2022',
+        likes: '23',
+        profile: '/img/Image 2.jpg',
+    },
+    {
+        id: 6,
+        url: "/img/Rectangle 39.jpg",
+        title: 'The Impact of Technology on the Workplace',
+        username: 'Tracey Wilson',
+        date: 'Aug 20 2022',
+        likes: '23',
+        profile: '/img/Image 2.jpg',
+    },
+    {
+        id: 7,
+        url: "/img/Rectangle 39.jpg",
+        title: 'The Impact of Technology on the Workplace',
+        username: 'Tracey Wilson',
+        date: 'Aug 20 2022',
+        likes: '23',
+        profile: '/img/Image 2.jpg',
+    },
+    {
+        id: 8,
+        url: "/img/Rectangle 39.jpg",
+        title: 'The Impact of Technology on the Workplace',
+        username: 'Tracey Wilson',
+        date: 'Aug 20 2022',
+        likes: '23',
+        profile: '/img/Image 2.jpg',
+    },
+]
 
-export default menus
+export  {menus ,cardsData}

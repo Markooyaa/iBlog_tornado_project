@@ -1,76 +1,14 @@
-import Card from "./Card"
+import { Link } from "react-router-dom"
+import { cardsData } from "../data/data"
+import { Card } from "./Card"
+
 export default function CategoryDetailComponent(props) {
-    const cardsData = [
-        {
-            url: "/img/Rectangle 39.jpg",
-            title: 'The Impact of Technology on the Workplace',
-            username: 'Tracey Wilson',
-            date: 'Aug 20 2022',
-            likes: '23',
-            profile: '/img/Image 2.jpg',
-        },
-        {
-            url: "/img/Rectangle 39.jpg",
-            title: 'The Impact of Technology on the Workplace',
-            username: 'Tracey Wilson',
-            date: 'Aug 20 2022',
-            likes: '23',
-            profile: '/img/Image 2.jpg',
-        },
-        {
-            url: "/img/Rectangle 39.jpg",
-            title: 'The Impact of Technology on the Workplace',
-            username: 'Tracey Wilson',
-            date: 'Aug 20 2022',
-            likes: '23',
-            profile: '/img/Image 2.jpg',
-        },
-        {
-            url: "/img/Rectangle 39.jpg",
-            title: 'The Impact of Technology on the Workplace',
-            username: 'Tracey Wilson',
-            date: 'Aug 20 2022',
-            likes: '23',
-            profile: '/img/Image 2.jpg',
-        },
-        {
-            url: "/img/Rectangle 39.jpg",
-            title: 'The Impact of Technology on the Workplace',
-            username: 'Tracey Wilson',
-            date: 'Aug 20 2022',
-            likes: '23',
-            profile: '/img/Image 2.jpg',
-        },
-        {
-            url: "/img/Rectangle 39.jpg",
-            title: 'The Impact of Technology on the Workplace',
-            username: 'Tracey Wilson',
-            date: 'Aug 20 2022',
-            likes: '23',
-            profile: '/img/Image 2.jpg',
-        },
-        {
-            url: "/img/Rectangle 39.jpg",
-            title: 'The Impact of Technology on the Workplace',
-            username: 'Tracey Wilson',
-            date: 'Aug 20 2022',
-            likes: '23',
-            profile: '/img/Image 2.jpg',
-        },
-        {
-            url: "/img/Rectangle 39.jpg",
-            title: 'The Impact of Technology on the Workplace',
-            username: 'Tracey Wilson',
-            date: 'Aug 20 2022',
-            likes: '23',
-            profile: '/img/Image 2.jpg',
-        },
-    ]
+    
     return (
         <div className="flex flex-col items-start sm:justify-center gap-[16px] sm:m-[30px] w-full">
             <div className="hidden sm:flex items-center gap-[5px] h-[75px]">
                 <div className="flex items-center gap-[5px] px-[16px] py-10px]">
-                    <a href="./home.html" className="text-[18px] text-gray-600">Нүүр хуудас</a>
+                    <Link to="/" className="text-[18px] text-gray-600">Нүүр хуудас</Link>
                     <i className="fa-solid fa-angle-right"></i>
                 </div>
                 <div className="flex items-center gap-[5px] px-[16px] py-10px]">
@@ -95,6 +33,7 @@ export default function CategoryDetailComponent(props) {
                         cardsData.map((data, index) => {
                             return (
                                 <Card key={index}
+                                id={data.id}
                                     url={data.url}
                                     title={data.title}
                                     username={data.username}

@@ -1,40 +1,50 @@
-export default function PostDetailComponent(props) {
+import { Link, useLocation, useParams } from "react-router-dom"
+import { cardsData } from "../data/data"
+
+export default function PostDetailComponent() {
+
+    const params  = useParams()
+    const blog = cardsData.filter(c => c.id == params.id)
+    console.log(blog)
     return (
-        <div className="content flex flex-col items-start gap-[16px] m-auto w-[328px] sm:w-[900px] pb-[30px]">
-            <div className="hidden sm:flex items-center gap-[5px] h-[75px]">
+        
+        <div className="content flex flex-col items-start gap-[16px] m-auto w-[328px] sm:w-[900px] pb-[30px] ml-[70px] mt-[50px]">
+            {blog &&  <div className="hidden sm:flex items-center gap-[5px] h-[75px]">
                 <div className="flex items-center gap-[5px] px-[16px] py-10px]">
-                    <a href="./home.html" className="text-[18px] text-gray-600">Нүүр хуудас</a>
+                    <Link to="/" className="text-[18px] text-gray-600">Нүүр хуудас</Link>
                     <i className="fa-solid fa-angle-right"></i>
                 </div>
                 <div className="flex items-center gap-[5px] px-[16px] py-10px]">
-                    <p className="text-[18px] text-gray-600">{props.category}</p>
+                    <p className="text-[18px] text-gray-600">{blog[0].category}</p>
                     <i className="fa-solid fa-angle-right"></i>
                 </div>
                 <div className="flex items-center gap-[5px] px-[16px] py-10px]">
-                    <p className="text-[18px] text-gray-600">{props.title}</p>
+                    <p className="text-[18px] text-gray-600">{blog[0].title}</p>
                     <i className="fa-solid fa-angle-right"></i>
                 </div>
                 <div className="flex items-center gap-[5px] px-[16px] py-10px]">
-                    <p className="text-[18px] font-bold text-gray-600">{props.postname}</p>
+                    <p className="text-[18px] font-bold text-gray-600">{blog[0].postname}</p>
                 </div>
-            </div>
-            <Profile />
+            </div>}
+           
+            <Profile url={blog[0].profile} username={blog[0].username}/>
             <img src="/img/Rectangle 2.jpg" />
             <h2 className="text-[24px] sm:text-[29px] font-semibold leading-[43px]">Theme Installation</h2>
-            <LikeShare />
+            <LikeShare like={blog[0].likes} />
             <Texts />
         </div>
+    
     )
 }
 
-function LikeShare() {
+function LikeShare({like}) {
     return (
         <div className="flex justify-between items-center w-full">
             <div className="flex items-center gap-[10px] w-">
                 <button>
                     <i className="fa-regular fa-heart"></i>
                 </button>
-                <p className="text-[20px] leading-[26px]">23</p>
+                <p className="text-[20px] leading-[26px]">{like}</p>
             </div>
             <div className="flex p-[5px] items-center">
                 <button className="text-[15px] leading-[20px] flex p-[5px] items-center gap-[4px] rounded-[5px] bg-blue-600 text-gray-50">
@@ -45,13 +55,13 @@ function LikeShare() {
     )
 }
 
-function Profile() {
+function Profile({url,username}) {
     return (
         <div className="w-full sm:w-[310px]">
             <div className="user flex justify-between items-center">
                 <div className="account inline-flex items-center gap-[10px]">
-                    <img src="/img/Image 2.jpg" />
-                    <p className="text-[18px] font-semibold text-slate-700">Tracey Willson</p>
+                    <img src={url} />
+                    <p className="text-[18px] font-semibold text-slate-700">{username}</p>
                 </div>
                 <button className="text-[18px] font-semibold text-blue-500">Follow</button>
             </div>

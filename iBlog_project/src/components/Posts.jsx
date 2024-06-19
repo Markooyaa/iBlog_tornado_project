@@ -1,41 +1,10 @@
-import Card from "./Card";
+import { Card } from "./Card"
+import { cardsData } from "../data/data"
+
 
 
 export default function Posts(props) {
-    const cardsData = [
-        {
-            url: "/img/Rectangle 39.jpg",
-            title: 'The Impact of Technology on the Workplace',
-            username: 'Tracey Wilson',
-            date: 'Aug 20 2022',
-            likes: '23',
-            profile: '/img/Image 2.jpg',
-        },
-        {
-            url: "/img/Rectangle 39.jpg",
-            title: 'The Impact of Technology on the Workplace',
-            username: 'Tracey Wilson',
-            date: 'Aug 20 2022',
-            likes: '23',
-            profile: '/img/Image 2.jpg',
-        },
-        {
-            url: "/img/Rectangle 39.jpg",
-            title: 'The Impact of Technology on the Workplace',
-            username: 'Tracey Wilson',
-            date: 'Aug 20 2022',
-            likes: '23',
-            profile: '/img/Image 2.jpg',
-        },
-        {
-            url: "/img/Rectangle 39.jpg",
-            title: 'The Impact of Technology on the Workplace',
-            username: 'Tracey Wilson',
-            date: 'Aug 20 2022',
-            likes: '23',
-            profile: '/img/Image 2.jpg',
-        },
-    ]
+   
 
     return (
         <div className="flex flex-col flex-wrap gap-[16px]">
@@ -53,6 +22,7 @@ export default function Posts(props) {
                         cardsData.map((data, index) => {
                             return (
                                 <Card key={index}
+                                    id={data.id}
                                     url={data.url}
                                     title={data.title}
                                     username={data.username}
