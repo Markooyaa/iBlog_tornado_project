@@ -18,12 +18,12 @@ const menus = [
             {
                 id: 3,
                 name: 'Food&Beverage',
-                path: '/lifestyle/food'
+                path: '/lifestyle/Food&Beverage'
             },
             {
                 id: 4,
-                name: 'Home&Decor',
-                path: "/lifestyle/home"
+                name: 'Home and decor',
+                path: "/lifestyle/Home and decor"
             }
         ]
 
@@ -249,7 +249,7 @@ const cardsData = [
         likes: '23',
         profile: '/Images/Image 2.jpg',
         category:'lifestyle',
-        categoryid:'food'
+        categoryid:'Food&Beverage'
     },
     {
         id: 18,
@@ -260,7 +260,7 @@ const cardsData = [
         likes: '23',
         profile: '/Images/Image 2.jpg',
         category:'lifestyle',
-        categoryid:'food'
+        categoryid:'Food&Beverage'
 
     },
     {
@@ -272,7 +272,7 @@ const cardsData = [
         likes: '23',
         profile: '/Images/Image 2.jpg',
         category:'lifestyle',
-        categoryid:'food'
+        categoryid:'Food&Beverage'
     },
     {
         id: 20,
@@ -283,7 +283,7 @@ const cardsData = [
         likes: '23',
         profile: '/Images/Image 2.jpg',
         category:'lifestyle',
-        categoryid:'food'
+        categoryid:'Food&Beverage'
     },
     {
         id: 21,
@@ -294,7 +294,7 @@ const cardsData = [
         likes: '23',
         profile: '/Images/Image 2.jpg',
         category:'lifestyle',
-        categoryid:'food'
+        categoryid:'Food&Beverage'
     },
     {
         id: 22,
@@ -305,7 +305,7 @@ const cardsData = [
         likes: '23',
         profile: '/Images/Image 2.jpg',
         category:'lifestyle',
-        categoryid:'food'
+        categoryid:'Food&Beverage'
     },
     {
         id: 23,
@@ -316,7 +316,7 @@ const cardsData = [
         likes: '23',
         profile: '/Images/Image 2.jpg',
         category:'lifestyle',
-        categoryid:'food'
+        categoryid:'Food&Beverage'
     },
     {
         id: 24,
@@ -327,7 +327,7 @@ const cardsData = [
         likes: '23',
         profile: '/Images/Image 2.jpg',
         category:'lifestyle',
-        categoryid:'food'
+        categoryid:'Food&Beverage'
     },
     {
         id: 25,
@@ -338,7 +338,7 @@ const cardsData = [
         likes: '23',
         profile: '/Images/Image 2.jpg',
         category:'lifestyle',
-        categoryid:'home'
+        categoryid:'Home and decor'
     },
     {
         id: 26,
@@ -349,7 +349,7 @@ const cardsData = [
         likes: '23',
         profile: '/Images/Image 2.jpg',
         category:'lifestyle',
-        categoryid:'home'
+        categoryid:'Home and decor'
 
     },
     {
@@ -361,7 +361,7 @@ const cardsData = [
         likes: '23',
         profile: '/Images/Image 2.jpg',
         category:'lifestyle',
-        categoryid:'home'
+        categoryid:'Home and decor'
     },
     {
         id: 28,
@@ -372,7 +372,7 @@ const cardsData = [
         likes: '23',
         profile: '/Images/Image 2.jpg',
         category:'lifestyle',
-        categoryid:'home'
+        categoryid:'Home and decor'
     },
     {
         id: 29,
@@ -383,7 +383,7 @@ const cardsData = [
         likes: '23',
         profile: '/Images/Image 2.jpg',
         category:'lifestyle',
-        categoryid:'home'
+        categoryid:'Home and decor'
     },
     {
         id: 30,
@@ -394,7 +394,7 @@ const cardsData = [
         likes: '23',
         profile: '/Images/Image 2.jpg',
         category:'lifestyle',
-        categoryid:'home'
+        categoryid:'Home and decor'
     },
     {
         id: 31,
@@ -405,7 +405,7 @@ const cardsData = [
         likes: '23',
         profile: '/Images/Image 2.jpg',
         category:'lifestyle',
-        categoryid:'home'
+        categoryid:'Home and decor'
     },
     {
         id: 32,
@@ -416,7 +416,7 @@ const cardsData = [
         likes: '23',
         profile: '/Images/Image 2.jpg',
         category:'lifestyle',
-        categoryid:'home'
+        categoryid:'Home and decor'
     },{
         id: 33,
         url: "/Images/Rectangle 39.jpg",
