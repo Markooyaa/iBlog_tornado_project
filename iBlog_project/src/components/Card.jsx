@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
 
 export  function Card(props,){
-    
+    console.log(props)
     return(
         <div className="card flex flex-col gap-[8px] sm:gap-[10px] pb-[10px] sm:p-[10px] shadow-md rounded-[8px] w-[158px] sm:w-[230px]">
-            <Link  to={{pathname: `/postDetail/${props.id}`, state: props,}}>
+            
+            <Link  to={{pathname: `/postDetail/${props.id}`, state: props}}>
                 <div className="flex flex-col items-start gap-[5px]">
                     <img src={props.url}/>
                     <p className="px-[10px] sm:px-0 leading-[16px] sm:leading-[18px] text-[14px] sm:text-[16px] font-medium sm:font-semibold">{props.title}</p>
@@ -28,6 +29,7 @@ export  function Card(props,){
                     <i className="fa-brands fa-facebook-f"></i>
                         Share
                     </button>
+                   
                 </div>
             </div>
         </div>

@@ -6,6 +6,8 @@ export default function PostDetailComponent() {
     const params  = useParams()
     const blog = cardsData.filter(c => c.id == params.id)
     console.log(blog)
+    
+    
     return (
         
         <div className="content flex flex-col items-start gap-[16px] m-auto w-[328px] sm:w-[900px] pb-[30px] ml-[70px] mt-[50px]">
@@ -15,7 +17,7 @@ export default function PostDetailComponent() {
                     <i className="fa-solid fa-angle-right"></i>
                 </div>
                 <div className="flex items-center gap-[5px] px-[16px] py-10px]">
-                    <p className="text-[18px] text-gray-600">{blog[0].category}</p>
+                    <p className="text-[18px] text-gray-600">{blog[0].category} </p>
                     <i className="fa-solid fa-angle-right"></i>
                 </div>
                 <div className="flex items-center gap-[5px] px-[16px] py-10px]">

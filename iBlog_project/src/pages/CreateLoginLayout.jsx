@@ -1,10 +1,15 @@
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { LoginPage } from "./LoginPage";
 import { CreateAccount, CreateAccount2 } from "./CreateAccount";
-import { ChangePassword, ChangePassword2, ChangePassword3 } from "./ChangePassword";
+import {
+  ChangePassword,
+  ChangePassword2,
+  ChangePassword3,
+} from "./ChangePassword";
+
+import MyProfileLayout from "./MyProfileLayout";
+import AddPost from "./AddPost";
+import Content from "../components/Content";
 
 const router = createBrowserRouter([
   {
@@ -31,18 +36,27 @@ const router = createBrowserRouter([
     path: "/changePassword_Page3",
     element: <ChangePassword3 />,
   },
+  {
+    path: "/profile",
+    element: <MyProfileLayout />,
+    children: [
+      {
+        path:"/profile",
+        element: <Content />,
+      },
+      {
+        path: "/profile/add",
+        element: <AddPost />,
+      },
+      {},
+    ]
+  },
 ]);
 
-
 export default function CreateLoginLayout() {
-
   return (
     <div>
-      <RouterProvider router={router}>
-
-
-      </RouterProvider>
-
+      <RouterProvider router={router} />
     </div>
-  )
+  );
 }
