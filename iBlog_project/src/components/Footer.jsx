@@ -5,7 +5,11 @@ export default function Footer() {
           <div className="flex flex-col items-start w-[216px]">
             <div className="h-[52px]">
               <div className="flex items-center">
+<<<<<<< HEAD
                 <img src="/img/Group.png" />
+=======
+                <img src="Images/Group.png" />
+>>>>>>> f09563b (My Profile)
                 <h2 className="text-orange-400 text-[28px] font-normal w-[63px] h-[42px]">
                   iBlog
                 </h2>
