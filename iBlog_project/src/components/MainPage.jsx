@@ -7,7 +7,7 @@ export default function MainPage() {
             <Posts category='technology' />
             <Posts category='health' />
 
-            <button className="hidden sm:inline-flex px-[20px] py-[12px] justify-center items-center gap-[12px] border-[1px] rounded-[10px]">Цааш унших</button>
+            <button className="hidden sm:inline-flex px-[20px] py-[12px] justify-center items-center gap-[12px] border-[1px] rounded-[10px]  ">Цааш унших</button>
         </div>
     )
 }
