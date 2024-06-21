@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 
 export default function HeaderComponent() {
     return (
@@ -28,10 +28,9 @@ export default function HeaderComponent() {
 }
 
 function Button(props) {
-    return (
-        <a href={props.url} className={props.className}>
-            {props.name}
-        </a>
-    )
+  return (
+    <a href={props.url} className={props.className}>
+      {props.name}
+    </a>
+  );
 }
-
