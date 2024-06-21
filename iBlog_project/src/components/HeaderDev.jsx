@@ -1,14 +1,12 @@
 
 import { Link,useNavigate } from "react-router-dom"
+import { Logo } from "./Logo";
 export default function Login_Create_header({text}){
   const navigate = useNavigate();
     return (
         <header className="lg:border-b-[1px] max-[1024px]:flex max-[1024px]:items-center   h-[70px]">
         <div id="computer" className=" hidden lg:flex lg:logo  lg:h-[46px] lg:justify-between lg:mx-[50px] lg:items-center lg:my-[20px]">
-                <div className="relative logo flex items-center">
-                    <img src="images/Group.png" alt="logo" className="w-[20px] h-[27px] "/>
-                    <h2 className="text-orange-400 text-3xl font-normal"><span className="text-[#F77268]">i</span>blog</h2>
-                </div>
+               <Logo></Logo>
                 
                 <div className="relative search">
                     <input type="text" className="border rounded-2xl pl-4 pr-12 py-2 w-[550px] h-[39px] focus:outline-none focus:border-blue-500" placeholder="Хайх"/>
@@ -19,12 +17,12 @@ export default function Login_Create_header({text}){
                   </div>
                   <div className="Buttons">
                    <Link to='/createAccount' >
-                   <button className="text-[#E86B02] border border-[#DCE3EA] rounded-lg pl-4 pr-4 py-[10px]  mr-[10px] pr-[30px] pl-[30px]" >
+                   <button className="text-[#E86B02] border border-[#DCE3EA] rounded-[10px]  pl-4 pr-4 py-[10px]  mr-[10px] pr-[30px] pl-[30px]" >
                         Бүртгүүлэх
                     </button>  
                    </Link>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
                    <Link to='/login'>
-                   <button className="text-white bg-[#E86B02] rounded-lg pl-4 pr-4 py-[10px] pr-[30px] pl-[30px]" >
+                   <button className="text-white bg-[#E86B02] rounded-[10px]  pl-4 pr-4 py-[10px] pr-[30px] pl-[30px]" >
                         Нэвтрэх
                     </button>
                    </Link>
