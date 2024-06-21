@@ -1,16 +1,18 @@
-import Card from "./Card"
+
+    
+import { Card } from "./Card"
 import { menus, cardsData } from "../data/data"
-import { useParams } from "react-router-dom"
+import { Link, useParams } from "react-router-dom"
 
 
 export default function CategoryDetailComponent() {
     const params = useParams()
-   
+   console.log(params)
     return (
         <div className="flex flex-col items-start sm:justify-center gap-[16px] sm:m-[30px] w-full">
             <div className="hidden sm:flex items-center gap-[5px] h-[75px]">
                 <div className="flex items-center gap-[5px] px-[16px] py-10px]">
-                    <a href="./home.html" className="text-[18px] text-gray-600">Нүүр хуудас</a>
+                    <Link to="/" className="text-[18px] text-gray-600">Нүүр хуудас</Link>
                     <i className="fa-solid fa-angle-right"></i>
                 </div>
                 <div className="flex items-center gap-[5px] px-[16px] py-10px]">
@@ -35,12 +37,15 @@ export default function CategoryDetailComponent() {
                         cardsData.map((data, index) => {
                             return (
                                 <Card key={index}
+                                id={data.id}
                                     url={data.url}
                                     title={data.title}
                                     username={data.username}
                                     date={data.date}
                                     likes={data.likes}
                                     profile={data.profile} 
+                                    category={params.category}
+                                    categoryid={params.id}
                                 />
                             )
                         })

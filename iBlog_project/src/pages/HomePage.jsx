@@ -2,6 +2,10 @@
 import MainPage from "../components/MainPage"
 
 import { useState } from "react";
+
+
+
+
 export default function HomePage() {
     const [showSidebar, setShowSidebar] = useState(false);
     return (

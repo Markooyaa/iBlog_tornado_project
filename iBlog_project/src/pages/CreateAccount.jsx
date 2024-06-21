@@ -49,7 +49,7 @@ export function CreateAccount() {
             </div>
             <Login_Create_footer></Login_Create_footer>
 
-            <Outlet />
+           
 
         </>
     )

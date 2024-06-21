@@ -4,10 +4,13 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import HomePage from "./pages/HomePage";
+
+import { menus } from "./data/data";
 import { LoginPage } from "./pages/LoginPage";
 import { CreateAccount, CreateAccount2 } from "./pages/CreateAccount";
 import { ChangePassword, ChangePassword2, ChangePassword3 } from "./pages/ChangePassword";
+import PostDetailComponent from "./components/PostDetailComponent";
+import HomePage from "./pages/HomePage";
 
 const router = createBrowserRouter([
   {
@@ -15,13 +18,19 @@ const router = createBrowserRouter([
     element: <BlogLayout />,
     children: [
       {
-        path: "/:category/:id",
-        element: <CategoryDetailComponent />
+        path: "/",
+        element: <HomePage />
       },
       {
-        path: '/',
-        element: <HomePage />
+        path: "/postDetail/:id",
+        element: <PostDetailComponent />
+      },
+      {
+        path: "/:category/:id",
+        element: <CategoryDetailComponent />
+      
       }
+
     ]
   },
   {
@@ -60,3 +69,5 @@ function App() {
 }
 
 export default App
+
+
