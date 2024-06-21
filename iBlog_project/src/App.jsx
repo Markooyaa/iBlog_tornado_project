@@ -11,6 +11,7 @@ import { CreateAccount, CreateAccount2 } from "./pages/CreateAccount";
 import { ChangePassword, ChangePassword2, ChangePassword3 } from "./pages/ChangePassword";
 import PostDetailComponent from "./components/PostDetailComponent";
 import HomePage from "./pages/HomePage";
+import LikedPost from "./pages/LikedPost";
 
 const router = createBrowserRouter([
   {
@@ -64,6 +65,7 @@ function App() {
   return (
     <>
       <RouterProvider router={router} />
+      <LikedPost />
     </>
   )
 }

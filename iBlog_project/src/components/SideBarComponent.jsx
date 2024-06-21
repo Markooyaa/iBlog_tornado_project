@@ -54,7 +54,7 @@ function HomeLink({ url, showSidebar, setShowSidebar }) {
     return (
         <Link to={url}>
             <div className={showSidebar ? "flex" : "hidden sm:flex h-[46px] items-center flex-grow"}>
-                <img src="img/Group.png" alt="logo" className="w-[20px] h-[27px]" />
+                <img src="/images/Group.png" alt="logo" className="w-[20px] h-[27px]" />
                 <h2 className="text-orange-400 text-3xl font-normal">iBlog</h2>
             </div>
         </Link>
