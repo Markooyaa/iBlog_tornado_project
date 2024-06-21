@@ -4,7 +4,7 @@ import { cardsData } from "../data/data"
 
 
 export default function Posts(props) {
-   
+    const List = cardsData.filter(cardsData=>cardsData.category===props.category && cardsData.categoryid==props.categoryid);
 
     return (
         <div className="flex flex-col flex-wrap gap-[16px]">
@@ -18,9 +18,10 @@ export default function Posts(props) {
             </div>
             <div className="flex sm:justify-end items-center flex-wrap w-full overflow-x-scroll pb-2">
                 <div className="flex gap-[8px] sm:gap-[22px] flex-wrap px-[20px]">
-                    {cardsData &&
-                        cardsData.map((data, index) => {
+                    {List &&
+                        List.map((data, index) => {
                             return (
+                                
                                 <Card key={index}
                                     id={data.id}
                                     url={data.url}
@@ -28,7 +29,9 @@ export default function Posts(props) {
                                     username={data.username}
                                     date={data.date}
                                     likes={data.likes}
-                                    profile={data.profile} />)
+                                    profile={data.profile}
+                                    category={data.category}
+                                    categoryid={data.categoryid} />)
                         })
                     }
                 </div>
