@@ -20,10 +20,11 @@ export default function PostDetailComponent() {
                     <p className="text-[18px] text-gray-600 capitalize">{blog[0].category} </p>
                     <i className="fa-solid fa-angle-right"></i>
                 </div>
-                <div className="flex items-center gap-[5px] px-[16px] py-10px]">
+                
+                {blog[0].categoryid!=''? <div className="flex items-center gap-[5px] px-[16px] py-10px]">
                     <p className="text-[18px] text-gray-600 capitalize">{blog[0].categoryid}</p>
                     <i className="fa-solid fa-angle-right"></i>
-                </div>
+                </div>:''}
                 <div className="flex items-center gap-[5px] px-[16px] py-10px]">
                     <p className="text-[18px] font-bold text-gray-600 capitalize">{blog[0].title}</p>
                 </div>
