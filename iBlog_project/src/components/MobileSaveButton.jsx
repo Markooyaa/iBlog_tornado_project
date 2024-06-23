@@ -1,7 +1,7 @@
 export default function MobileSaveButton() {
   return (
     <>
-      <button className="w-full sm:hidden flex justify-center px-[30px] py-[10px] text-[15px] font-normal rounded-xl text-[#fff] bg-[#E86B02] mt-[5%]">
+      <button className="w-full  sm:hidden flex justify-center px-[30px] py-[10px] text-[15px] font-normal rounded-xl text-[#fff] bg-[#E86B02] mt-[5%] bottom-0 hover:bg-orange-400 active:bg-orange-600">
         <span>хадгалах</span>
         <svg
           xmlns="http://www.w3.org/2000/svg"

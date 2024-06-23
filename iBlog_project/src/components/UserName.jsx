@@ -6,9 +6,8 @@ export default function UserName(){
         </p>
         <input
           type="text"
-          className="w-full h-[50px] border-2 px-[24px] py-[14px] rounded-xl mb-[20px]"
+          className="w-full h-[50px] border-2 px-[24px] py-[14px] rounded-xl mb-[20px] hover:bg-slate-200 active:bg-slate-300 cursor-pointer"
           placeholder="Хэрэглэгчийн нэр"
-          
         />
       </div>
     );

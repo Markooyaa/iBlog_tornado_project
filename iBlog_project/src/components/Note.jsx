@@ -2,7 +2,7 @@
 
 export default function Note() {
   return (
-    <div class="note sm:w-[265px] w-[215px] sm: flex-col absolute sm:top-[40%] top-[65%] sm:left-[50%] left-1/4 z-[-999] sm: h-[142px] sm: flex sm: items-center ">
+    <div class="note sm:w-[265px] w-[215px] sm: flex-col absolute sm:top-[40%] top-[50%] sm:left-[50%] left-1/4 z-[-999] sm: h-[142px] sm: flex sm: items-center ">
       <div class="image flex justify-center mb-[13px] sm: size-[75px]">
         <img width="145px" src={"Images/Note.png"} />
       </div>

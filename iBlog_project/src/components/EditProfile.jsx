@@ -10,8 +10,8 @@ import MobileSaveButton from "./MobileSaveButton";
 import MobileBottomBtns from "./MobileBottomBtns";
 import UserImage from "./UserImage";
 
-export default function EditProfile() {
-  const [show, setShow] = useState(false);
+export default function EditProfile(change, setChange) {
+  const [show, setShow] = useState(true);
   let selectedStyle =
   "Профайл-мэдээлэл sm:flex hidden justify-center h-[40px] w-full p-1 border-b-2 border-[#E86B02] font-bold text-[18px] rounded-t-xl hover:bg-slate-200 active:bg-slate-300 cursor-pointer";
   let unselectedStyle =
@@ -22,9 +22,9 @@ export default function EditProfile() {
     "Профайл-мэдээлэл sm:hidden flex justify-center h-[40px] w-full p-1 border-b-2 border-[#E86B02] sm:font-bold font-medium sm:text-[18px] text-[14px] rounded-t-xl hover:bg-slate-200 active:bg-slate-400 cursor-pointer";
   
   return (
-    <div className="content sm:w-3/4 w-full h-full sm:flex-col flex-col-reverse  border-5 border-orange-600 sm:ml-[155px]">
+    <div className="content relative sm:w-3/4 w-full h-full sm:flex-col flex-col-reverse  border-5 border-orange-600 sm:ml-[155px]">
       <div className="categories gap-[35px] sm:flex hidden sm:w-full w-full h-[40px] ">
-        {/* ----------------------------------------------------------- Desktop ------------------------------------------- */}
+        {/* ----------------------------------------------------------Buttons flex ------------------------------------------- */}
         <button
           onClick={() => setShow(true)}
           className={show ? selectedStyle : unselectedStyle}>
@@ -60,12 +60,14 @@ export default function EditProfile() {
           <p>Нууц үг солих</p>
         </button>
       </div>
-      <ProfileFixMobileButton />
+      <ProfileFixMobileButton change={change} setChange={setChange}/>
 
-      {/* ----------------------------------------------------------- Mobile ------------------------------------------- */}
-      <div className="flex-col w-full ">
+      {/* ----------------------------------------------------------- Desktop & Mobile ------------------------------------------- */}
+      <div className="flex-col w-full h-[100%-[50px])]">
         {show && <EditProfileMain />}
-        <div className="sm:hidden flex justify-center">{!show && <UserImage />}</div>
+        <div className="sm:hidden flex justify-center">
+          {!show && <UserImage />}
+        </div>
         <div className="sm:hidden flex">
           <button
             onClick={() => setShow(true)}
@@ -110,8 +112,8 @@ export default function EditProfile() {
           </div>
         </div>
       </div>
-      <MobileSaveButton />
-      <MobileBottomBtns />
+      
+      
     </div>
   );
 }

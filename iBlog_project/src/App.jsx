@@ -53,13 +53,7 @@ const router = createBrowserRouter([
       },
     ],
   },
-  {
-    path: "/edit",
-    element: <EditProfileMain />,
-    children: [
-      
-    ],
-  },
+  
 ]);
 
 function App() {

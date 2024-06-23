@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom"
 export default function SideBar(){
+  
+  
     return (
-      <div className="sidebar sm:flex hidden">
+      <div className="sidebar sm:flex flex sm:w-[390px] ">
         <div className="left-container  w-full flex flex-col grow border-5 p-6 sm:gap-5 gap-[16px]">
           <div
             className="profile flex border-5 gap-4 mx-[24px] 
@@ -39,9 +41,9 @@ export default function SideBar(){
               </ul>
             </div>
           </div>
-          <Link
-            to="/profile/edit"
-            className="profile-fix w- h-[41px] flex justify-center text-center border-2 border-[#E2E8EE] rounded-md hover:bg-slate-200 active:bg-slate-300">
+          <Link to="/profile/edit"
+            onClick={() => setChange(true)}
+            className="profile-fix  h-[41px] flex justify-center text-center border-2 border-[#E2E8EE] rounded-md hover:bg-slate-200 active:bg-slate-300"   >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="17"

@@ -1,4 +1,6 @@
-function ProfileFixMobileButton() {
+import { Link } from "react-router-dom"
+
+function ProfileFixMobileButton(change, setChange) {
   return (
     <div className="categories-inside sm:hidden flex justify-center h-[74px] sm:w-[150px] w-full sm: px-[10px] sm:border-b-2 sm:border-[#E86B02] font-bold text-[18px] relative">
       <div className="Pen flex  items-center">
@@ -14,7 +16,7 @@ function ProfileFixMobileButton() {
             fill="#E86B02"
           />
         </svg>
-        <div className="flex text-center absolute left-[2%]">
+        <Link to="/profile"  onClick={()=>setChange(true)} className="flex text-center absolute left-[2%]">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -27,7 +29,7 @@ function ProfileFixMobileButton() {
               fill="#E86B02"
             />
           </svg>
-        </div>
+        </Link>
         Профайл засах
       </div>
     </div>
