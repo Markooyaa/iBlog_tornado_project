@@ -24,9 +24,9 @@ export default function MyProfileLayout() {
 
         <Outlet />
       </div>
-      <div className="sm:flex hidden justify-center">
+      
         <Login_Create_footer/>
-      </div>
+     
     </div>
   );
 }
