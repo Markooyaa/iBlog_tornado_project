@@ -1,5 +1,5 @@
 const Images = {
-    Logo: require('./Logo.jpg').default,
+    Logo: require('./Group.png').default,
     Note: require('./Note.png').default,
     Profile: require('./Profile.jpg').default,
 };

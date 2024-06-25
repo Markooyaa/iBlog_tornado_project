@@ -41,7 +41,7 @@ export default function SideBarComponent({ showSidebar, setShowSidebar }) {
                     <div className={showSidebar ? "flex" : "hidden w-[245px] h-[42px] px-[15px] items-center gap-[5px]"}>
                         <button className="logout flex w-[250px] h-[42px] px-[15px] items-center gap-[5px] pt-[150px] pb-[30px]">
                             <i className="fa-solid fa-arrow-right-from-bracket"></i>
-                            <p>Гарах</p>
+                            <p>Гарxsх</p>
                         </button>
                     </div>
                 </div>
@@ -55,7 +55,7 @@ function HomeLink({ url, showSidebar, setShowSidebar }) {
     return (
         <Link to={url}>
             <div className={showSidebar ? "flex" : "hidden sm:flex h-[46px] items-center flex-grow"}>
-                <img src="Images/Group.png" alt="logo" className="w-[20px] h-[27px]" />
+                <img src="images/Group.png" alt="logo" className="w-[20px] h-[27px]" />
                 <h2 className="text-orange-400 text-3xl font-normal">iBlog</h2>
             </div>
         </Link>
