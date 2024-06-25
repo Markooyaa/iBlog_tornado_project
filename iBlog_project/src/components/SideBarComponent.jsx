@@ -41,7 +41,7 @@ export default function SideBarComponent({ showSidebar, setShowSidebar }) {
                     <div className={showSidebar ? "flex" : "hidden w-[245px] h-[42px] px-[15px] items-center gap-[5px]"}>
                         <button className="logout flex w-[250px] h-[42px] px-[15px] items-center gap-[5px] pt-[150px] pb-[30px]">
                             <i className="fa-solid fa-arrow-right-from-bracket"></i>
-                            <p>Гарxsх</p>
+                            <p>Гарах</p>
                         </button>
                     </div>
                 </div>
