@@ -187,7 +187,7 @@ export function ChangePassword3() {
 
                     <div id="Dialog" className=" save lg:flex hidden">
 
-                        <Full_colored_button text={'Хадгалах'} id={''} onclick_button={Dialog} />
+                        <Full_colored_button text={'Хадгалах'} id={''} onClick_button={Dialog} />
 
                         {dialog ?
                             <div id="dialog"
@@ -227,10 +227,11 @@ export function ChangePassword3() {
                     <div id="mobileDialog" className="save lg:hidden flex flex-col ">
 
 
-                        <Full_colored_button text={'Хадгалах'} id={'teleportButton'} onclick_button={DialogMobile} />
+                        <Full_colored_button text={'Хадгалах'} id={'teleportButton'} onClick_button={DialogMobile} />
 
 
-                        {mobileDialog ? <div id="dialogContainer "
+                        {mobileDialog ? 
+                        <div id="dialogContainer "
                             className="fixed inset-0 flex items-center justify-center  ">
                             <div className="bg-white rounded-md p-4 flex flex-col justify-center shadow-lg">
                                 <div className="text-center flex justify-center">

@@ -11,7 +11,7 @@ import MobileBottomBtns from "../components/MobileBottomBtns";
 import MainPostButton from "../components/MainPostButton";
 export default function AddPost() {
   return (
-    <div className="content sm:w-3/4 h-full relative sm:pl-[155px]  flex-col flex items-center">
+    <div className="content sm:w-3/4 h-full  sm:pl-[155px]  flex-col flex items-center">
       <div className="categories sm: flex items-center sm:w-3/4 w-full sm:h-[40px] h-full border-b-2 border-slate-200 ">
         <CategoryInside />
       </div>
