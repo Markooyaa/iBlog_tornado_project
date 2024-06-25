@@ -41,9 +41,11 @@ export default function SideBar(){
               </ul>
             </div>
           </div>
-          <Link to="/profile/edit"
-            onClick={() => setChange(true)}
-            className="profile-fix  h-[41px] flex justify-center text-center border-2 border-[#E2E8EE] rounded-md hover:bg-slate-200 active:bg-slate-300"   >
+          <Link
+            to="/profile/edit"
+            onClick={() => setChange(false)}
+            // onClick={() => setChange(true)}
+            className="profile-fix  h-[41px] flex justify-center text-center border-2 border-[#E2E8EE] rounded-md hover:bg-slate-200 active:bg-slate-300">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="17"

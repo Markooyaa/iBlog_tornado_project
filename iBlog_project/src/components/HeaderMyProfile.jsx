@@ -22,7 +22,7 @@ function HeaderMyProfile({ button, setButton, change, setChange  }) {
       className={
         change
           ? "hidden"
-          : "  flex sm:flex border-b-[1px] sm:w-full sm:h-[74px] h-[56px]  sm:px-[50px] px-[16px] justify-between  items-center "
+          : "test  flex sm:flex border-b-[1px] sm:w-full sm:h-[74px] h-[56px]  sm:px-[50px] px-[16px] justify-between  items-center "
       }>
       <div className="mobile-icon sm:hidden flex sm:items-center ">
         <svg

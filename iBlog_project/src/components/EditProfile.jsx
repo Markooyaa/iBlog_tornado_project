@@ -7,7 +7,7 @@ import ProfileFixMobileButton from "./ProfileFixMobileButton";
 import UserName from "./UserName";
 import UserEmail from "./UserEmail";
 import MobileSaveButton from "./MobileSaveButton";
-import MobileBottomBtns from "./MobileBottomBtns";
+
 import UserImage from "./UserImage";
 
 export default function EditProfile(change, setChange) {

@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function CategoryInside(){
     return (
       <div className="categories-inside flex justify-center h-[40px] sm:w-[150px] w-full sm: px-[10px] sm:border-b-2 sm:border-[#E86B02] font-bold text-[18px] relative">
@@ -14,7 +16,7 @@ function CategoryInside(){
               fill="#E86B02"
             />
           </svg>
-          <div className="flex text-center absolute left-[2%]">
+          <Link to="/profile" className="flex text-center absolute left-[2%]" onClick={() => setChange(false)}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -27,7 +29,7 @@ function CategoryInside(){
                 fill="#E86B02"
               />
             </svg>
-          </div>
+          </Link>
           Пост нэмэх
         </div>
       </div>
