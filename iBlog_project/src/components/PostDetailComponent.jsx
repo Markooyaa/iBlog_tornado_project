@@ -17,20 +17,21 @@ export default function PostDetailComponent() {
                     <i className="fa-solid fa-angle-right"></i>
                 </div>
                 <div className="flex items-center gap-[5px] px-[16px] py-10px]">
-                    <p className="text-[18px] text-gray-600">{blog[0].category} </p>
+                    <p className="text-[18px] text-gray-600 capitalize">{blog[0].category} </p>
                     <i className="fa-solid fa-angle-right"></i>
                 </div>
-                <div className="flex items-center gap-[5px] px-[16px] py-10px]">
-                    <p className="text-[18px] text-gray-600">{blog[0].title}</p>
+                
+                {blog[0].categoryid!=''? <div className="flex items-center gap-[5px] px-[16px] py-10px]">
+                    <p className="text-[18px] text-gray-600 capitalize">{blog[0].categoryid}</p>
                     <i className="fa-solid fa-angle-right"></i>
-                </div>
+                </div>:''}
                 <div className="flex items-center gap-[5px] px-[16px] py-10px]">
-                    <p className="text-[18px] font-bold text-gray-600">{blog[0].postname}</p>
+                    <p className="text-[18px] font-bold text-gray-600 capitalize">{blog[0].title}</p>
                 </div>
             </div>}
            
             <Profile url={blog[0].profile} username={blog[0].username}/>
-            <img src="/img/Rectangle 2.jpg" />
+            <img src="/Images/Rectangle 2.jpg" />
             <h2 className="text-[24px] sm:text-[29px] font-semibold leading-[43px]">Theme Installation</h2>
             <LikeShare like={blog[0].likes} />
             <Texts />

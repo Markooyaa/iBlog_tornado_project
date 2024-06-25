@@ -65,12 +65,12 @@ export function ChangePassword2() {
                 <form action="">
                     <div className="email mt-[20px] mb-[10px] flex justify-center ">
 
-                        <input type="number" required onInput={(e) => { if (e.target.value.length > e.target.maxLength) e.target.value = e.target.value.slice(0, e.target.maxLength); }} className="[appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none w-[50px] mr-[10px] h-[50px] rounded-lg focus:outline-none pl-[20px]  bg-[#F5F7F9]" placeholder="-" maxLength="1" max="9" min="0" />
-                        <input type="number" required onInput={(e) => { if (e.target.value.length > e.target.maxLength) e.target.value = e.target.value.slice(0, e.target.maxLength); }} className="[appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none w-[50px] mr-[10px] h-[50px] rounded-lg focus:outline-none pl-[20px]  bg-[#F5F7F9]" placeholder="-" maxLength="1" max="9" min="0" />
-                        {/* <input type="number" required onKeyPress="if(this.value.length==1) return false;" className="[appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none w-[50px] mr-[10px] h-[50px] rounded-lg focus:outline-none pl-[20px]  bg-[#F5F7F9]" placeholder="-" maxLength="1" max="9" min="0" />
-                        <input type="number" required onKeyPress="if(this.value.length==1) return false;" className="[appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none w-[50px]  h-[50px] rounded-lg focus:outline-none pl-[20px]  bg-[#F5F7F9]" placeholder="-" maxLength="1" max="9" min="0" /> */}
-                        <input type="number" required onInput={(e) => { if (e.target.value.length > e.target.maxLength) e.target.value = e.target.value.slice(0, e.target.maxLength); }} className="[appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none w-[50px] mr-[10px] h-[50px] rounded-lg focus:outline-none pl-[20px]  bg-[#F5F7F9]" placeholder="-" maxLength="1" max="9" min="0" />
-                        <input type="number" required onInput={(e) => { if (e.target.value.length > e.target.maxLength) e.target.value = e.target.value.slice(0, e.target.maxLength); }} className="[appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none w-[50px] mr-[10px] h-[50px] rounded-lg focus:outline-none pl-[20px]  bg-[#F5F7F9]" placeholder="-" maxLength="1" max="9" min="0" />
+                        <input type="number" required onInput={(e) => { if (e.target.value.length > e.target.maxLength) e.target.value = e.target.value.slice(0, e.target.maxLength); }} className="[appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none w-[50px] mr-[10px] h-[50px] rounded-[10px]  focus:outline-none pl-[20px]  bg-[#F5F7F9]" placeholder="-" maxLength="1" max="9" min="0" />
+                        <input type="number" required onInput={(e) => { if (e.target.value.length > e.target.maxLength) e.target.value = e.target.value.slice(0, e.target.maxLength); }} className="[appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none w-[50px] mr-[10px] h-[50px] rounded-[10px]  focus:outline-none pl-[20px]  bg-[#F5F7F9]" placeholder="-" maxLength="1" max="9" min="0" />
+                        {/* <input type="number" required onKeyPress="if(this.value.length==1) return false;" className="[appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none w-[50px] mr-[10px] h-[50px] rounded-[10px]  focus:outline-none pl-[20px]  bg-[#F5F7F9]" placeholder="-" maxLength="1" max="9" min="0" />
+                        <input type="number" required onKeyPress="if(this.value.length==1) return false;" className="[appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none w-[50px]  h-[50px] rounded-[10px]  focus:outline-none pl-[20px]  bg-[#F5F7F9]" placeholder="-" maxLength="1" max="9" min="0" /> */}
+                        <input type="number" required onInput={(e) => { if (e.target.value.length > e.target.maxLength) e.target.value = e.target.value.slice(0, e.target.maxLength); }} className="[appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none w-[50px] mr-[10px] h-[50px] rounded-[10px]  focus:outline-none pl-[20px]  bg-[#F5F7F9]" placeholder="-" maxLength="1" max="9" min="0" />
+                        <input type="number" required onInput={(e) => { if (e.target.value.length > e.target.maxLength) e.target.value = e.target.value.slice(0, e.target.maxLength); }} className="[appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none w-[50px] mr-[10px] h-[50px] rounded-[10px]  focus:outline-none pl-[20px]  bg-[#F5F7F9]" placeholder="-" maxLength="1" max="9" min="0" />
 
 
                     </div>
@@ -139,7 +139,7 @@ export function ChangePassword3() {
                     <div className="password">
                         <div className="relative">
                             <input id="password" required type={password ? 'text' : 'password'}
-                                className=" rounded-lg pl-4 pr-12 py-2 lg:w-[478px] w-[335px]  h-[50px] focus:outline-none focus:border-blue-500  bg-[#F5F7F9] my-[12px]"
+                                className=" rounded-[10px]  pl-4 pr-12 py-2 lg:w-[478px] w-[335px]  h-[50px] focus:outline-none focus:border-blue-500  bg-[#F5F7F9] my-[12px]"
                                 placeholder="Нууц үг зохиох" minLength="8" />
 
                             <div className="absolute inset-y-0 right-0 flex items-center px-3" onClick={togglePasswordVisibility}>
@@ -157,7 +157,7 @@ export function ChangePassword3() {
                     <div className="password">
                         <div className="relative">
                             <input id="pswrd" required type={rePassword ? 'text' : 'password'}
-                                className=" rounded-lg pl-4 pr-12 py-2 lg:w-[478px] w-[335px]  h-[50px] focus:outline-none focus:border-blue-500  bg-[#F5F7F9] my-[12px]"
+                                className=" rounded-[10px]  pl-4 pr-12 py-2 lg:w-[478px] w-[335px]  h-[50px] focus:outline-none focus:border-blue-500  bg-[#F5F7F9] my-[12px]"
                                 placeholder="Нууц үг давтах" minLength="8" />
                             <div className="absolute inset-y-0 right-0 flex items-center px-3" onClick={toggleRePasswordVisibility}>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 20 18" fill="none">
@@ -192,7 +192,7 @@ export function ChangePassword3() {
                         {dialog ?
                             <div id="dialog"
                                 className=" fixed  inset-10 flex items-start justify-center ">
-                                <div className="bg-white rounded-lg p-2.5 flex  justify-evenly w-[380px ] mt-[5%] shadow-2xl">
+                                <div className="bg-white rounded-[10px]  p-2.5 flex  justify-evenly w-[380px ] mt-[5%] shadow-2xl">
                                     <div className="text-center flex justify-center items-center ">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 39 38" fill="none"
                                             className="flex justify-center">
@@ -249,7 +249,7 @@ export function ChangePassword3() {
 
                                 <Link to='/login'>
                                     <button id="closeDialogButton"
-                                        className="text-white bg-[#E86B02] lg:rounded-lg rounded-2xl pl-4 pr-4 py-[10px] pr-[30px] pl-[30px] lg:w-[478px] w-[335px] h-[50px] my-[12px]"
+                                        className="text-white bg-[#E86B02] lg:rounded-[10px]  rounded-2xl pl-4 pr-4 py-[10px] pr-[30px] pl-[30px] lg:w-[478px] w-[335px] h-[50px] my-[12px]"
                                         onClick={DialogMobile}>Ok</button>
                                 </Link>
                             </div>

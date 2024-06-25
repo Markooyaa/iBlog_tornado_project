@@ -16,7 +16,7 @@ export function CreateAccount() {
             <div className="container flex-col flex justify-center items-center lg:pt-[180px] lg:pb-[270px] m-auto   lg:[850px]">
                 <div className="logo lg:hidden flex flex-col">
                     <div className=" w-[100%] justify-center flex items-center  ">
-                        <img src="images/Group.png" alt="logo" className="w-[20px] h-[27px] " />
+                        <img src="Images/Group.png" alt="logo" className="w-[20px] h-[27px] " />
                         <h2 className="text-orange-400 text-3xl font-normal"><span className="text-[#F77268]">i</span>blog</h2>
                     </div>
                     <div className="text-[9px]">
@@ -37,7 +37,7 @@ export function CreateAccount() {
                 <GreyLine text={'Та бүртгэлтэй юу?'}></GreyLine>
                 <div className="burtguulh">
                     <Link to='/login'  >
-                        <button className="text-black border-[#E86B02] border-[1.5px] lg:rounded-lg rounded-2xl pl-4 pr-4 py-[10px] pr-[30px] pl-[30px] lg:w-[478px] w-[335px] h-[50px] my-[10px] " >
+                        <button className="text-black border-[#E86B02] border-[1.5px] lg:rounded-[10px]  rounded-2xl pl-4 pr-4 py-[10px] pr-[30px] pl-[30px] lg:w-[478px] w-[335px] h-[50px] my-[10px] " >
                             <p className=" flex items-center justify-center ">  Нэвтрэх</p>
                         </button>
                     </Link>
@@ -71,7 +71,7 @@ export function CreateAccount2() {
             <div className="container flex-col flex justify-center items-center lg:pt-[180px] lg:pb-[270px] m-auto   lg:[850px]">
                 <div className="logo lg:hidden flex flex-col">
                     <div className=" w-[100%] justify-center flex items-center  ">
-                        <img src="images/Group.png" alt="logo" className="w-[20px] h-[27px] " />
+                        <img src="Images/Group.png" alt="logo" className="w-[20px] h-[27px] " />
                         <h2 className="text-orange-400 text-3xl font-normal"><span className="text-[#F77268]">i</span>blog</h2>
                     </div>
                     <div className="text-[9px]">
