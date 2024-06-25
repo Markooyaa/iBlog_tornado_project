@@ -1,4 +1,3 @@
-
 import SideBar from "../components/SideBar";
 import Content from "../components/Content";
 import Note from "../components/Note";
@@ -6,9 +5,11 @@ import Category from "../components/Category";
 import { useState } from "react";
 import { Outlet } from "react-router-dom";
 import Footer from "../components/Footer";
+
 import MobileBottomBtns from "../components/MobileBottomBtns";
 import { HeaderMyProfile } from "../components/HeaderMyProfile";
 import Login_Create_footer from "../components/FooterDev";
+import MobileSaveButton from "../components/MobileSaveButton";
 export default function MyProfileLayout() {
   const [button, setButton] = useState(false);
   const [change, setChange] = useState(true);
@@ -30,7 +31,7 @@ export default function MyProfileLayout() {
         <Outlet />
       </div>
       <div className="sm:flex hidden justify-center">
-        <Login_Create_footer/>
+        <Login_Create_footer />
       </div>
       <div className="absolute bottom-[94px] w-full px-[5%]">
         <MobileSaveButton />

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-function HeaderMyProfile({ button, setButton }) {
+export function HeaderMyProfile({ button, setButton }) {
   // const [Button, SetButton] = useState(false);
 
     function Click() {
