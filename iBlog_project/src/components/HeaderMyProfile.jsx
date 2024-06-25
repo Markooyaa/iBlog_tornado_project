@@ -1,4 +1,4 @@
-// import Images from './Images/Index.js'
+// import images from './images/Index.js'
 import { useState } from "react";
 import { Link } from "react-router-dom";
 function HeaderMyProfile({ button, setButton }) {
@@ -49,7 +49,7 @@ function HeaderMyProfile({ button, setButton }) {
       </div>
       <Link to="/" className="relative-logo flex items-center">
         <img
-          src="Images/Logo.jpg"
+          src="images/Logo.jpg"
           alt="logo"
           className="w-[20px] h-[27px] sm: flex-col "
         />
@@ -93,7 +93,7 @@ function HeaderMyProfile({ button, setButton }) {
 
         <Link
           to="/profile/add"
-          className="flex text-white bg-[#E86B02] rounded-lg pl-4 pr-4 py-[10px] sm:pr-[30px] sm:pl-[30px] gap-1 hover:bg-orange-400 active:bg-orange-600">
+          className="flex text-white bg-[#E86B02] rounded-[10px] pl-4 pr-4 py-[10px] sm:pr-[30px] sm:pl-[30px] gap-1 hover:bg-orange-400 active:bg-orange-600">
           Post
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -111,7 +111,7 @@ function HeaderMyProfile({ button, setButton }) {
         <button
           onClick={handleProfile}
           id="dropdownBtn"
-          className="sm:flex relative text-[#E86B02] border border-[#DCE3EA]  rounded-lg pt-[10px] px-[10px]  gap-1">
+          className="sm:flex relative text-[#E86B02] border border-[#DCE3EA]  rounded-[10px] pt-[10px] px-[10px]  gap-1">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="17"
@@ -126,7 +126,7 @@ function HeaderMyProfile({ button, setButton }) {
           </svg>
           <div className="cursor-pointer ">Профайл</div>
           {button && (
-            <div className=" extend-profile  absolute rounded-lg bg-slate-200 w-[300px] top-[60px] right-0 z-20">
+            <div className=" extend-profile  absolute rounded-[10px] bg-slate-200 w-[300px] top-[60px] right-0 z-20">
               <div
                 id="dropdown"
                 className="flex flex-col w-full text-[14px] text-black font-semibold cursor:pointer ">

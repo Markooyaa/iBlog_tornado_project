@@ -1,13 +1,14 @@
 
     
 import { Card } from "./Card"
-import { menus, cardsData } from "../data/data"
+import { cardsData } from "../data/data"
 import { Link, useParams } from "react-router-dom"
 
 
 export default function CategoryDetailComponent() {
     const params = useParams()
    console.log(params)
+   const List = cardsData.filter(cardsData=>cardsData.category===params.category && cardsData.categoryid==params.id);
     return (
         <div className="flex flex-col items-start sm:justify-center gap-[16px] sm:m-[30px] w-full">
             <div className="hidden sm:flex items-center gap-[5px] h-[75px]">
@@ -33,8 +34,8 @@ export default function CategoryDetailComponent() {
             </div>
             <div className="flex sm:justify-end items-center flex-wrap w-full pb-2">
                 <div className="flex gap-[8px] sm:gap-[22px] flex-wrap px-[20px]">
-                    {cardsData &&
-                        cardsData.map((data, index) => {
+                    {List &&
+                        List.map((data, index) => {
                             return (
                                 <Card key={index}
                                 id={data.id}

@@ -1,20 +1,19 @@
 import { cardsData } from "../data/data";
 import { Card } from "./Card"
 
-export default function LikedPosts({categoryid}){
+export default function MyPosted({categoryid}){
     const List = cardsData.filter(cardsData => cardsData.categoryid === categoryid);
     
     return( 
         <div className="flex flex-col items-start gap-[20px]">
             <div className="border-b-[1px] w-full">
                 <div className="w-[400px] h-[40px] hidden sm:flex items-center justify-center gap-[10px] border-b-[2px] border-orange-500">
-                    <i className="fa-regular fa-heart"></i>
                     <p className="text-[18px] font-bold">
-                    Таалагдсан
+                    Бүх Пост
                     </p>
                 </div>
                 <div className="sm:hidden flex font-bold px-[20px] py-[10px] gap-[10px] items-center h-[40px] border-b-[2px] border-orange-500">
-                    Таалагдсан постууд
+                    Постууд
                 </div>
             </div>
             <div className="flex gap-[8px] sm:gap-[22px] flex-wrap px-[20px] justify-center">

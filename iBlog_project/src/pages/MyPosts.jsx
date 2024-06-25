@@ -1,13 +1,13 @@
 import HeaderMyProfile from "../components/HeaderMyProfile";
-import LikedPosts from "../components/LikedPosts";
 import SideBar from "../components/SideBar";
 import { useState } from "react";
 import Footer from "../components/Footer";
 import SidebarMobile from "../components/SideBarMobile";
 import SideBarComponent from "../components/SideBarComponent";
 import MobileBottomBtns from "../components/MobileBottomBtns";
+import MyPosted from "../components/MyPost";
 
-export default function LikedPost() {
+export default function MyPosts() {
     const [button, setButton] = useState(false);
     function click() { setButton(false); }
     const [showSidebar, setShowSidebar] = useState(false);
@@ -24,7 +24,7 @@ export default function LikedPost() {
                 onClick={click}
                 className="w-full h-full sm:px-12 sm:pt-12 sm:flex pb-[30px] items-start gap-[30px]">
                 <SideBar />
-                <LikedPosts categoryid={'hobby'} />
+                <MyPosted categoryid={'hobby'} />
             </div>
             <div className="sm:flex hidden border-t-[1px] w-full">
                 <Footer />

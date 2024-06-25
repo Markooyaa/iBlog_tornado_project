@@ -37,7 +37,7 @@ export function CreateAccount() {
                 <GreyLine text={'Та бүртгэлтэй юу?'}></GreyLine>
                 <div className="burtguulh">
                     <Link to='/login'  >
-                        <button className="text-black border-[#E86B02] border-[1.5px] lg:rounded-lg rounded-2xl pl-4 pr-4 py-[10px] pr-[30px] pl-[30px] lg:w-[478px] w-[335px] h-[50px] my-[10px] " >
+                        <button className="text-black border-[#E86B02] border-[1.5px] lg:rounded-[10px]  rounded-2xl pl-4 pr-4 py-[10px] pr-[30px] pl-[30px] lg:w-[478px] w-[335px] h-[50px] my-[10px] " >
                             <p className=" flex items-center justify-center ">  Нэвтрэх</p>
                         </button>
                     </Link>

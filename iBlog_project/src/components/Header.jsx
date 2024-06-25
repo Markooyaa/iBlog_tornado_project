@@ -9,16 +9,16 @@ export default function HeaderComponent() {
                 <div className="flex justify-end items-start gap-3.5">
                    <Link to={'/createAccount'}>
                    <Button
-                        url="#"
+                        
                         name="Бүртгүүлэх"
-                        className="px-7 py-2.5 border-[1px] border-solid rounded-[10px] text-orange-500 text-base font-semibold leading-[21px]"
+                        className="px-7 py-2.5 border-[1px] border-solid rounded-[10px]   text-orange-500 text-base font-semibold leading-[21px]"
                     />
                    </Link>
                    <Link to={'/login'}>
                    <Button
-                        url="#"
+                        
                         name="Нэвтрэх"
-                        className="px-7 py-2.5 border-[1px] border-solid rounded-[10px] bg-orange-500 text-white text-base font-semibold leading-[21px]" />
+                        className="px-7 py-2.5 border-[1px] border-solid rounded-[10px]   bg-orange-500 text-white text-base font-semibold leading-[21px]" />
                    </Link>
                 </div>
            
@@ -29,8 +29,8 @@ export default function HeaderComponent() {
 
 function Button(props) {
   return (
-    <a href={props.url} className={props.className}>
+    <div className={props.className}>
       {props.name}
-    </a>
+    </div>
   );
 }
