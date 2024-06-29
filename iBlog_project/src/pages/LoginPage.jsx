@@ -29,7 +29,7 @@ export function LoginPage() {
                 <div className="  lg:w-[478px] w-[335px] h-[50px]  hidden lg:flex "> <p className="text-[#E86B02] text-start pt-[10px] text-[20px]">Нэвтрэх</p></div>
                 <div className="logo lg:hidden flex flex-col">
                     <div className=" w-[100%] justify-center flex items-center  ">
-                        <img src="Images/Group.png" alt="logo" className="w-[20px] h-[27px] " />
+                        <img src="images/Group.png" alt="logo" className="w-[20px] h-[27px] " />
                         <h2 className="text-orange-400 text-3xl font-normal"><span className="text-[#F77268]">i</span>blog</h2>
                     </div>
                     <div className="text-[9px]">

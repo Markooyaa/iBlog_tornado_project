@@ -1,7 +1,7 @@
 function MobileBottomBtns(){
     return (
-      <div className="absolute bottom-0 flex w-full">
-        <div className="w-full sm:hidden flex justify-between sm: h-[79px]  border-2 border-slate-200  sm: px-[20px] sm: pt-[16px]">
+      <div className="sticky bottom-0 flex w-full">
+        <div className="w-full sm:hidden flex justify-between sm: h-[79px] bg-white border-2 border-slate-200  sm: px-[20px] sm: pt-[16px]">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="28"

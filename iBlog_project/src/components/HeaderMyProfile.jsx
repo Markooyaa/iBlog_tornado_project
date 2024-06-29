@@ -1,10 +1,61 @@
+<<<<<<< HEAD
+=======
+// import images from './images/Index.js'
+>>>>>>> 9dc2085ab11aac6d2244ae6881ef18b08a64d1d6
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
 export function HeaderMyProfile({ button, setButton }) {
 
 
+<<<<<<< HEAD
     const [dialog, setDialog] = useState(false)
+=======
+  return (
+    <header
+      onClick={() => setButton(!button)}
+      className="border-b-[1px] sm:w-full sm:h-[74px] h-[56px] sm:flex hidden sm:px-[50px] px-[16px] justify-between  items-center ">
+      <div className="mobile-icon sm:hidden flex sm:items-center ">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none">
+          <path
+            d="M3 18H12"
+            stroke="#E86B02"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M3 12H17"
+            stroke="#E86B02"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M3 6H21"
+            stroke="#E86B02"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      </div>
+      <Link to="/" className="relative-logo flex items-center">
+        <img
+          src="images/Logo.jpg"
+          alt="logo"
+          className="w-[20px] h-[27px] sm: flex-col "
+        />
+        <h2 className="text-orange-400 text-3xl font-normal">
+          <span className="text-[#F77268]">i</span>blog
+        </h2>
+      </Link>
+>>>>>>> 9dc2085ab11aac6d2244ae6881ef18b08a64d1d6
 
     function Dialog() {
         setDialog(!dialog)

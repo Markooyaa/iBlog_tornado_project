@@ -2,17 +2,19 @@ import BlogLayout from "./pages/BlogLayout";
 import CategoryDetailComponent from "./components/CategoryDetailComponent";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Content from "./components/Content";
-import { menus } from "./data/data";
 import { LoginPage } from "./pages/LoginPage";
 import { CreateAccount, CreateAccount2 } from "./pages/CreateAccount";
 import { ChangePassword, ChangePassword2, ChangePassword3 } from "./pages/ChangePassword";
 import PostDetailComponent from "./components/PostDetailComponent";
 import HomePage from "./pages/HomePage";
+import LikedPost from "./pages/LikedPost";
 import MyProfileLayout from "./pages/MyProfileLayout";
 import AddPost from "./pages/AddPost";
 import EditProfile from "./components/EditProfile";
 import EditProfileMain from "./components/EditProfileMain";
-import EditProfilePass from "./components/EditProfilePass";
+import OthersProfile from "./pages/OthersProfile";
+import OthersProfilePage from "./pages/OthersProfile";
+import MyPosts from "./pages/MyPosts";
 
 const router = createBrowserRouter([
   {
@@ -84,6 +86,21 @@ const router = createBrowserRouter([
       
     ],
   },
+  {
+    path: "/likedposts",
+    element: <LikedPost />,
+    children : [
+
+    ],
+  },
+  {
+    path: "/othersprofile",
+    element: <OthersProfilePage />
+  },
+  {
+    path: "/myposts",
+    element: <MyPosts />
+  }
 ]);
 
 function App() {

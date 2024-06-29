@@ -31,7 +31,7 @@ export default function PostDetailComponent() {
             </div>}
            
             <Profile url={blog[0].profile} username={blog[0].username}/>
-            <img src="/Images/Rectangle 2.jpg" />
+            <img src="/images/Rectangle 2.jpg" />
             <h2 className="text-[24px] sm:text-[29px] font-semibold leading-[43px]">Theme Installation</h2>
             <LikeShare like={blog[0].likes} />
             <Texts />

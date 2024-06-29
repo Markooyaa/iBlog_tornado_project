@@ -16,7 +16,7 @@ export function CreateAccount() {
             <div className="container flex-col flex justify-center items-center lg:pt-[180px] lg:pb-[270px] m-auto   lg:[850px]">
                 <div className="logo lg:hidden flex flex-col">
                     <div className=" w-[100%] justify-center flex items-center  ">
-                        <img src="Images/Group.png" alt="logo" className="w-[20px] h-[27px] " />
+                        <img src="images/Group.png" alt="logo" className="w-[20px] h-[27px] " />
                         <h2 className="text-orange-400 text-3xl font-normal"><span className="text-[#F77268]">i</span>blog</h2>
                     </div>
                     <div className="text-[9px]">
@@ -71,7 +71,7 @@ export function CreateAccount2() {
             <div className="container flex-col flex justify-center items-center lg:pt-[180px] lg:pb-[270px] m-auto   lg:[850px]">
                 <div className="logo lg:hidden flex flex-col">
                     <div className=" w-[100%] justify-center flex items-center  ">
-                        <img src="Images/Group.png" alt="logo" className="w-[20px] h-[27px] " />
+                        <img src="images/Group.png" alt="logo" className="w-[20px] h-[27px] " />
                         <h2 className="text-orange-400 text-3xl font-normal"><span className="text-[#F77268]">i</span>blog</h2>
                     </div>
                     <div className="text-[9px]">

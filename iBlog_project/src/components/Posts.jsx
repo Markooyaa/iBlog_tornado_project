@@ -32,7 +32,8 @@ export default function Posts(props) {
                                         likes={data.likes}
                                         profile={data.profile}
                                         category={data.category}
-                                        categoryid={data.categoryid} />)
+                                        categoryid={data.categoryid} 
+                                    />)
                             }
                         })
                     }
