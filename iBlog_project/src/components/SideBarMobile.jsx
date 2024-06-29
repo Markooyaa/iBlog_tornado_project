@@ -21,7 +21,7 @@ function SideBar({showSidebar, setShowSidebar}) {
                     <SideBarComponent />
                 </div>
                 <div className="logo flex items-center">
-                    <img src="images/Group.png"/>
+                    <img src="/Images/Group.png"/>
                     <h2 className="text-orange-400 text-[30px] font-normal">iblog</h2>
                 </div>
                 <div>

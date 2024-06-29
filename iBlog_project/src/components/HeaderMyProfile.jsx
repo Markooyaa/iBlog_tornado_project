@@ -56,7 +56,7 @@ export function HeaderMyProfile({ button, setButton }) {
             </div>
             <Link to="/" className="relative-logo flex items-center">
                 <img
-                    src="images/Logo.jpg"
+                    src="Images/Logo.jpg"
                     alt="logo"
                     className="w-[20px] h-[27px] sm: flex-col "
                 />
