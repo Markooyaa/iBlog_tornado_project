@@ -4,13 +4,13 @@ function ImgSectionFilledPost() {
       <p className="cover text-[16px] font-bold">Cover зураг</p>
       <div class="img-section h-[154px] w-full p-[2px] flex justify-center rounded-xl mt-[10px] mb-[20px] relative">
         <img
-          src="images/Pic.png"
+          src="Images/Pic.png"
           alt=""
           srcset=""
           class="object-cover w-full h-full z-[-1] rounded-xl sm:flex hidden "
         />
         <img
-          src="images/Pic2.png"
+          src="Images/Pic2.png"
           alt=""
           class="sm:hidden flex object-cover w-full h-full z-[-1] rounded-xl "
         />

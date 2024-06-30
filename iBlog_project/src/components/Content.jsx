@@ -13,7 +13,7 @@ export default function Content() {
           <p>Бүгд</p>
         </div>
       </div>
-      
+
       <Note />
     </div>
   );

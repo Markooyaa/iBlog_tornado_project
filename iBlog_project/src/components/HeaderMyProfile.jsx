@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-export function HeaderMyProfile({ button, setButton }) {
+function HeaderMyProfile({ button, setButton, change, setChange}) {
   // const [Button, SetButton] = useState(false);
 
-    function Click() {
-        setButton(!false);
-    }
+  function Click() {
+    setButton(!false);
+  }
 
   function handleProfile() {
     setButton(!button);
@@ -14,8 +14,8 @@ export function HeaderMyProfile({ button, setButton }) {
 
   return (
     <header
-      onClick={() => setButton(!button)}
-      className="border-b-[1px] sm:w-full sm:h-[74px] h-[56px] sm:flex hidden sm:px-[50px] px-[16px] justify-between  items-center ">
+      
+      className="border-b-[1px] sm:w-full w-full sm:h-[74px] h-[56px] sm:flex flex sm:px-[50px] px-[16px] justify-between  items-center ">
       <div className="mobile-icon sm:hidden flex sm:items-center ">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -57,38 +57,38 @@ export function HeaderMyProfile({ button, setButton }) {
         </h2>
       </Link>
 
-            <div className="search relative sm:flex hidden">
-                <input
-                    type="text"
-                    className="border border-gray-300 rounded-2xl pl-4 pr-12 py-2 w-[572px] h-[39px] focus:outline-none focus:border-blue-500"
-                    placeholder="Хайх"
-                />
-                <svg
-                    className="absolute right-2 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400"
-                    fill="none"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path d="M21 21l-6-6M3 12a9 9 0 1118 0 9 9 0 01-18 0z"></path>
-                </svg>
-            </div>
+      <div className="search relative sm:flex hidden">
+        <input
+          type="text"
+          className="border border-gray-300 rounded-2xl pl-4 pr-12 py-2 w-[572px] h-[39px] focus:outline-none focus:border-blue-500"
+          placeholder="Хайх"
+        />
+        <svg
+          className="absolute right-2 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400"
+          fill="none"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          viewBox="0 0 24 24"
+          stroke="currentColor">
+          <path d="M21 21l-6-6M3 12a9 9 0 1118 0 9 9 0 01-18 0z"></path>
+        </svg>
+      </div>
 
-            {/* <!---------------------------buttons--------------------> */}
-            <div className="Buttons sm:flex hidden gap-2">
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="28"
-                    height="29"
-                    viewBox="0 0 28 29"
-                    fill="none"
-                    className="mt-[9px]">
-                    <path
-                        d="M23.52 6.33336C22.2833 5.09344 20.6439 4.33666 18.8981 4.19973C17.1522 4.0628 15.4149 4.55474 14 5.5867C12.5156 4.48261 10.668 3.98196 8.82924 4.18557C6.99049 4.38919 5.29718 5.28194 4.0903 6.68405C2.88342 8.08615 2.25262 9.89347 2.32493 11.742C2.39724 13.5906 3.16728 15.3431 4.48 16.6467L11.725 23.9034C12.3317 24.5004 13.1488 24.8351 14 24.8351C14.8512 24.8351 15.6683 24.5004 16.275 23.9034L23.52 16.6467C24.8822 15.2762 25.6467 13.4223 25.6467 11.49C25.6467 9.55771 24.8822 7.70389 23.52 6.33336ZM21.875 15.0367L14.63 22.2817C14.5476 22.3649 14.4494 22.431 14.3413 22.4761C14.2332 22.5212 14.1172 22.5444 14 22.5444C13.8828 22.5444 13.7668 22.5212 13.6587 22.4761C13.5506 22.431 13.4524 22.3649 13.37 22.2817L6.125 15.0017C5.21005 14.0664 4.69771 12.8101 4.69771 11.5017C4.69771 10.1933 5.21005 8.93696 6.125 8.0017C7.05734 7.08118 8.3148 6.56503 9.625 6.56503C10.9352 6.56503 12.1926 7.08118 13.125 8.0017C13.2335 8.11105 13.3625 8.19784 13.5047 8.25707C13.6468 8.3163 13.7993 8.3468 13.9533 8.3468C14.1073 8.3468 14.2598 8.3163 14.402 8.25707C14.5442 8.19784 14.6732 8.11105 14.7817 8.0017C15.714 7.08118 16.9715 6.56503 18.2817 6.56503C19.5919 6.56503 20.8493 7.08118 21.7817 8.0017C22.7092 8.92471 23.2383 10.1743 23.2558 11.4827C23.2732 12.7911 22.7776 14.0543 21.875 15.0017V15.0367Z"
-                        fill="#E86B02"
-                    />
-                </svg>
+      {/* <!---------------------------buttons--------------------> */}
+      <div className="Buttons sm:flex hidden gap-2">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="28"
+          height="29"
+          viewBox="0 0 28 29"
+          fill="none"
+          className="mt-[9px]">
+          <path
+            d="M23.52 6.33336C22.2833 5.09344 20.6439 4.33666 18.8981 4.19973C17.1522 4.0628 15.4149 4.55474 14 5.5867C12.5156 4.48261 10.668 3.98196 8.82924 4.18557C6.99049 4.38919 5.29718 5.28194 4.0903 6.68405C2.88342 8.08615 2.25262 9.89347 2.32493 11.742C2.39724 13.5906 3.16728 15.3431 4.48 16.6467L11.725 23.9034C12.3317 24.5004 13.1488 24.8351 14 24.8351C14.8512 24.8351 15.6683 24.5004 16.275 23.9034L23.52 16.6467C24.8822 15.2762 25.6467 13.4223 25.6467 11.49C25.6467 9.55771 24.8822 7.70389 23.52 6.33336ZM21.875 15.0367L14.63 22.2817C14.5476 22.3649 14.4494 22.431 14.3413 22.4761C14.2332 22.5212 14.1172 22.5444 14 22.5444C13.8828 22.5444 13.7668 22.5212 13.6587 22.4761C13.5506 22.431 13.4524 22.3649 13.37 22.2817L6.125 15.0017C5.21005 14.0664 4.69771 12.8101 4.69771 11.5017C4.69771 10.1933 5.21005 8.93696 6.125 8.0017C7.05734 7.08118 8.3148 6.56503 9.625 6.56503C10.9352 6.56503 12.1926 7.08118 13.125 8.0017C13.2335 8.11105 13.3625 8.19784 13.5047 8.25707C13.6468 8.3163 13.7993 8.3468 13.9533 8.3468C14.1073 8.3468 14.2598 8.3163 14.402 8.25707C14.5442 8.19784 14.6732 8.11105 14.7817 8.0017C15.714 7.08118 16.9715 6.56503 18.2817 6.56503C19.5919 6.56503 20.8493 7.08118 21.7817 8.0017C22.7092 8.92471 23.2383 10.1743 23.2558 11.4827C23.2732 12.7911 22.7776 14.0543 21.875 15.0017V15.0367Z"
+            fill="#E86B02"
+          />
+        </svg>
 
         <Link
           to="/profile/add"
@@ -211,3 +211,4 @@ export function HeaderMyProfile({ button, setButton }) {
     </header>
   );
 }
+export default HeaderMyProfile
