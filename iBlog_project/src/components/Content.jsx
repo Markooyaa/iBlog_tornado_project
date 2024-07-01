@@ -1,4 +1,4 @@
-// import images from ".public/images";
+// import Images from ".public/Images";
 import Note from "./Note.jsx";
 import { Outlet } from "react-router-dom";
 

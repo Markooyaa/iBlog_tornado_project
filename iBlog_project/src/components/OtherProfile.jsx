@@ -8,7 +8,7 @@ export default function OtherProfile() {
             ">
                     <div className="image sm:h-[90px] h-[60px] sm:w-[90px] [60px] flex items-center ">
                         <img
-                            src="images/Image (3).jpg"
+                            src="Images/Image (3).jpg"
                             className="rounded-full sm: w-[60px] "
                             alt=""
                         />

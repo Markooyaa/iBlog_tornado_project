@@ -1,61 +1,10 @@
-<<<<<<< HEAD
-=======
-// import images from './images/Index.js'
->>>>>>> 9dc2085ab11aac6d2244ae6881ef18b08a64d1d6
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-export function HeaderMyProfile({ button, setButton }) {
+function HeaderMyProfile({ button, setButton }) {
 
 
-<<<<<<< HEAD
     const [dialog, setDialog] = useState(false)
-=======
-  return (
-    <header
-      onClick={() => setButton(!button)}
-      className="border-b-[1px] sm:w-full sm:h-[74px] h-[56px] sm:flex hidden sm:px-[50px] px-[16px] justify-between  items-center ">
-      <div className="mobile-icon sm:hidden flex sm:items-center ">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none">
-          <path
-            d="M3 18H12"
-            stroke="#E86B02"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-          <path
-            d="M3 12H17"
-            stroke="#E86B02"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-          <path
-            d="M3 6H21"
-            stroke="#E86B02"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        </svg>
-      </div>
-      <Link to="/" className="relative-logo flex items-center">
-        <img
-          src="images/Logo.jpg"
-          alt="logo"
-          className="w-[20px] h-[27px] sm: flex-col "
-        />
-        <h2 className="text-orange-400 text-3xl font-normal">
-          <span className="text-[#F77268]">i</span>blog
-        </h2>
-      </Link>
->>>>>>> 9dc2085ab11aac6d2244ae6881ef18b08a64d1d6
 
     function Dialog() {
         setDialog(!dialog)
@@ -182,7 +131,7 @@ onClick={() => setButton(!button)}
                             fill="#E86B02"
                         />
                     </svg>
-                    <button className="cursor-pointer "  >Профайл</button>
+                    <div className="cursor-pointer "  >Профайл</div>
                     {button && (
                         <div className=" extend-profile  absolute rounded-[10px] bg-slate-200 w-[300px] top-[60px] right-0 z-20">
                             <div
@@ -217,7 +166,7 @@ onClick={() => setButton(!button)}
                                     </svg>
                                     <div className="text-center">Таалагдсан</div>
                                 </div>
-                                <button onClick={Dialog} className="extra 3 flex w-full h-[43px] gap-2 rounded-b-md bg-slate-200 items-center text-center pl-2  hover:bg-slate-300">
+                                <div onClick={Dialog} className="extra 3 flex w-full h-[43px] gap-2 rounded-b-md bg-slate-200 items-center text-center pl-2  hover:bg-slate-300">
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         width="20"
@@ -246,9 +195,9 @@ onClick={() => setButton(!button)}
                                             strokeLinejoin="round"
                                         />
                                     </svg>
-                                    <button onClick={Dialog} className="text-center">гарах</button>
+                                    <div onClick={Dialog} className="text-center">гарах</div>
 
-                                </button>
+                                </div>
                             </div>
 
                         </div>
@@ -309,3 +258,5 @@ onClick={() => setButton(!button)}
         </header>
     );
 }
+
+export default HeaderMyProfile

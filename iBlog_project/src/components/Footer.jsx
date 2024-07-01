@@ -6,7 +6,7 @@ export default function Footer() {
                 <div className="h-[52px]">
                     <div className="flex items-center">
                        
-                        <img src="images/Group.png" alt="" />
+                        <img src="Images/Group.png" alt="" />
                         <h2 className="text-orange-400 text-3xl font-normal"><span className="text-[#F77268]">i</span>blog</h2>
                     </div>
                     <p className="text-[10px] text-slate-600">Write, Read, Enjoy</p>
