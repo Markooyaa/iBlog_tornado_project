@@ -1,13 +1,9 @@
-import Header from "../components/Header";
-import SideBar from "../components/SideBar";
 import Category from "../components/Category";
 import ImgSection from "../components/ImgSection";
 import CategoryInside from "../components/CategoryInside";
 import Subtitle from "../components/ContentTitle";
 import MainPart from "../components/MainPart";
-import Footer from "../components/Footer";
 import PostButton from "../components/MobilePostButton";
-import MobileBottomBtns from "../components/MobileBottomBtns";
 import MainPostButton from "../components/MainPostButton";
 export default function AddPost() {
   return (

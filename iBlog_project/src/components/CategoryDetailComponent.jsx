@@ -1,7 +1,7 @@
 
     
 import { Card } from "./Card"
-import { menus, cardsData } from "../data/data"
+import { cardsData } from "../data/data"
 import { Link, useParams } from "react-router-dom"
 
 

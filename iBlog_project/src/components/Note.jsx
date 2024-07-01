@@ -1,4 +1,4 @@
-// import Images from "../../public/images/Index.js";
+// import images from "../../public/images/Index.js";
 
 export default function Note() {
   return (
