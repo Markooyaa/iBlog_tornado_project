@@ -10,19 +10,19 @@ export default function PostDetailComponent() {
     
     return (
         
-        <div className="content flex flex-col items-start gap-[16px] m-auto w-[328px] sm:w-[900px] pb-[30px] ml-[70px] mt-[50px]">
+        <div className="content flex flex-col items-start gap-[16px] w-[328px] sm:w-[900px] sm:m-[30px]  ">
             {blog &&  <div className="hidden sm:flex items-center gap-[5px] h-[75px]">
                 <div className="flex items-center gap-[5px] px-[16px] py-10px]">
                     <Link to="/" className="text-[18px] text-gray-600">Нүүр хуудас</Link>
                     <i className="fa-solid fa-angle-right"></i>
                 </div>
                 <div className="flex items-center gap-[5px] px-[16px] py-10px]">
-                    <p className="text-[18px] text-gray-600 capitalize">{blog[0].category} </p>
+                    <Link to={`/${blog[0].category}`} className="text-[18px] text-gray-600 capitalize">{blog[0].category} </Link>
                     <i className="fa-solid fa-angle-right"></i>
                 </div>
                 
                 {blog[0].categoryid!=''? <div className="flex items-center gap-[5px] px-[16px] py-10px]">
-                    <p className="text-[18px] text-gray-600 capitalize">{blog[0].categoryid}</p>
+                    <Link to={`/${blog[0].category}/${blog[0].categoryid}`} className="text-[18px] text-gray-600 capitalize">{blog[0].categoryid}</Link>
                     <i className="fa-solid fa-angle-right"></i>
                 </div>:''}
                 <div className="flex items-center gap-[5px] px-[16px] py-10px]">

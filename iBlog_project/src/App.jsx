@@ -15,6 +15,7 @@ import EditProfileMain from "./components/EditProfileMain";
 import OthersProfile from "./pages/OthersProfile";
 import OthersProfilePage from "./pages/OthersProfile";
 import MyPosts from "./pages/MyPosts";
+import { Fullcategory } from "./components/FullCategory";
 
 const router = createBrowserRouter([
   {
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
         path: "/:category/:id",
         element: <CategoryDetailComponent />
       
+      },
+      {
+        path:'/:category',
+        element:<Fullcategory/>
       }
 
     ]
@@ -100,7 +105,8 @@ const router = createBrowserRouter([
   {
     path: "/myposts",
     element: <MyPosts />
-  }
+  },
+ 
 ]);
 
 function App() {
