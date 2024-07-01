@@ -7,7 +7,7 @@ import { useState } from "react";
 import { Outlet } from "react-router-dom";
 import Footer from "../components/Footer";
 import MobileBottomBtns from "../components/MobileBottomBtns";
-import { HeaderMyProfile } from "../components/HeaderMyProfile";
+import  HeaderMyProfile  from "../components/HeaderMyProfile";
 import Login_Create_footer from "../components/FooterDev";
 export default function MyProfileLayout() {
   const [button, setButton] = useState(false);

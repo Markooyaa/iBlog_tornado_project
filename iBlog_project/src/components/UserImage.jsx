@@ -4,7 +4,7 @@ export default function UserImage(){
         <div className="sm:flex flex sm: justify-center">
           <img
             className="sm:size-[85px] size-[55px] flex items-center"
-            src="/images/Profile.jpg"
+            src="/Images/Profile.jpg"
           />
         </div>
         <p className="flex sm:items-center justify-center text-[16px] font-normal text-slate-600 hover:text-slate-300 active:text-slate-400 ">

@@ -8,7 +8,7 @@ export default function SideBar(){
             ">
             <div className="image sm:h-[90px] h-[60px] sm:w-[90px] [60px] flex items-center ">
               <img
-                src="images/Profile.jpg"
+                src="Images/Profile.jpg"
                 className="rounded-full sm: w-[60px] "
                 alt=""
               />
