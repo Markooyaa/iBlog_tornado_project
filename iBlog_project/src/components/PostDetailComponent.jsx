@@ -10,7 +10,7 @@ export default function PostDetailComponent() {
     
     return (
         
-        <div className="content flex flex-col items-start gap-[16px] w-[328px] sm:w-[900px] sm:m-[30px]  ">
+        <div className="content flex flex-col m-auto gap-[16px] w-[328px] sm:w-full sm:m-[30px] sm:pr-[50px] ">
             {blog &&  <div className="hidden sm:flex items-center gap-[5px] h-[75px]">
                 <div className="flex items-center gap-[5px] px-[16px] py-10px]">
                     <Link to="/" className="text-[18px] text-gray-600">Нүүр хуудас</Link>
@@ -42,7 +42,7 @@ export default function PostDetailComponent() {
 
 function LikeShare({like}) {
     return (
-        <div className="flex justify-between items-center w-full">
+        <div className="flex justify-between items-center w-full mr-[50px]">
             <div className="flex items-center gap-[10px] w-">
                 <button>
                     <i className="fa-regular fa-heart"></i>
@@ -62,10 +62,12 @@ function Profile({url,username}) {
     return (
         <div className="w-full sm:w-[310px]">
             <div className="user flex justify-between items-center">
-                <div className="account inline-flex items-center gap-[10px]">
+               <Link to={'/othersprofile'}>
+               <div className="account inline-flex items-center gap-[10px]">
                     <img src={url} />
                     <p className="text-[18px] font-semibold text-slate-700">{username}</p>
                 </div>
+               </Link>
                 <button className="text-[18px] font-semibold text-blue-500">Follow</button>
             </div>
         </div>

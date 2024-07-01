@@ -4,7 +4,7 @@ export default function HeaderComponent() {
     return (
             <div className="hidden max-w-full sm:flex px-12 py-10 justify-between items-center gap-28 border-b-[1px]">
                 <div className="flex justify-between items-center rounded-full border-solid border-[1px] w-full">
-                    <input type="text" placeholder="Хайх" className="text-[16px]  h-10 rounded-full px-6" />
+                    <input type="text" placeholder="Хайх" className="text-[16px]  h-10 rounded-full px-6 w-full"/>
                 </div>
                 <div className="flex justify-end items-start gap-3.5">
                    <Link to={'/createAccount'}>
