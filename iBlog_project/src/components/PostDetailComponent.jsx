@@ -34,7 +34,7 @@ export default function PostDetailComponent() {
             <img src="/Images/Rectangle 2.jpg" />
             <h2 className="text-[24px] sm:text-[29px] font-semibold leading-[43px]">Theme Installation</h2>
             <LikeShare like={blog[0].likes} />
-            <Texts />
+            <Texts  text={blog[0].text}/>
         </div>
     
     )
@@ -74,8 +74,8 @@ function Profile({url,username}) {
     )
 }
 
-function Texts() {
+function Texts({text}) {
     return (
-        <p className="flex flex-wrap">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia harum temporibus cum deserunt eos accusamus necessitatibus dolorum soluta tempora? Quo mollitia illo nihil ut, cupiditate dicta! Provident nisi soluta nulla hic excepturi, nihil, illo id accusantium magni quia ipsum itaque architecto pariatur eos rem eius, adipisci eum. Ea officiis cum nisi velit deleniti fugit laborum quam? Eligendi corrupti repudiandae voluptatum ab unde laboriosam atque praesentium debitis rerum natus labore cumque quas, laudantium, dignissimos nostrum ea quaerat dolores porro alias repellat ipsam nihil, nesciunt saepe! Quidem officia cupiditate accusamus odit, libero assumenda natus nisi laborum culpa vitae illo harum rem placeat eaque perspiciatis expedita mollitia deleniti repellat non id blanditiis. Quia provident maxime sunt quam? Totam odio sed aperiam aliquam fugit, at non illo placeat ratione dolorem tempora veniam neque, autem, debitis ullam est rerum quisquam hic voluptate atque perspiciatis ab quo. Aspernatur est eius aperiam vel, obcaecati labore vitae, dignissimos saepe atque veniam voluptatem eligendi tenetur incidunt dicta suscipit! Labore, fuga. Modi commodi eveniet blanditiis atque sunt inventore iste illo placeat accusantium minima, porro ex sit! Nisi nesciunt repellat maxime fugit sed repudiandae voluptas eaque quia quisquam error explicabo nobis voluptate, ea excepturi exercitationem velit in? Nihil impedit omnis pariatur obcaecati sapiente ullam veritatis at, magnam ratione porro iure sequi repellat reiciendis adipisci optio doloremque quisquam numquam ea eum voluptatibus excepturi beatae? Possimus eius dolore enim eveniet autem tempore repudiandae tempora doloremque incidunt vero obcaecati odio voluptates, debitis numquam, in voluptas culpa fuga deserunt? Eligendi, maxime totam eveniet placeat voluptas consectetur eius praesentium ad error dignissimos soluta ipsum reiciendis, earum culpa tenetur omnis dolor iusto laborum! Recusandae vitae iure, nisi quos reprehenderit perspiciatis illum laboriosam ut at corrupti voluptate pariatur odio esse ipsa. Ipsa, architecto consectetur accusantium dicta eum obcaecati ab ad! Consequatur accusamus fugit consectetur, possimus vero eaque tenetur!</p>
+        <p className="flex flex-wrap">{text}</p>
     )
 }
