@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { menus } from '../data/data'
 import { Logo } from './Logo'
+import { useState } from 'react'
 
 
 
@@ -63,7 +64,15 @@ function HomeLink({ url, showSidebar, setShowSidebar }) {
 }
 
 function SidebarLink(props) {
+    const [whenClicked, setWhenClicked] = useState('bg-orange-500')
+    function changeColor(){
+        if (whenClicked === 'bg-white'){
+            setWhenClicked('bg-orange-500')
+        } else {
+            setWhenClicked('bg-white')
+        }
+    }
     return (
-        <Link to={props.url} className="capitalizetext-[14px] px-[16px] py-[8px] hover:bg-orange-500 hover:text-white">{props.title}</Link>
+        <Link to={props.url} onClick={changeColor} className="capitalizetext-[14px] px-[16px] py-[8px] hover:bg-orange-500 hover:text-white">{props.title}</Link>
     )
 }
