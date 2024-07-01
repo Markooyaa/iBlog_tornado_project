@@ -17,7 +17,7 @@ export default function CategoryDetailComponent() {
                     <i className="fa-solid fa-angle-right"></i>
                 </div>
                 <div className="flex items-center gap-[5px] px-[16px] py-10px]">
-                    <p className="text-[18px] text-gray-600 capitalize">{params.category}</p>
+                    <Link to={`/${params.category}`} className="text-[18px] text-gray-600 capitalize">{params.category}</Link>
                     <i className="fa-solid fa-angle-right"></i>
                 </div>
                 <div className="flex items-center gap-[5px] px-[16px] py-10px]">
