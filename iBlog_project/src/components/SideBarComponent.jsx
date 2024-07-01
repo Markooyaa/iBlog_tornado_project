@@ -10,9 +10,9 @@ export default function SideBarComponent({ showSidebar, setShowSidebar }) {
         menus.map((menu, idx) => {
             return (
                 <div key={idx} className="inline-flex flex-col gap-[32px]">
-                    <div className="text-[14px] font-semibold pb-[12px]">
+                    <Link to={`/${menu.name}`} className="text-[14px] font-semibold pb-[12px]">
                         {menu.title}
-                    </div>
+                    </Link>
                     <div className="flex flex-col gap-[8px]">
                         {menu.children && menu.children.map(
                             (c, index) => {
