@@ -54,9 +54,10 @@ function LikeShare({like}) {
                 <p className="text-[20px] leading-[26px]">{like}</p>
             </div>
             <div className="flex p-[5px] items-center">
-                <button className="text-[15px] leading-[20px] flex p-[5px] items-center gap-[4px] rounded-[5px] bg-blue-600 text-gray-50">
-                    Share
-                </button>
+            <button className="text-[15px] leading-[20px] flex p-[5px] items-center gap-[7px] rounded-[5px] bg-blue-600 text-gray-50">
+                    <i className="fa-brands fa-facebook-f ml-[3px]"></i>
+                        Share
+                    </button>
             </div>
         </div>
     )
