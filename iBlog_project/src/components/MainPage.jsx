@@ -14,12 +14,15 @@ export default function MainPage() {
             <Posts category='health' />
 
             {hide==false?
-            <button onClick={Hide} className="hidden sm:inline-flex px-[20px] py-[12px] justify-center items-center gap-[12px] border-[1px] rounded-[10px]  ">Цааш унших</button>
+            <div className="w-full flex justify-center mb-[30px]">
+             <button onClick={Hide} className=" inline-flex px-[20px] py-[12px] justify-center items-center gap-[12px] border-[1px] rounded-[10px]  ">Цааш унших</button> 
+             </div>
             :null
 
             }
+             
             {hide==true ? 
-            <div>
+            <div className="w-full">
                 <Posts category='sport'/>
                 <Posts category='entertainment'/>
             </div>

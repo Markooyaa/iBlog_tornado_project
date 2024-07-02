@@ -1,6 +1,6 @@
 export default function Footer() {
     return(
-        <div className="inline-flex sm:flex flex-col items-start gap-[20px] sm:gap-[10px] px-[65px] py-[25px] border-t-[1px] sm:h-[190px]">
+        <div className="mt-[30px] inline-flex sm:flex flex-col items-start gap-[20px] sm:gap-[10px] px-[65px] py-[25px] border-t-[1px] sm:h-[190px]">
         <div className="content flex-col sm:flex-row flex gap-[20px] sm:gap-[15px] items-start">
             <div className="flex flex-col items-start w-[216px]">
                 <div className="h-[52px]">

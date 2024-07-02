@@ -1,4 +1,5 @@
 
+import { Link } from "react-router-dom"
 import SideBarComponent from "./SideBarComponent"
 
 export default function SidebarMobile({showSidebar, setShowSidebar}) {
@@ -20,10 +21,12 @@ function SideBar({showSidebar, setShowSidebar}) {
                     <i className="fa-solid fa-bars text-[#E86B02]"></i>
                     <SideBarComponent />
                 </div>
-                <div className="logo flex items-center">
+               <Link to={'/'}>
+               <div className="logo flex items-center">
                     <img src="/Images/Group.png"/>
                     <h2 className="text-orange-400 text-[30px] font-normal">iblog</h2>
                 </div>
+               </Link>
                 <div>
                     <i className="fa-solid fa-magnifying-glass"></i>
                 </div>
