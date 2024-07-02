@@ -135,12 +135,12 @@ function HeaderMyProfile({ button, setButton }) {
                     </svg>
                     <div className="cursor-pointer "  >Профайл</div>
                     {button && (
-                        <div className=" extend-profile  absolute rounded-[10px]  w-[300px] top-[60px] right-0 z-20">
+                        <div className=" extend-profile  absolute rounded-[10px] shadow-2xl  w-[300px] top-[60px] right-0 z-20">
                             <div
                                 id="dropdown"
                                 className="flex flex-col w-full text-[14px] text-black font-semibold cursor:pointer ">
                                 <Link to={'/profile'} >
-                                    <div className="extra 1 flex w-full h-[43px] gap-2  bg-slate-200 rounded-t-md items-center text-center pl-2 hover:bg-slate-300">
+                                    <div className="extra 1 border-b flex w-full h-[43px] gap-2  bg-white rounded-t-md items-center text-center pl-2 hover:bg-slate-100">
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
                                             width="20"
@@ -158,7 +158,7 @@ function HeaderMyProfile({ button, setButton }) {
                                 </Link>
 
                                 <Link to={'/likedposts'}>
-                                    <div className="extra 2 flex w-full h-[43px] gap-2  bg-slate-200 items-center text-center pl-2 hover:bg-slate-300">
+                                    <div className="extra 2 flex w-full border-b h-[43px] gap-2  bg-white  items-center text-center pl-2 hover:bg-slate-100">
                                         <svg
                                             xml ns="http://www.w3.org/2000/svg"
                                             width="20"
@@ -173,7 +173,7 @@ function HeaderMyProfile({ button, setButton }) {
                                         <div className="text-center">Таалагдсан</div>
                                     </div>
                                 </Link>
-                                <div onClick={Dialog} className="extra 3 flex w-full h-[43px] gap-2 rounded-b-md bg-slate-200 items-center text-center pl-2  hover:bg-slate-300">
+                                <div onClick={Dialog} className="extra 3 flex w-full h-[43px] gap-2 rounded-b-md bg-white  items-center text-center pl-2  hover:bg-slate-100">
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         width="20"
@@ -202,7 +202,7 @@ function HeaderMyProfile({ button, setButton }) {
                                             strokeLinejoin="round"
                                         />
                                     </svg>
-                                    <div onClick={Dialog} className="text-center">гарах</div>
+                                    <div onClick={Dialog} className="text-center">Гарах</div>
 
                                 </div>
                             </div>
