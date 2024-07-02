@@ -17,7 +17,7 @@ function SideBar({showSidebar, setShowSidebar}) {
         <div>
             <header className="w-full h-[74px] px-[16px] flex justify-between items-center sm:hidden">
                 <div onClick={() => setShowSidebar(!showSidebar)}>
-                    <i className="fa-solid fa-bars"></i>
+                    <i className="fa-solid fa-bars text-[#E86B02]"></i>
                     <SideBarComponent />
                 </div>
                 <div className="logo flex items-center">

@@ -51,21 +51,21 @@ const menus = [
         name: 'technology',
         title: "Technology",
         path: '/technology',
-        children: []
+        
     },
     {
         id: 4,
         name: 'entertainment',
         title: 'Entertainment',
         path: '/entertainment',
-        children: []
+       
     },
     {
         id: 5,
         name: 'health',
         title: 'Health',
         path: '/health',
-        children: []
+       
     }
 ]
 const cardsData = [

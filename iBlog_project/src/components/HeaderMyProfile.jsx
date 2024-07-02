@@ -235,7 +235,7 @@ function HeaderMyProfile({ button, setButton }) {
                                 <p class="font-[14px] w-[289px] text-center m-auto mb-[10px] text-black pt-[16px]"><b>Та системээс гарахдаа итгэлтэй байна уу?</b></p>
 
                                 <div className="flex gap-[15px]">
-                                    <Link to={'/login'} className="text-white bg-[#E86B02] lg:rounded-lg rounded-2xl pl-4 pr-4 py-[10px] pr-[30px] pl-[30px] w-[50%]   h-[50px] my-[12px]">
+                                    <Link to={'/login'} className=" text-center text-white bg-[#E86B02] lg:rounded-lg rounded-2xl pl-4 pr-4 py-[10px] pr-[30px] pl-[30px] w-[50%]   h-[50px] my-[12px]">
                                         Тийм
                                     </Link>
 
