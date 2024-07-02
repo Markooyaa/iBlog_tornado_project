@@ -14,7 +14,7 @@ export default function MainPage() {
             <Posts category='health' />
 
             {hide==false?
-            <div className="w-full flex justify-center mb-[30px]">
+            <div className="w-full flex justify-center ">
              <button onClick={Hide} className=" inline-flex px-[20px] py-[12px] justify-center items-center gap-[12px] border-[1px] rounded-[10px]  ">Цааш унших</button> 
              </div>
             :null
