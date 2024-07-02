@@ -9,6 +9,7 @@ import OthersPosts from "../components/OthersPosts";
 import MobileSaveButton from "../components/MobileSaveButton";
 import MobileFooter from "../components/MobileFooter";
 import MobileBottomBtns from "../components/MobileBottomBtns";
+import Login_Create_footer from "../components/FooterDev";
 
 export default function OthersProfilePage(){
     const [button, setButton] = useState(false);
@@ -29,9 +30,7 @@ export default function OthersProfilePage(){
                 <OtherProfile />
                 <OthersPosts categoryid={'hobby'} />
             </div>
-            <div className="sm:flex hidden border-t-[1px] w-full">
-                <Footer />
-            </div>
+            <Login_Create_footer/>
             <MobileBottomBtns />
         </div>
     )

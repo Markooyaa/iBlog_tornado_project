@@ -6,6 +6,9 @@ import Login_Create_header from "../components/HeaderDev";
 import { Input,PasswordInput } from "../components/Input";
 import { CreateAccount } from "./CreateAccount";
 import { Link } from "react-router-dom";
+import { BsEye, BsEyeSlash, BsEyeSlashFill } from "react-icons/bs";
+import { FaEyeSlash } from "react-icons/fa6";
+import { PiEye, PiEyeSlash, PiEyeSlashBold } from "react-icons/pi";
 
 
 
@@ -42,7 +45,7 @@ export function LoginPage() {
 
 
 
-                    <PasswordInput id={'password'} type={password? 'text' : 'password'} placeholder={"Нууц үг"} onClick_button={togglePasswordVisibility}/>
+                    <PasswordInput id={'password'} type={password? 'text' : 'password'} placeholder={"Нууц үг"} onClick_button={togglePasswordVisibility} icon={password? <PiEyeSlash className="text-[20px]" />  : <PiEye className="text-[20px]"/>}/>
                   
 
                    

@@ -6,6 +6,7 @@ import Footer from "../components/Footer";
 import SidebarMobile from "../components/SideBarMobile";
 import SideBarComponent from "../components/SideBarComponent";
 import MobileBottomBtns from "../components/MobileBottomBtns";
+import Login_Create_footer from "../components/FooterDev";
 
 export default function LikedPost() {
     const [button, setButton] = useState(false);
@@ -26,9 +27,7 @@ export default function LikedPost() {
                 <SideBar />
                 <LikedPosts categoryid={'hobby'} />
             </div>
-            <div className="sm:flex hidden border-t-[1px] w-full">
-                <Footer />
-            </div>
+           <Login_Create_footer/>
             <MobileBottomBtns />
         </div>
     )

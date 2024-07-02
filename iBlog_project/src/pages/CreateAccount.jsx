@@ -6,6 +6,7 @@ import Login_Create_header from "../components/HeaderDev";
 import { Input, PasswordInput } from "../components/Input";
 import { Outlet } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { PiEye, PiEyeSlash } from "react-icons/pi";
 
 
 
@@ -86,9 +87,9 @@ export function CreateAccount2() {
                     <Input type={'email'} placeholder={"И-мэйл эсвэл утасны дугаар"} />
 
 
-                    <PasswordInput id={''} type={password ? 'text' : 'password'} placeholder={"Нууц үг зохиох"} onClick_button={togglePasswordVisibility} />
+                    <PasswordInput id={''} type={password ? 'text' : 'password'} placeholder={"Нууц үг зохиох"} onClick_button={togglePasswordVisibility} icon={password? <PiEyeSlash className="text-[20px]" />  : <PiEye className="text-[20px]"/>} />
 
-                    <PasswordInput id={''} type={rePassword ? 'text' : 'password'} placeholder={"Нууц үг давтах"} onClick_button={toggleRePasswordVisibility} />
+                    <PasswordInput id={''} type={rePassword ? 'text' : 'password'} placeholder={"Нууц үг давтах"} onClick_button={toggleRePasswordVisibility} icon={rePassword? <PiEyeSlash className="text-[20px]" />  : <PiEye className="text-[20px]"/>} />
 
                     <Link to='/login'  >
                         <Full_colored_button text={'Бүртгүүлэх'} />
