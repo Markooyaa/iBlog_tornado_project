@@ -64,14 +64,14 @@ function LikeShare({like}) {
 
 function Profile({url,username}) {
     return (
-        <div className="w-full sm:w-[310px]">
+        <div className="w-full sm:w-[310px] mb-[10px]">
             <div className="user flex justify-between items-center">
-               <Link to={'/othersprofile'}>
-               <div className="account inline-flex items-center gap-[10px]">
+               
+               <Link to={'/othersprofile'} className="account inline-flex items-center gap-[10px]">
                     <img src={url} />
                     <p className="text-[18px] font-semibold text-slate-700">{username}</p>
-                </div>
-               </Link>
+                </Link>
+             
                 <button className="text-[18px] font-semibold text-blue-500">Follow</button>
             </div>
         </div>
