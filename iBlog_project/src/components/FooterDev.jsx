@@ -19,7 +19,8 @@ export default function Login_Create_footer(){
         </div>
         <div className="Бидэнтэй холбогдох">
             <p className="font-bold mb-[18px]">Бидэнтэй холбогдох</p>
-            <p className="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <p className="flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                 <g clipPath="url(#clip0_575_3760)">
                 <path d="M2.875 3H12.875C13.5625 3 14.125 3.5625 14.125 4.25V11.75C14.125 12.4375 13.5625 13 12.875 13H2.875C2.1875 13 1.625 12.4375 1.625 11.75V4.25C1.625 3.5625 2.1875 3 2.875 3Z" stroke="#E86B02" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 <path d="M14.125 4.25L7.875 8.625L1.625 4.25" stroke="#E86B02" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
