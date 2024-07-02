@@ -8,8 +8,8 @@ export default function Posts(props) {
     const List = cardsData.filter(cardsData => cardsData.category === props.category);
 
     return (
-        <div className="flex flex-col flex-wrap gap-[16px]">
-            <div className="flex sm:justify-between">
+        <div className="flex flex-col flex-wrap gap-[16px] w-full">
+            <div className="flex justify-between">
                 <h2 className="uppercase font-bold flex items-center gap-[10px] px-[18px] py-[11px] text-[18px] leading-[24px] justify-center">
                     {props.category}
                 </h2>
@@ -21,8 +21,8 @@ export default function Posts(props) {
 </svg>
                 </Link>
             </div>
-            <div className="flex sm:justify-end items-center flex-wrap w-full overflow-x-scroll pb-2">
-                <div className="flex gap-[8px] sm:gap-[22px] flex-wrap px-[20px]">
+            <div className="flex max-sm:justify-center  items-center flex-wrap w-full pb-2 ">
+            <div className="grid grid-cols-2 max-sm:justify-center sm:flex gap-[8px] sm:gap-[22px] flex-wrap ">
                     {List &&
                         List.map((data, index) => {
                             if (index < 8) {

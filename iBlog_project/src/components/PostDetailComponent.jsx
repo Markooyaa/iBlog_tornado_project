@@ -10,8 +10,8 @@ export default function PostDetailComponent() {
     
     return (
         
-        <div className="content flex flex-col m-auto gap-[16px] w-[328px] sm:w-full sm:m-[30px] sm:pr-[50px] ">
-            {blog &&  <div className="hidden sm:flex items-center gap-[5px] h-[75px]">
+        <div className="content flex flex-col m-auto gap-[16px]  w-full sm:m-[30px] sm:pr-[50px] ">
+            {blog &&  <div className="flex items-center gap-[5px] h-[75px]">
                 <div className="flex items-center gap-[5px] px-[16px] py-10px]">
                     <Link to="/" className="text-[18px] text-gray-600">Нүүр хуудас</Link>
                     <i className="fa-solid fa-angle-right"></i>
@@ -25,16 +25,20 @@ export default function PostDetailComponent() {
                     <Link to={`/${blog[0].category}/${blog[0].categoryid}`} className="text-[18px] text-gray-600 capitalize">{blog[0].categoryid}</Link>
                     <i className="fa-solid fa-angle-right"></i>
                 </div>:''}
-                <div className="flex items-center gap-[5px] px-[16px] py-10px]">
+                <div className="hidden sm:flex items-center gap-[5px] px-[16px] py-10px]">
                     <p className="text-[18px] font-bold text-gray-600 capitalize">{blog[0].title}</p>
                 </div>
             </div>}
            
+           <div className="flex justify-center">
+           <div className="sm:w-full w-[328px] ">
             <Profile url={blog[0].profile} username={blog[0].username}/>
             <img src="/Images/Rectangle 2.jpg" />
             <h2 className="text-[24px] sm:text-[29px] font-semibold leading-[43px]">Theme Installation</h2>
             <LikeShare like={blog[0].likes} />
             <Texts  text={blog[0].text}/>
+            </div>
+           </div>
         </div>
     
     )
