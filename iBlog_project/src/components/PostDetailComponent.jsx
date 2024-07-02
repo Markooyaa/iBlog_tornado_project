@@ -33,7 +33,7 @@ export default function PostDetailComponent() {
            <div className="flex justify-center">
            <div className="sm:w-full w-[328px] ">
             <Profile url={blog[0].profile} username={blog[0].username}/>
-            <img src="/Images/Rectangle 2.jpg" />
+            <img src="/Images/Rectangle 2.jpg" className="w-full"/>
             <h2 className="text-[24px] sm:text-[29px] font-semibold leading-[43px]">Theme Installation</h2>
             <LikeShare like={blog[0].likes} />
             <Texts  text={blog[0].text}/>
@@ -66,7 +66,7 @@ function LikeShare({like}) {
 function Profile({url,username}) {
     return (
         <div className="w-full sm:w-[310px] mb-[10px]">
-            <div className="user flex justify-between items-center">
+            <div className="user  flex gap-[56px] items-center">
                
                <Link to={'/othersprofile'} className="account inline-flex items-center gap-[10px]">
                     <img src={url} />
@@ -81,6 +81,6 @@ function Profile({url,username}) {
 
 function Texts({text}) {
     return (
-        <p className="flex flex-wrap">{text}</p>
+        <p className="flex flex-wrap w-full">{text}</p>
     )
 }
