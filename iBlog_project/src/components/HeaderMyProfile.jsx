@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Logo } from "./Logo";
 
-function HeaderMyProfile({ button, setButton }) {
+function HeaderMyProfile() {
 
 
     const [dialog, setDialog] = useState(false)
@@ -11,15 +11,11 @@ function HeaderMyProfile({ button, setButton }) {
         setDialog(!dialog)
     }
 
-    function Click() {
-        setButton(!false);
+    
+    const [button, setButton] = useState(false);
+    function Click(){
+        setButton(!button)
     }
-
-    function handleProfile() {
-        setButton(!button);
-       
-    }
-
 
     return (
         <header
@@ -110,7 +106,7 @@ function HeaderMyProfile({ button, setButton }) {
                     </svg>
                 </Link>
                 <button
-                    onClick={() => setButton(!button)}
+                    onClick={Click}
                     id="dropdownBtn"
                     className="sm:flex relative text-[#E86B02] border border-[#DCE3EA]  rounded-[10px] pt-[10px] px-[10px]  gap-1">
                     <svg

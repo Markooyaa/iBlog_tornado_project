@@ -1,8 +1,8 @@
 export default function MobileSaveButton() {
   return (
-    <>
-      <button className="w-full sm:hidden flex justify-center px-[30px] py-[10px] text-[15px] font-normal rounded-xl text-[#fff] bg-[#E86B02] mt-[5%]">
-        <span>хадгалах</span>
+    <div className="flex justify-center">
+      <button className="w-[90%] sm:hidden gap-[5px] flex justify-center  py-[10px] text-[15px] font-normal rounded-xl text-[#fff] bg-[#E86B02] mt-[5%]">
+        <span >Xадгалах</span>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="16"
@@ -16,6 +16,6 @@ export default function MobileSaveButton() {
           />
         </svg>
       </button>
-    </>
+    </div>
   );
 }

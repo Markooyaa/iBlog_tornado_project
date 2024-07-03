@@ -12,27 +12,7 @@ export default function SideBarComponent({ showSidebar, setShowSidebar }) {
     function Exit() {
         setexit(!exit)
     }
-    // const buildMenus = menus &&
-    //     menus.map((menu, idx) => {
-    //         return (
-    //             <div key={idx} className="inline-flex flex-col ">
-    //                 <Link onClick={`/${menu.name}` && Hide} to={`/${menu.name}`} className="text-[14px] font-semibold pb-[12px]">
-    //                     {menu.title}
-    //                 </Link>
-    //                 {hide && <div className="flex flex-col gap-[8px]">
-    //                     {menu.children && menu.children.map(
-    //                         (c, index) => {
-    //                             return (
-    //                                 <div key={index} onClick={() => setShowSidebar(false)} className="flex flex-col gap-[8px]">
-    //                                     <SidebarLink key={index} url={c.path} title={c.name} />
-    //                                 </div>
-    //                             )
-    //                         }
-    //                     )}
-    //                 </div>}
-    //             </div>
-    //         )
-    //     })
+   
 
 
     return (

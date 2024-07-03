@@ -16,31 +16,57 @@ import OthersProfile from "./pages/OthersProfile";
 import OthersProfilePage from "./pages/OthersProfile";
 import MyPosts from "./pages/MyPosts";
 import { Fullcategory } from "./components/FullCategory";
+import { Layout } from "./pages/Layout";
 
 const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <BlogLayout />,
-    children: [
+  { path: "/",
+    element: <Layout />,
+    children:[
       {
         path: "/",
-        element: <HomePage />
+        element: <BlogLayout />,
+        children: [
+          {
+            path: "/",
+            element: <HomePage />
+          },
+          {
+            path: "/postDetail/:id",
+            element: <PostDetailComponent />
+          },
+          {
+            path: "/:category/:id",
+            element: <CategoryDetailComponent />
+          
+          },
+          {
+            path:'/:category',
+            element:<Fullcategory/>
+          },
+         
+    
+        ]
       },
-      {
-        path: "/postDetail/:id",
-        element: <PostDetailComponent />
-      },
-      {
-        path: "/:category/:id",
-        element: <CategoryDetailComponent />
       
+    ]
+  },
+  {
+    path: "/profile",
+    element: <MyProfileLayout />,
+    children: [
+      {
+        path: "/profile",
+        element: <Content />,
       },
       {
-        path:'/:category',
-        element:<Fullcategory/>
-      }
-
-    ]
+        path: "/profile/add",
+        element: <AddPost />,
+      },
+      {
+        path: "/profile/edit",
+        element: <EditProfile />,
+      },
+    ],
   },
   {
     path: "/login",
@@ -66,24 +92,7 @@ const router = createBrowserRouter([
     path: "/changePassword_Page3",
     element: <ChangePassword3 />,
   },
-  {
-    path: "/profile",
-    element: <MyProfileLayout />,
-    children: [
-      {
-        path: "/profile",
-        element: <Content />,
-      },
-      {
-        path: "/profile/add",
-        element: <AddPost />,
-      },
-      {
-        path: "/profile/edit",
-        element: <EditProfile />,
-      },
-    ],
-  },
+  
   {
     path: "/edit",
     element: <EditProfileMain />,

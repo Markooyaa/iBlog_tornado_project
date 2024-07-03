@@ -4,10 +4,10 @@ import { Card } from "./Card"
 export default function OthersPosts({categoryid}){
     const List = cardsData.filter(cardsData => cardsData.categoryid === categoryid);
     return(
-        <div className="flex flex-col items-start gap-[20px]">
+        <div className="w-full flex flex-col items-start gap-[20px]">
             <div className="border-b-[1px] w-full">
-                <div className="w-[150px] h-[40px] hidden sm:flex items-center justify-center gap-[10px] border-b-[2px] border-orange-500">
-                    <p className="text-[18px] font-bold">
+                <div className="w-full hidden sm:flex items-center pl-10 gap-[10px] border-b-[2px] border-orange-500">
+                    <p className=" text-[18px] text-start font-bold">
                     Постууд
                     </p>
                 </div>
@@ -15,26 +15,31 @@ export default function OthersPosts({categoryid}){
                     Постууд
                 </div>
             </div>
-            <div className="flex max-smjustify-center w-full"> 
-            <div className="flex gap-[8px] sm:gap-[22px] flex-wrap max-sm:justify-center">
+            
+
+            <div className="flex max-sm:justify-center  items-center flex-wrap w-full  ">
+            <div className="grid grid-cols-2 max-sm:justify-center sm:flex gap-[8px] sm:gap-[22px] flex-wrap ">
                 {List &&
-                    List.map((data, index)=>{
-                        return(
-                            <Card key={index}
-                            id={data.id}
-                            url={data.url}
+                    List.map((data, index) => {
+                      
+                            return (
+
+                                <Card key={index}
+                                    id={data.id}
+                                    url={data.url}
                                     title={data.title}
                                     username={data.username}
                                     date={data.date}
                                     likes={data.likes}
-                                    profile={data.profile} 
+                                    profile={data.profile}
                                     category={data.category}
-                                    categoryid={data.id} />
-                        )
+                                    categoryid={data.categoryid} 
+                                />)
+                       
                     })
-                    }
+                }
             </div>
-            </div>
+        </div>
         </div>
     )
 }

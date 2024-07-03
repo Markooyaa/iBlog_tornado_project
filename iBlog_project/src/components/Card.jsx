@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export  function Card(props,){
     
     return(
-        <div className="card flex flex-col gap-[8px] sm:gap-[10px] pb-[10px] sm:p-[10px] shadow-md rounded-[8px] w-[158px] sm:w-[230px]">
+        <div className=" justify-center card flex flex-col gap-[8px] sm:gap-[10px] pb-[10px] sm:p-[10px] shadow-md rounded-[8px] w-[158px] sm:w-[230px]">
             
             <Link  to={{pathname: `/postDetail/${props.id}`, state: props}}>
                 <div className="flex flex-col items-start gap-[5px]">

@@ -20,11 +20,12 @@ export default function LikedPosts({categoryid}){
                     Таалагдсан
                     </p>
                 </div>
-                <div className="sm:hidden flex font-bold px-[20px] py-[10px] gap-[10px] items-center h-[40px] border-b-[2px] border-orange-500">
+                <div className="sm:hidden flex font-bold px-[30px] py-[10px] gap-[10px] items-center h-[40px] border-b-[2px] border-orange-500">
                     Таалагдсан постууд
                 </div>
             </div>
-            <div className="flex gap-[8px] sm:gap-[22px] flex-wrap px-[20px] justify-center">
+            <div className="flex max-sm:justify-center  items-center flex-wrap w-full pb-2 ">
+            <div className="grid grid-cols-2 max-sm:justify-center sm:flex gap-[8px] sm:gap-[22px] flex-wrap ">
                 {List &&
                     List.map((data, index)=>{
                         return(
@@ -41,6 +42,7 @@ export default function LikedPosts({categoryid}){
                         )
                     })
                     }
+                      </div>
             </div>
         </div>
     )
