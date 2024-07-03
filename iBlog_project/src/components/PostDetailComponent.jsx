@@ -5,7 +5,7 @@ export default function PostDetailComponent() {
 
     const params  = useParams()
     const blog = cardsData.filter(c => c.id == params.id)
-    console.log(blog)
+   
     
     
     return (
@@ -16,16 +16,16 @@ export default function PostDetailComponent() {
                     <Link to="/" className="text-[18px] text-gray-600">Нүүр хуудас</Link>
                     <i className="fa-solid fa-angle-right"></i>
                 </div>
-                <div className="flex items-center gap-[5px] px-[16px] py-10px]">
+                <div className="flex items-center gap-[5px] pr-[16px] py-10px]">
                     <Link to={`/${blog[0].category}`} className="text-[18px] text-gray-600 capitalize">{blog[0].category} </Link>
                     <i className="fa-solid fa-angle-right"></i>
                 </div>
                 
-                {blog[0].categoryid!=''? <div className="flex items-center gap-[5px] px-[16px] py-10px]">
+                {blog[0].categoryid!=''? <div className="flex items-center gap-[5px] pr-[16px] py-10px]">
                     <Link to={`/${blog[0].category}/${blog[0].categoryid}`} className="text-[18px] text-gray-600 capitalize">{blog[0].categoryid}</Link>
                     <i className="fa-solid fa-angle-right"></i>
                 </div>:''}
-                <div className="hidden sm:flex items-center gap-[5px] px-[16px] py-10px]">
+                <div className="hidden sm:flex items-center gap-[5px] pr-[16px] py-10px]">
                     <p className="text-[18px] font-bold text-gray-600 capitalize">{blog[0].title}</p>
                 </div>
             </div>}

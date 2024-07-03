@@ -15,7 +15,8 @@ export default function OthersPosts({categoryid}){
                     Постууд
                 </div>
             </div>
-            <div className="flex gap-[8px] sm:gap-[22px] flex-wrap px-[20px] justify-center">
+            <div className="flex max-smjustify-center w-full"> 
+            <div className="flex gap-[8px] sm:gap-[22px] flex-wrap max-sm:justify-center">
                 {List &&
                     List.map((data, index)=>{
                         return(
@@ -32,6 +33,7 @@ export default function OthersPosts({categoryid}){
                         )
                     })
                     }
+            </div>
             </div>
         </div>
     )

@@ -4,4 +4,4 @@ const Images = {
     Profile: require('./Profile.jpg').default,
 };
 
-export default images;
+export default Images;

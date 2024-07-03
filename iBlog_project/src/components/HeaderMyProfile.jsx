@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { Logo } from "./Logo";
 
 function HeaderMyProfile({ button, setButton }) {
 
@@ -16,7 +17,7 @@ function HeaderMyProfile({ button, setButton }) {
 
     function handleProfile() {
         setButton(!button);
-        console.log("Profile");
+       
     }
 
 
@@ -54,16 +55,7 @@ function HeaderMyProfile({ button, setButton }) {
                     />
                 </svg>
             </div>
-            <Link to="/" className="relative-logo flex items-center">
-                <img
-                    src="Images/Logo.jpg"
-                    alt="logo"
-                    className="w-[20px] h-[27px] sm: flex-col "
-                />
-                <h2 className="text-orange-400 text-3xl font-normal">
-                    <span className="text-[#F77268]">i</span>blog
-                </h2>
-            </Link>
+            <Logo/>
 
             <div className="search relative sm:flex hidden">
                 <input

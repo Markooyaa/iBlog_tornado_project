@@ -26,9 +26,11 @@ export default function OthersProfilePage(){
             </div>
             <div
                 onClick={click}
-                className="w-full h-full sm:px-12 sm:pt-12 sm:flex pb-[30px] items-start gap-[30px]">
+                className="w-full h-full sm:pl-12 sm:pt-12 sm:flex pb-[30px] items-start gap-[30px]">
                 <OtherProfile />
-                <OthersPosts categoryid={'hobby'} />
+              
+              <OthersPosts categoryid={'hobby'} />
+          
             </div>
             <Login_Create_footer/>
             <MobileBottomBtns />

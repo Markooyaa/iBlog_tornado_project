@@ -6,7 +6,7 @@ export function Fullcategory(props){
     
     const params  = useParams()
     const blog = cardsData.filter(c => c.category == params.category)
-    console.log(blog)
+    
     
     
     return(
@@ -19,7 +19,7 @@ export function Fullcategory(props){
                     <Link to="/" className="text-[18px] text-gray-600">Нүүр хуудас</Link>
                     <i className="fa-solid fa-angle-right"></i>
                 </div>
-                <div className="flex items-center gap-[5px] px-[16px] py-10px]">
+                <div className="flex items-center gap-[5px] pr-[16px] py-10px]">
                     <b className="text-[18px] text-gray-600 capitalize">{params.category}</b>
                     <i className="fa-solid fa-angle-right"></i>
                 </div>
