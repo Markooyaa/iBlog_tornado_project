@@ -75,7 +75,7 @@ export default function Content() {
 
 
   return (
-    <div className="h-full w-full ">
+    <div className="h-full w-full  ">
     <SidebarMobile/>
      <Profile/>
       <div className="content sm:w-3/4 border-5 border-orange-600 ">
@@ -92,7 +92,7 @@ export default function Content() {
     
      
     </div>
-    <div className="w-full h-1/2 flex place-items-center">  <Note /></div>
+    <div className="w-full h-3/4 flex place-items-center">  <Note /></div>
     <Buttons/>
     </div>
   );

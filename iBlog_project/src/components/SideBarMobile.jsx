@@ -19,20 +19,20 @@ export default function SidebarMobile() {
     return (
         <header className="w-full max-sm:flex hidden">
             <SideBar  showSidebar={showSidebar} setShowSidebar={setShowSidebar} />
-            <div className={showSidebar ? "fixed bottom-0 top-0 left-0 " : ""}>
+            <div className={showSidebar ? "w-full h-full  " : ""}>
             {showSidebar && <div onClick={() => setShowSidebar(false)} className="w-full h-full opacity-80 bg-slate-800 z-10 fixed top-0 left-0 sm:w-0 flex"></div>}
             <section className={showSidebar ? "flex" : "hidden sm:inline-flex  flex-col items-start gap-[10px] px-[49px] py-[40px]"}>
-                <div className={showSidebar ? "absolute flex flex-col  w-[250px]  bg-white z-20 sm:pt-[40px] px-[20px] sm:w-0 h-full" : "flex flex-col gap-[32px] w-[250px]"}>
+                <div className={showSidebar ? "fixed   left-0 flex flex-col  w-[250px]  bg-white z-20 sm:pt-[40px] px-[20px] sm:w-0 h-full" : "flex flex-col gap-[32px] w-[250px]"}>
                  
-                  <div  className={showSidebar ? "hidden" : "flex"}> <Logo></Logo></div>
+                  
                     <button className={showSidebar ? "flex mb-[45px] mt-[40px]" : "hidden"} onClick={() => setShowSidebar(false)}>
                         <i className="fa-solid fa-arrow-left-long"></i>
                     </button>
                     <div className=''>{menus.map((item,index)=>{
                         return <Submenu path={item.path} title={item.title} children={item.children} key={index}/>
                     })}</div>
-                    <div className={showSidebar ? "flex flex-col justify-end h-full" : "hidden w-[245px] h-[42px] px-[15px] items-center gap-[5px]"}>
-                        <button onClick={Exit} className="logout absolute pb-[150px] flex w-[250px] h-[42px]  items-center gap-[5px] pt-[150px] ">
+                    <div className={showSidebar ? "flex flex-col justify-end pb-[50px] h-full" : "hidden w-[245px] h-[42px] px-[15px] items-center gap-[5px]"}>
+                        <button onClick={Exit} className="logout   flex w-[250px] h-[42px]  items-center gap-[5px] pt-[150px] ">
                             <i className="fa-solid  fa-arrow-right-from-bracket text-[#E86B02]"></i>
                             <p>Гарах</p>
                         </button>
