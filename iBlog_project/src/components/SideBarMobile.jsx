@@ -39,7 +39,7 @@ export default function SidebarMobile() {
                             </button>
                         </div>
                         {exit ? <div id="dialogContainer" className=" fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 " onClick={Exit}>
-                            <div className="bg-white rounded-md p-4 flex flex-col justify-center w-[335px]">
+                            <div className="bg-white rounded-xl p-4 flex flex-col justify-center w-[335px]">
 
                                 <div className="text-center flex justify-center">
                                     <div className="rounded-full bg-[#E86B02] p-[10px]">
@@ -53,12 +53,12 @@ export default function SidebarMobile() {
 
                                 <p className="font-[14px] w-[289px] text-center m-auto mb-[10px] text-black pt-[16px]"><b>Та системээс гарахдаа итгэлтэй байна уу?</b></p>
 
-                                <div className="flex gap-[15px]">
-                                    <Link to={'/login'} className="text-white bg-[#E86B02] justify-center lg:rounded-lg rounded-2xl pl-4 pr-4 py-[10px] pr-[30px] pl-[30px] w-[50%]   h-[50px] my-[12px]">
+                                <div className="flex gap-[15px] ">
+                                    <Link to={'/login'} className="text-white place-items-center flex bg-[#E86B02] justify-center lg:rounded-lg rounded-2xl py-[10px] pr-[30px] pl-[30px] w-[50%]   h-[50px] mt-[12px]">
                                         <p className='text-center'>  Тийм</p>
                                     </Link>
 
-                                    <button onClick={Exit} id="closeDialogButton" className="text-[#546371] bg-[#E2E8EE] lg:rounded-lg rounded-2xl pl-4 pr-4 py-[10px] pr-[30px] pl-[30px] w-[50%] h-[50px] my-[12px]" >Үгүй</button>
+                                    <button onClick={Exit} id="closeDialogButton" className="text-[#546371] bg-[#E2E8EE] lg:rounded-lg rounded-2xl  py-[10px] pr-[30px] pl-[30px] w-[50%] h-[50px] mt-[12px]" >Үгүй</button>
                                 </div>
 
 
