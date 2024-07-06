@@ -1,7 +1,7 @@
-export default function MobilePostButton() {
+export default function MobilePostButton({onClick}) {
   return (
     <>
-      <button className="w-full sm:hidden flex justify-center px-[30px] py-[10px] text-[15px] font-normal rounded-xl text-[#fff] bg-[#E86B02] mt-[5%]">
+      <button onClick={onclick} className="w-full sm:hidden flex justify-center px-[30px] py-[10px] text-[15px] font-normal rounded-xl text-[#fff] bg-[#E86B02] mt-[5%]">
         <span>Post</span>
         <svg
           xmlns="http://www.w3.org/2000/svg"

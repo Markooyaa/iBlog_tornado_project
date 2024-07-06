@@ -204,8 +204,8 @@ export function ChangePassword3() {
 
                         {mobileDialog ? 
                         <div id="dialogContainer "
-                            className="fixed inset-0 flex items-center justify-center  ">
-                            <div className="bg-white rounded-md p-4 flex flex-col justify-center shadow-lg">
+                            className="fixed   inset-0 flex items-center justify-center  ">
+                            <div className="bg-white rounded-md p-4 flex flex-col justify-center shadow-2xl">
                                 <div className="text-center flex justify-center">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="39" height="38" viewBox="0 0 39 38" fill="none"
                                         className="flex justify-center">

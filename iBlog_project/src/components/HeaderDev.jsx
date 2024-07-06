@@ -1,6 +1,7 @@
 
 import { Link,useNavigate } from "react-router-dom"
 import { Logo } from "./Logo";
+import { CiSearch } from "react-icons/ci";
 export default function Login_Create_header({text}){
   const navigate = useNavigate();
     return (
@@ -10,9 +11,8 @@ export default function Login_Create_header({text}){
                 
                 <div className="relative search">
                     <input type="text" className="border rounded-2xl pl-4 pr-12 py-2 w-[550px] h-[39px] focus:outline-none focus:border-blue-500" placeholder="Хайх"/>
-                    <svg className="absolute right-2 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
-                        <path d="M21 21l-6-6M3 12a9 9 0 1118 0 9 9 0 01-18 0z"></path>
-                    </svg>
+                   
+                    <CiSearch className={'w-[25px] h-[25px] absolute right-2 top-1/2 transform -translate-y-1/2  text-gray-400'}/>
                 
                   </div>
                   <div className="Buttons">

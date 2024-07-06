@@ -27,7 +27,7 @@ export default function EditProfilePass() {
           className="w-full h-[50px] border-2 px-[24px] py-[14px] rounded-xl mb-[24px] hover:bg-slate-100 active:bg-slate-200"
           placeholder="Нууц үг давтах"
         />
-        <button class="float-right sm:flex hidden px-[30px] py-[10px] text-[15px] font-normal rounded-xl text-[#fff] bg-[#E86B02] hover:bg-orange-400 active:bg-orange-600">
+        <button className="float-right sm:flex hidden px-[30px] py-[10px] text-[15px] font-normal rounded-xl text-[#fff] bg-[#E86B02] hover:bg-orange-400 active:bg-orange-600">
           Xадгалах
         </button>
       </div>

@@ -15,7 +15,7 @@ export function Submenu(item) {
             <Link to={`${item.path}`} onClick={item.children && showSubnav}  className="text-[10px] mb-[12px] flex items-center justify-between w-full">
                 <div className="text-[14px] font-semibold">{item.title}</div>
                
-                {item.children && subnav? <BiSolidDownArrow/>:item.children?<BiSolidUpArrow/>:null}
+                {item.children && subnav? <BiSolidUpArrow/>:item.children? <BiSolidDownArrow/>:null}
             </Link>
             
             {subnav && item.children.map((item, index) => {

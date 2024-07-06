@@ -99,11 +99,11 @@ export default function Content() {
 }
  function Note() {
   return (
-    <div class="flex flex-col place-items-center w-full">
-      <div class="image flex justify-center mb-[13px] sm: size-[75px]">
+    <div className="flex flex-col place-items-center w-full">
+      <div className="image flex justify-center mb-[13px] sm: size-[75px]">
         <img width="145px" src={"Images/Note.png"} />
       </div>
-      <div class="w-[265px] text text-center text-[#546371] mt-[12px] font-normal text-[16px]">
+      <div className="w-[265px] text text-center text-[#546371] mt-[12px] font-normal text-[16px]">
         Одоогоор бичвэр оруулаагүй байна!
       </div>
     </div>

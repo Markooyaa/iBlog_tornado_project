@@ -1,5 +1,5 @@
 import Category from "../components/Category";
-import ImgSection from "../components/ImgSection";
+import Img_comment from "../components/ImgSection";
 import CategoryInside from "../components/CategoryInside";
 import Subtitle from "../components/ContentTitle";
 import MainPart from "../components/MainPart";
@@ -55,8 +55,10 @@ export default function AddPost() {
       </div>
     )
   }
+
+  
   return (
-    <div className="h-full">
+    <div className="h-full w-full">
       <div className="content  sm:w-3/4  h-full sm:pl-[155px]  flex-col flex items-center">
       <div className="categories sm:flex hidden items-center sm:w-3/4 w-full sm:h-[40px] h-full border-b-2 border-slate-200 ">
         <CategoryInside />
@@ -68,11 +70,8 @@ export default function AddPost() {
       <div className="sm:w-3/4 w-full mb-[100px]  h-full sm:px-0 px-[5%] ">
         <Category />
        
-          <ImgSection />
-          <Subtitle />
-          <MainPart />
-          <MainPostButton />
-          <PostButton />
+          <Img_comment />
+         
          
        
       </div>

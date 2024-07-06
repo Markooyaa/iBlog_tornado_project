@@ -34,10 +34,10 @@ export default function SideBarComponent({ showSidebar, setShowSidebar }) {
                             <p>Гарах</p>
                         </button>
                     </div>
-                    {exit? <div id="dialogContainer" class=" fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 " onClick={Exit}>
-                            <div class="bg-white rounded-md p-4 flex flex-col justify-center w-[335px]">
+                    {exit? <div id="dialogContainer" className=" fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 " onClick={Exit}>
+                            <div className="bg-white rounded-md p-4 flex flex-col justify-center w-[335px]">
                                 
-                                <div class="text-center flex justify-center">
+                                <div className="text-center flex justify-center">
                                     <div className="rounded-full bg-[#E86B02] p-[10px]">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
                                             <path d="M10 17.5L15 12.5L10 7.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -47,14 +47,14 @@ export default function SideBarComponent({ showSidebar, setShowSidebar }) {
                                     </div>
                                 </div>
 
-                                <p class="font-[14px] w-[289px] text-center m-auto mb-[10px] text-black pt-[16px]"><b>Та системээс гарахдаа итгэлтэй байна уу?</b></p>
+                                <p className="font-[14px] w-[289px] text-center m-auto mb-[10px] text-black pt-[16px]"><b>Та системээс гарахдаа итгэлтэй байна уу?</b></p>
 
                                 <div className="flex gap-[15px]">
                                     <Link to={'/login'} className="text-white bg-[#E86B02] justify-center lg:rounded-lg rounded-2xl pl-4 pr-4 py-[10px] pr-[30px] pl-[30px] w-[50%]   h-[50px] my-[12px]">
                                        <p className='text-center'>  Тийм</p>
                                     </Link>
 
-                                    <button onClick={Exit} id="closeDialogButton" class="text-[#546371] bg-[#E2E8EE] lg:rounded-lg rounded-2xl pl-4 pr-4 py-[10px] pr-[30px] pl-[30px] w-[50%] h-[50px] my-[12px]" >Үгүй</button>
+                                    <button onClick={Exit} id="closeDialogButton" className="text-[#546371] bg-[#E2E8EE] lg:rounded-lg rounded-2xl pl-4 pr-4 py-[10px] pr-[30px] pl-[30px] w-[50%] h-[50px] my-[12px]" >Үгүй</button>
                                 </div>
 
 

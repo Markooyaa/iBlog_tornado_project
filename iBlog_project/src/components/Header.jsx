@@ -1,11 +1,15 @@
+import { CiSearch } from "react-icons/ci";
 import { Link } from "react-router-dom";
 
 export default function HeaderComponent() {
     return (
             <div className="hidden max-w-full sm:flex px-12 py-10 justify-between items-center gap-28 border-b-[1px]">
-                <div className="flex justify-between items-center rounded-full border-solid border-[1px] w-full">
-                    <input type="text" placeholder="Хайх" className="text-[16px]  h-10 rounded-full px-6 w-full"/>
-                </div>
+                  <div className="relative search">
+                    <input type="text" className="border rounded-2xl pl-4 pr-12 py-2 w-[550px] h-[39px] focus:outline-none focus:border-blue-500" placeholder="Хайх"/>
+                   
+                    <CiSearch className={'w-[25px] h-[25px] absolute right-2 top-1/2 transform -translate-y-1/2  text-gray-400'}/>
+                
+                  </div>
                 <div className="flex justify-end items-start gap-3.5">
                    <Link to={'/createAccount'}>
                    <Button
