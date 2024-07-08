@@ -4,7 +4,7 @@ function MainPartFilledPost() {
       <p className="main-section text-[16px] font-bold mb-[10px]">
         Үндсэн хэсэг
       </p>
-      <div class="w-full flex border  sm:mb-5  sm:px-[24px] px-[24px] sm:py-[14px] py-[14px] gap-[10px] font-medium text-[16px] bg-[#F5F7F9] rounded-xl">
+      <div className="w-full flex border  sm:mb-5  sm:px-[24px] px-[24px] sm:py-[14px] py-[14px] gap-[10px] font-medium text-[16px] bg-[#F5F7F9] rounded-xl">
         <div>
           <svg
             xmlns="http://www.w3.org/2000/svg"

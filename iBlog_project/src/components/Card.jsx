@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export  function Card(props,){
     
     return(
-        <div className="card flex flex-col gap-[8px] sm:gap-[10px] pb-[10px] sm:p-[10px] shadow-md rounded-[8px] w-[158px] sm:w-[230px]">
+        <div className=" justify-center card flex flex-col gap-[8px] sm:gap-[10px] pb-[10px] sm:p-[10px] shadow-md rounded-[8px] w-[158px] sm:w-[230px]">
             
             <Link  to={{pathname: `/postDetail/${props.id}`, state: props}}>
                 <div className="flex flex-col items-start gap-[5px]">
@@ -25,8 +25,8 @@ export  function Card(props,){
                 </button>{props.likes}</p>
                 </div>
                 <div className="flex p-[5px] items-center">
-                    <button className="text-[15px] leading-[20px] flex p-[5px] items-center gap-[4px] rounded-[5px] bg-blue-600 text-gray-50">
-                    <i className="fa-brands fa-facebook-f"></i>
+                    <button className="text-[15px] leading-[20px] flex p-[5px] items-center gap-[7px] rounded-[5px] bg-blue-600 text-gray-50">
+                    <i className="fa-brands fa-facebook-f ml-[3px]"></i>
                         Share
                     </button>
                    

@@ -1,7 +1,9 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { Logo } from "./Logo";
+import { CiSearch } from "react-icons/ci";
 
-function HeaderMyProfile({ button, setButton }) {
+function HeaderMyProfile() {
 
 
     const [dialog, setDialog] = useState(false)
@@ -10,15 +12,11 @@ function HeaderMyProfile({ button, setButton }) {
         setDialog(!dialog)
     }
 
-    function Click() {
-        setButton(!false);
+    
+    const [button, setButton] = useState(false);
+    function Click(){
+        setButton(!button)
     }
-
-    function handleProfile() {
-        setButton(!button);
-        console.log("Profile");
-    }
-
 
     return (
         <header
@@ -54,34 +52,14 @@ function HeaderMyProfile({ button, setButton }) {
                     />
                 </svg>
             </div>
-            <Link to="/" className="relative-logo flex items-center">
-                <img
-                    src="Images/Logo.jpg"
-                    alt="logo"
-                    className="w-[20px] h-[27px] sm: flex-col "
-                />
-                <h2 className="text-orange-400 text-3xl font-normal">
-                    <span className="text-[#F77268]">i</span>blog
-                </h2>
-            </Link>
+            <Logo/>
 
-            <div className="search relative sm:flex hidden">
-                <input
-                    type="text"
-                    className="border border-gray-300 rounded-2xl pl-4 pr-12 py-2 w-[572px] h-[39px] focus:outline-none focus:border-blue-500"
-                    placeholder="Хайх"
-                />
-                <svg
-                    className="absolute right-2 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400"
-                    fill="none"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path d="M21 21l-6-6M3 12a9 9 0 1118 0 9 9 0 01-18 0z"></path>
-                </svg>
-            </div>
+            <div className="relative search">
+                    <input type="text" className="border rounded-2xl pl-4 pr-12 py-2 w-[550px] h-[39px] focus:outline-none focus:border-blue-500" placeholder="Хайх"/>
+                   
+                    <CiSearch className={'w-[25px] h-[25px] absolute right-2 top-1/2 transform -translate-y-1/2  text-gray-400'}/>
+                
+                  </div>
 
             {/* <!---------------------------buttons--------------------> */}
             <div className="Buttons sm:flex hidden gap-2">
@@ -118,7 +96,7 @@ function HeaderMyProfile({ button, setButton }) {
                     </svg>
                 </Link>
                 <button
-                    onClick={() => setButton(!button)}
+                    onClick={Click}
                     id="dropdownBtn"
                     className="sm:flex relative text-[#E86B02] border border-[#DCE3EA]  rounded-[10px] pt-[10px] px-[10px]  gap-1">
                     <svg
@@ -135,12 +113,12 @@ function HeaderMyProfile({ button, setButton }) {
                     </svg>
                     <div className="cursor-pointer "  >Профайл</div>
                     {button && (
-                        <div className=" extend-profile  absolute rounded-[10px]  w-[300px] top-[60px] right-0 z-20">
+                        <div className=" extend-profile  absolute rounded-[10px] shadow-2xl  w-[300px] top-[60px] right-0 z-20">
                             <div
                                 id="dropdown"
                                 className="flex flex-col w-full text-[14px] text-black font-semibold cursor:pointer ">
                                 <Link to={'/profile'} >
-                                    <div className="extra 1 flex w-full h-[43px] gap-2  bg-slate-200 rounded-t-md items-center text-center pl-2 hover:bg-slate-300">
+                                    <div className="extra 1 border-b flex w-full h-[43px] gap-2  bg-white rounded-t-md items-center text-center pl-2 hover:bg-slate-100">
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
                                             width="20"
@@ -158,7 +136,7 @@ function HeaderMyProfile({ button, setButton }) {
                                 </Link>
 
                                 <Link to={'/likedposts'}>
-                                    <div className="extra 2 flex w-full h-[43px] gap-2  bg-slate-200 items-center text-center pl-2 hover:bg-slate-300">
+                                    <div className="extra 2 flex w-full border-b h-[43px] gap-2  bg-white  items-center text-center pl-2 hover:bg-slate-100">
                                         <svg
                                             xml ns="http://www.w3.org/2000/svg"
                                             width="20"
@@ -173,7 +151,7 @@ function HeaderMyProfile({ button, setButton }) {
                                         <div className="text-center">Таалагдсан</div>
                                     </div>
                                 </Link>
-                                <div onClick={Dialog} className="extra 3 flex w-full h-[43px] gap-2 rounded-b-md bg-slate-200 items-center text-center pl-2  hover:bg-slate-300">
+                                <div onClick={Dialog} className="extra 3 flex w-full h-[43px] gap-2 rounded-b-md bg-white  items-center text-center pl-2  hover:bg-slate-100">
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         width="20"
@@ -202,7 +180,7 @@ function HeaderMyProfile({ button, setButton }) {
                                             strokeLinejoin="round"
                                         />
                                     </svg>
-                                    <div onClick={Dialog} className="text-center">гарах</div>
+                                    <div onClick={Dialog} className="text-center">Гарах</div>
 
                                 </div>
                             </div>
@@ -213,8 +191,8 @@ function HeaderMyProfile({ button, setButton }) {
                     <div className="bg-white"></div>
 
                     {dialog ?
-                        <div id="dialogContainer" class=" fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 " onClick={Dialog}>
-                            <div class="bg-white rounded-md p-4 flex flex-col justify-center w-[482px]">
+                        <div id="dialogContainer" className=" fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 " onClick={Dialog}>
+                            <div className="bg-white rounded-md p-4 flex flex-col justify-center w-[482px]">
                                 <div className="w-full justify-end flex   ">
                                     <button className="rounded-full border p-[3px]" onClick={Dialog}>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -222,7 +200,7 @@ function HeaderMyProfile({ button, setButton }) {
                                         </svg>
                                     </button>
                                 </div>
-                                <div class="text-center flex justify-center">
+                                <div className="text-center flex justify-center">
                                     <div className="rounded-full bg-[#E86B02] p-[10px]">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
                                             <path d="M10 17.5L15 12.5L10 7.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -232,14 +210,14 @@ function HeaderMyProfile({ button, setButton }) {
                                     </div>
                                 </div>
 
-                                <p class="font-[14px] w-[289px] text-center m-auto mb-[10px] text-black pt-[16px]"><b>Та системээс гарахдаа итгэлтэй байна уу?</b></p>
+                                <p className="font-[14px] w-[289px] text-center m-auto mb-[10px] text-black pt-[16px]"><b>Та системээс гарахдаа итгэлтэй байна уу?</b></p>
 
                                 <div className="flex gap-[15px]">
-                                    <Link to={'/login'} className="text-white bg-[#E86B02] lg:rounded-lg rounded-2xl pl-4 pr-4 py-[10px] pr-[30px] pl-[30px] w-[50%]   h-[50px] my-[12px]">
+                                    <Link to={'/login'} className=" text-center text-white bg-[#E86B02] lg:rounded-lg rounded-2xl pl-4 pr-4 py-[10px] pr-[30px] pl-[30px] w-[50%]   h-[50px] my-[12px]">
                                         Тийм
                                     </Link>
 
-                                    <button onClick={Dialog} id="closeDialogButton" class="text-[#546371] bg-[#E2E8EE] lg:rounded-lg rounded-2xl pl-4 pr-4 py-[10px] pr-[30px] pl-[30px] w-[50%] h-[50px] my-[12px]" >Үгүй</button>
+                                    <button onClick={Dialog} id="closeDialogButton" className="text-[#546371] bg-[#E2E8EE] lg:rounded-lg rounded-2xl pl-4 pr-4 py-[10px] pr-[30px] pl-[30px] w-[50%] h-[50px] my-[12px]" >Үгүй</button>
                                 </div>
 
 

@@ -7,7 +7,7 @@ export default function CategoryFilledPost() {
       <div
         name="category"
         id="gategories"
-        class="sm:w-[247px] w-full border-2 rounded-xl px-[24px] py-[10px] bg-[#E86B02] text-[16px] text-white font-medium flex justify-between">
+        className="sm:w-[247px] w-full border-2 rounded-xl px-[24px] py-[10px] bg-[#E86B02] text-[16px] text-white font-medium flex justify-between">
         <p>Technology</p>
         <svg
           xmlns="http://www.w3.org/2000/svg"
