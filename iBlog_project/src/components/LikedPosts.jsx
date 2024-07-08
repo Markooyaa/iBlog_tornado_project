@@ -1,5 +1,6 @@
 import { cardsData } from "../data/data";
 import { Card } from "./Card"
+import  LikedCard  from "./LikedCard";
 
 export default function LikedPosts({categoryid}){
     const List = cardsData.filter(cardsData => cardsData.categoryid === categoryid);
@@ -25,11 +26,11 @@ export default function LikedPosts({categoryid}){
                 </div>
             </div>
             <div className="flex max-sm:justify-center  items-center flex-wrap w-full pb-2 ">
-            <div className="grid grid-cols-2 max-sm:justify-center sm:flex gap-[8px] sm:gap-[22px] flex-wrap ">
+            <div className="max-sm:justify-center flex sm:flex-row flex-col gap-[8px] sm:gap-[22px] flex-wrap ">
                 {List &&
                     List.map((data, index)=>{
                         return(
-                            <Card key={index}
+                            <LikedCard key={index}
                             id={data.id}
                             url={data.url}
                                     title={data.title}

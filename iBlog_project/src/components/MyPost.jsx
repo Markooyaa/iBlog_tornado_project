@@ -1,5 +1,6 @@
 import { cardsData } from "../data/data";
 import { Card } from "./Card"
+import LikedCard from "./LikedCard";
 
 export default function MyPosted({categoryid}){
     const List = cardsData.filter(cardsData => cardsData.categoryid === categoryid);
@@ -20,7 +21,7 @@ export default function MyPosted({categoryid}){
                 {List &&
                     List.map((data, index)=>{
                         return(
-                            <Card key={index}
+                            <LikedCard key={index}
                             id={data.id}
                             url={data.url}
                                     title={data.title}
