@@ -103,9 +103,7 @@ const router = createBrowserRouter([
   {
     path: "/likedposts",
     element: <LikedPost />,
-    children : [
-
-    ],
+    
   },
   {
     path: "/othersprofile",

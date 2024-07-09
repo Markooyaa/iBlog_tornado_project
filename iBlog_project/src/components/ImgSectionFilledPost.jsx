@@ -31,8 +31,8 @@ function ImgSectionFilledPost() {
             <path
               d="M9 3L3 9M3 3L9 9"
               stroke="white"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
           </svg>
         </div>

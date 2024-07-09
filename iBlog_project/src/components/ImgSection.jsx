@@ -4,7 +4,7 @@ import MainPart from "./MainPart";
 import MainPostButton from "./MainPostButton";
 import MobilePostButton from "./MobilePostButton";
 
-export default function Img_comment() {
+export default function   Img_comment() {
   
 
  
@@ -122,8 +122,10 @@ export default function Img_comment() {
       </div>
     </div>
     <Subtitle />
+          
           <MainPart />
           <MainPostButton tap={handleUploadButtonClick} />
+         
           <MobilePostButton tap={handleUploadButtonClick}/>
   
     </div>

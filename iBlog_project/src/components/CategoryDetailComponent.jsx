@@ -4,11 +4,26 @@ import { Card } from "./Card"
 import { cardsData } from "../data/data"
 import { Link, useParams } from "react-router-dom"
 
+import data from "../data/data.json"
+import { useEffect, useState } from "react"
+
 
 export default function CategoryDetailComponent() {
     const params = useParams()
+//     const [items, setItems] = useState([]);
+
+//   useEffect(() => { 
+//     setItems(data);
+//   }, []);
+
+//   const deleteItem = (id) => {
+//     const newItems = items.filter((item) => item.id !== id);
+//     setItems(newItems);
+    
+//   };
+
   
-   const List = cardsData.filter(cardsData=>cardsData.category===params.category && cardsData.categoryid==params.id);
+   const List = data.filter(data=>data.category===params.category && data.categoryid==params.id);
     return (
         <div className="flex flex-col items-start sm:justify-center gap-[16px] sm:m-[30px] w-full">
             <div className="flex items-center gap-[5px] h-[75px]">

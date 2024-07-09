@@ -164,7 +164,7 @@ export function ChangePassword3() {
                         {dialog ?
                             <div id="dialog"
                                 className=" fixed  inset-10 flex items-start justify-center ">
-                                <div className="bg-white rounded-[10px]  p-2.5 flex  justify-evenly w-[380px ] mt-[5%] shadow-2xl">
+                                <div className="bg-white rounded-[10px] items-center  p-2.5 flex  justify-evenly w-[380px ] mt-[5%] shadow-2xl">
                                     <div className="text-center flex justify-center items-center ">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 39 38" fill="none"
                                             className="flex justify-center">
@@ -178,7 +178,7 @@ export function ChangePassword3() {
                                     </div>
 
 
-                                    <Link to='/login' >
+                                    <Link to='/login' className="items-center flex">
                                         <button id="closeDialogButton"
                                             onClick={Dialog}>
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">

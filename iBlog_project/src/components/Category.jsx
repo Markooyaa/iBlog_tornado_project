@@ -55,10 +55,10 @@ const SearchableDropdown = ({
   const getDisplayValue = () => {
     if (query) return {query};
     if (selectedVal) return selectedVal;
-
+    
     return "";
   };
-  console.log(query)
+  console.log(selectedVal)
 
   const filter = (options) => {
     return options.filter(

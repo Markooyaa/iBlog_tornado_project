@@ -58,16 +58,16 @@ export default function AddPost() {
 
   
   return (
-    <div className="h-full w-full">
-      <div className="content  sm:w-3/4  h-full sm:pl-[155px]  flex-col flex items-center">
-      <div className="categories sm:flex hidden items-center sm:w-3/4 w-full sm:h-[40px] h-full border-b-2 border-slate-200 ">
+    <div className="h-full   w-full ">
+      <div className=" h-screen  sm:flex-col flex-col-reverse  border-5 border-orange-600 sm:ml-[125px]">
+      <div className="categories sm:flex hidden items-center  w-full sm:h-[40px] h-full  ">
         <CategoryInside />
       </div>
       <div className="sm:hidden flex w-full">
         <Login_Create_header text={'Пост нэмэх'} />
       </div>
 
-      <div className="sm:w-3/4 w-full mb-[100px]  h-full sm:px-0 px-[5%] ">
+      <div className="px-[10px] sm:w-[604px] w-full mb-[100px] sm:px-0   ">
         <Category />
        
           <Img_comment />

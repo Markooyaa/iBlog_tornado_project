@@ -1,7 +1,7 @@
-export default function MobilePostButton({onClick}) {
+export default function MobilePostButton({tap}) {
   return (
-    <>
-      <button onClick={onclick} className="w-full sm:hidden flex justify-center px-[30px] py-[10px] text-[15px] font-normal rounded-xl text-[#fff] bg-[#E86B02] mt-[5%]">
+    <div className="mt-[70px]">
+      <button onClick={tap} className=" w-full sm:hidden flex justify-center px-[30px] py-[10px] text-[15px] font-normal rounded-xl text-[#fff] bg-[#E86B02] ">
         <span>Post</span>
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -16,6 +16,6 @@ export default function MobilePostButton({onClick}) {
           />
         </svg>
       </button>
-    </>
+    </div>
   );
 }

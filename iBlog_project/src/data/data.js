@@ -71,6 +71,7 @@ const menus = [
 const cardsData = [
     {
         id: 1,
+        userid:1,
         url: "/Images/Rectangle 39.jpg",
         title: 'The Impact of technology on the Workplace',
         username: 'Tracey Wilson',
@@ -944,3 +945,4 @@ const cardsData = [
 ]
 
 export  {menus ,cardsData}
+

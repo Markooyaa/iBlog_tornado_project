@@ -1,6 +1,9 @@
 import { Card } from "./Card";
 import { cardsData } from "../data/data";
 import { Link } from "react-router-dom";
+import { BiArrowBack, BiArrowFromBottom, BiArrowFromLeft, BiArrowFromRight, BiArrowToRight } from "react-icons/bi";
+import { TbArrowBarToRight } from "react-icons/tb";
+import { IoIosArrowForward } from "react-icons/io";
 
 export default function Posts(props) {
   const List = cardsData.filter(
@@ -32,7 +35,7 @@ export default function Posts(props) {
           </svg>
         </Link>
       </div>
-      <div className="flex sm:justify-end items-center flex-wrap w-full pb-2 overflow-x-auto">
+      <div className="flex sm:justify-end items-center pr-3 w-full pb-2 overflow-x-auto">
         <div className="flex items-start gap-[8px] sm:gap-[22px] px-[20px] sm:flex-wrap">
           {List &&
             List.map((data, index) => {
@@ -54,6 +57,12 @@ export default function Posts(props) {
               }
             })}
         </div>
+        <Link
+          to={{ pathname: `/${props.category}`, state: props }} 
+          className="justify-center  flex p-[20px] rounded-full sm:hidden items-center bg-[#E86B02] text-white">
+       <p> Бүгд</p>
+       <IoIosArrowForward className="mt-1"/>
+        </Link>
       </div>
     </div>
   );

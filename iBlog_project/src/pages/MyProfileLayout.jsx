@@ -22,7 +22,7 @@ export default function MyProfileLayout() {
       
       <div
         onClick={click}
-        className="main sm:w-full w-full sm:h-full h-full sm:px-12 sm:pt-12 sm:flex">
+        className="main sm:w-full w-full sm:h-full h-full sm:pl-12 sm:pr-5 sm:pt-12 sm:flex">
         <SideBar />
 
         <Outlet />

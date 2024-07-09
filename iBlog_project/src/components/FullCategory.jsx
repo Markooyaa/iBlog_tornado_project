@@ -1,13 +1,15 @@
 import { Link, useParams } from "react-router-dom";
-import { cardsData } from "../data/data";
+import  data  from "../data/data.json";
 import { Card } from "./Card";
+import { useEffect, useState } from "react";
+
 
 export function Fullcategory(props){
     
     const params  = useParams()
-    const blog = cardsData.filter(c => c.category == params.category)
+    const blog = data.filter(c => c.category == params.category)
     
-    
+   
     
     return(
         <div className="flex flex-col flex-wrap gap-[16px] sm:m-[30px] ">
@@ -43,6 +45,7 @@ export function Fullcategory(props){
                                     profile={data.profile}
                                     category={data.category}
                                     categoryid={data.categoryid} 
+                                    
                                 />)
                        
                     })

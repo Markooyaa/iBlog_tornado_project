@@ -1,15 +1,15 @@
 import { Link } from "react-router-dom"
 export default function SideBar(){
     return (
-      <div className="sidebar sm:flex hidden">
-        <div className="left-container  w-full flex flex-col grow border-5 p-6 sm:gap-5 gap-[16px]">
+      <div className="sidebar  sm:flex hidden mr-[30px]">
+        <div className=" sm:w-[380px] w-full flex flex-col grow border-5  sm:gap-5 gap-[16px]">
           <div
-            className="profile flex border-5 gap-4 mx-[24px] 
+            className="profile flex border-5 gap-[10px]   mx-[24px] 
             ">
-            <div className="image sm:h-[90px] h-[60px] sm:w-[90px] [60px] flex items-center ">
+            <div className="image flex items-center ">
               <img
                 src="Images/Profile.jpg"
-                className="rounded-full sm: w-[60px] "
+                className="rounded-full  sm:w-[85px] sm:h-[85px] w-[60px] h-[60px] "
                 alt=""
               />
             </div>
