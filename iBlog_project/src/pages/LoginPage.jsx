@@ -28,7 +28,7 @@ export function LoginPage() {
 
             <Login_Create_header text=''></Login_Create_header>
 
-            <div id="computer" className="container h-full flex-col flex justify-center items-center lg:pt-[130px] lg:pb-[220px] m-auto w-[100%] lg:h-[850px] ">
+            <div id="computer" className="container lg:pt-[5%] lg:pb-[10%] flex-col flex justify-center items-center   m-auto w-[100%]  ">
                 <div className="  lg:w-[478px] w-[335px] h-[50px]  hidden lg:flex "> <p className="text-[#E86B02] text-start pt-[10px] text-[20px]">Нэвтрэх</p></div>
                 <div className="logo lg:hidden flex flex-col">
                     <div className=" w-[100%] justify-center flex items-center  ">

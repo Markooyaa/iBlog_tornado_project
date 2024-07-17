@@ -59,7 +59,7 @@ export default function AddPost() {
   
   return (
     <div className="h-full   w-full ">
-      <div className=" h-screen  sm:flex-col flex-col-reverse  border-5 border-orange-600 sm:ml-[125px]">
+      <div className="   sm:flex-col flex-col-reverse  border-5 border-orange-600 sm:ml-[125px]">
       <div className="categories sm:flex hidden items-center  w-full sm:h-[40px] h-full  ">
         <CategoryInside />
       </div>

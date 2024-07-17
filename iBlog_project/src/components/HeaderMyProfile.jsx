@@ -21,7 +21,7 @@ function HeaderMyProfile() {
     return (
         <header
 
-            className="border-b-[1px] sm:w-full sm:h-[74px] h-[56px] sm:flex hidden sm:px-[50px] px-[16px] justify-between  items-center ">
+            className="border-b-[1px] sm:w-full sm:h-[103px] h-[56px] sm:flex hidden sm:px-[50px] px-[16px] justify-between gap-[20px] items-center ">
             <div className="mobile-icon sm:hidden flex sm:items-center ">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -54,8 +54,8 @@ function HeaderMyProfile() {
             </div>
             <Logo/>
 
-            <div className="relative search">
-                    <input type="text" className="border rounded-2xl pl-4 pr-12 py-2 w-[550px] h-[39px] focus:outline-none focus:border-blue-500" placeholder="Хайх"/>
+            <div className="relative search w-[50%]">
+                    <input type="text" className="border w-full rounded-2xl pl-4 pr-12 py-2  h-[39px] focus:outline-none focus:border-blue-500" placeholder="Хайх"/>
                    
                     <CiSearch className={'w-[25px] h-[25px] absolute right-2 top-1/2 transform -translate-y-1/2  text-gray-400'}/>
                 

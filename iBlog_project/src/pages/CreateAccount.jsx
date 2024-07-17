@@ -14,7 +14,7 @@ export function CreateAccount() {
     return (
         <>
             <Login_Create_header text={''}></Login_Create_header>
-            <div className="container flex-col flex justify-center items-center lg:pt-[180px] lg:pb-[270px] m-auto   lg:[850px]">
+            <div className="container flex-col flex justify-center items-center lg:pt-[10%] lg:pb-[15%] m-auto   ">
                 <div className="logo lg:hidden flex flex-col">
                     <div className=" w-[100%] justify-center flex items-center  ">
                         <img src="Images/Group.png" alt="logo" className="w-[20px] h-[27px] " />
@@ -69,7 +69,7 @@ export function CreateAccount2() {
     return (
         <>
             <Login_Create_header text={''}></Login_Create_header>
-            <div className="container flex-col flex justify-center items-center lg:pt-[180px] lg:pb-[270px] m-auto   lg:[850px]">
+            <div className="container flex-col flex justify-center items-center lg:pt-[10%] lg:pb-[15%] m-auto      ">
                 <div className="logo lg:hidden flex flex-col">
                     <div className=" w-[100%] justify-center flex items-center  ">
                         <img src="Images/Group.png" alt="logo" className="w-[20px] h-[27px] " />

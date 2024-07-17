@@ -1,8 +1,8 @@
 
 export default function Login_Create_footer(){
     return (
-        <footer className="lg:border-t-[1px] hidden lg:flex justify-center">
-       <div className="footer flex justify-between w-[600px] pt-[20px]">
+        <footer className="lg:border-t-[1px] h-[20%] items-center hidden lg:flex justify-center">
+       <div className="footer flex justify-between  w-[600px] pt-[30px] mb-[30px]">
         <div className="logo">
             <div className=" logo flex items-center w-[170px]">
                 <img src="Images/Group.png" alt="logo" className="w-[20px] h-[27px] "/>

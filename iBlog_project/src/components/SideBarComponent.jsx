@@ -18,7 +18,7 @@ export default function SideBarComponent({ showSidebar, setShowSidebar }) {
     return (
         <div className={showSidebar ? "fixed bottom-0 top-0 left-0" : ""}>
             {showSidebar && <div onClick={() => setShowSidebar(false)} className="w-full h-full opacity-80 bg-slate-800 z-10 fixed top-0 left-0 sm:w-0 flex"></div>}
-            <section className={showSidebar ? "flex" : "hidden sm:inline-flex  flex-col items-start gap-[10px] px-[49px] py-[40px]"}>
+            <section className={showSidebar ? "flex" : "hidden sm:inline-flex  flex-col items-start gap-[10px] px-[50px] py-[33.1px]"}>
                 <div className={showSidebar ? "absolute flex flex-col   bg-white z-20 sm:pt-[40px] px-[20px] sm:w-0 h-full" : "flex flex-col gap-[32px] w-[250px]"}>
                  
                   <div  className={showSidebar ? "hidden" : "flex"}> <Logo></Logo></div>
