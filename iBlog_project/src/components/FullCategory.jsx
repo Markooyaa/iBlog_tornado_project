@@ -29,7 +29,7 @@ export function Fullcategory(props){
             </div>
         </div>
         <div className="flex max-sm:justify-center  items-center flex-wrap w-full pb-2 ">
-            <div className="grid grid-cols-2 max-sm:justify-center sm:flex gap-[8px] sm:gap-[22px] flex-wrap ">
+        <div className="grid grid-cols-2 max-sm:justify-center sm:flex gap-[8px] sm:gap-[22px] flex-wrap ">
                 {blog &&
                     blog.map((data, index) => {
                       
