@@ -76,7 +76,7 @@ function SideBar({ showSidebar, setShowSidebar }) {
 const [search,setSearch]=useState(false)
 function Searchbar(){
     setSearch(!search)
-    console.log(search)
+   
 
 }
 
@@ -94,10 +94,10 @@ function Searchbar(){
                         <h2 className="text-orange-400 text-[30px] font-normal">iblog</h2>
                     </div>
                 </Link>:
-                <input className="w-[65%] pr-[30px] pl-[33px] border-2 h-[40px] rounded-xl absolute left-[15%]"  />}
+                <input className="w-[65%] pr-[30px] pl-[33px] border-2 h-[40px] rounded-xl absolute left-[15%] "  />}
                 {search==false?null:<RxCross2 onClick={Searchbar} className="absolute right-[22%] text-[#E86B02] "/>}
 
-                <div onClick={Searchbar} className={`absolute ${search==false?"right-[10px]": 'left-[15%] ml-[10px]'}`}>
+                <div onClick={Searchbar} className={`absolute ${search==false?"right-[10px]": 'left-[15%] ml-[10px] transition-all duration-300'}`}>
                     <i className="fa-solid fa-magnifying-glass text-[#E86B02]"></i>
                 </div>
                </div>
