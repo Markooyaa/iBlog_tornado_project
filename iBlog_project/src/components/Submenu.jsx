@@ -21,7 +21,7 @@ export function Submenu(item) {
             {subnav && item.children.map((item, index) => {
                 return (
                     <Link to={`${item.path}`} key={index} className="m-0  ">
-                        <div className="px-[16px] py-[8px] capitalizetext-[14px] w-full h-full m-[12px]  hover:bg-orange-500 hover:text-white">
+                        <div className="px-[16px] py-[8px] capitalizetext-[14px] w-full h-full m-[12px]  hover:bg-[#E86B02] hover:text-white">
                         <div className=" text-[14px]">{item.name}</div>
                         </div>
                        

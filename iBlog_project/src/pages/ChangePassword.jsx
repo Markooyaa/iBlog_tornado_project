@@ -15,7 +15,7 @@ export function ChangePassword() {
 
 
 
-            <div className="container flex-col flex justify-center items-center lg:pt-[180px] lg:pb-[270px] m-auto   lg:[850px]">
+            <div className="container flex-col flex justify-center items-center lg:pt-[10%] lg:pb-[15%] m-auto   ">
                 <div className="  lg:w-[478px] w-[335px] h-[50px] lg:border-b"> <p className="text-[#E86B02] text-start pt-[5px] text-[20px]  lg:flex hidden">Нууц үг сэргээх</p></div>
                 <div className="mt-[30px]  w-[318px] h-[70px] m-0">
                     <p className="text-center pt-[5px] text-[#546371] text-[18px]">
@@ -53,7 +53,7 @@ export function ChangePassword2() {
             <Login_Create_header text={'Нууц үг сэргээх'}></Login_Create_header>
 
 
-            <div className="container flex-col flex justify-center items-center lg:pt-[180px] lg:pb-[270px] m-auto   lg:[850px]">
+            <div className="container flex-col flex justify-center items-center lg:pt-[10%] lg:pb-[15%] m-auto   ">
                 <div className="  lg:w-[478px] w-[335px] h-[50px] mb-[30px] lg:border-b">
                     <p className="text-[#E86B02] text-start pt-[5px] text-[20px]  lg:flex hidden">Нууц үг сэргээх</p>
                 </div>
@@ -121,7 +121,7 @@ export function ChangePassword3() {
         <>
             <Login_Create_header text={'Нууц үг зохиох'}></Login_Create_header>
 
-            <div className="container flex-col flex justify-center items-center lg:pt-[180px] lg:pb-[270px] m-auto   lg:[850px]">
+            <div className="container flex-col flex justify-center items-center lg:pt-[10%] lg:pb-[15%] m-auto   lg:[850px]">
                 <div className="  lg:w-[478px] w-[335px] h-[50px]  mb-[30px] lg:border-b">
                     <p className="text-[#E86B02] text-start pt-[5px] text-[20px] lg:flex hidden">Нууц үг зохиох</p>
                 </div>

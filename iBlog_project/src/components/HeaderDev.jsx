@@ -5,12 +5,12 @@ import { CiSearch } from "react-icons/ci";
 export default function Login_Create_header({text}){
   const navigate = useNavigate();
     return (
-        <header className="w-full  lg:border-b-[1px] max-[1024px]:flex max-[1024px]:items-center    h-[100px]">
-        <div id="computer" className=" hidden lg:flex lg:logo  lg:h-[46px] lg:justify-between lg:mx-[50px] lg:items-center lg:my-[20px]">
+        <header className="w-full  lg:border-b-[1px] flex items-center    h-[103px]">
+        <div id="computer" className="w-full hidden lg:flex lg:logo  lg:h-[46px] lg:justify-between lg:mx-[50px] lg:items-center  ">
                <Logo></Logo>
                 
-                <div className="relative search">
-                    <input type="text" className="border rounded-2xl pl-4 pr-12 py-2 w-[550px] h-[39px] focus:outline-none focus:border-blue-500" placeholder="Хайх"/>
+                <div className="relative search w-[50%] ">
+                    <input type="text" className="border rounded-2xl pl-4 pr-12 py-2 w-full h-[39px] focus:outline-none focus:border-blue-500" placeholder="Хайх"/>
                    
                     <CiSearch className={'w-[25px] h-[25px] absolute right-2 top-1/2 transform -translate-y-1/2  text-gray-400'}/>
                 
