@@ -69,7 +69,7 @@ export default function Posts(props) {
             handleHorizantalScroll(elementRef.current, 25, 100, -10);
           }}
           
-        className={`text-[#546371] p-[15px] shadow-black shadow-2xl absolute left-5  w-[52px] h-[52px] rounded-full  bg-white ${arrowDisable==true?'hidden':'flex'} `}
+        className={`text-[#546371] p-[15px] shadow-black shadow-2xl absolute left-5  w-[52px] h-[52px] rounded-full  bg-white ${arrowDisable==true?'hidden':'sm:flex'} `}
           
         />
       <FaChevronRight
@@ -77,7 +77,7 @@ export default function Posts(props) {
             handleHorizantalScroll(elementRef.current, 25, 100, 10);  
           }}
         
-         className="text-[#546371] p-[15px] shadow-black shadow-2xl absolute right-5    w-[52px] h-[52px] rounded-full  bg-white "
+         className="text-[#546371] p-[15px] shadow-black shadow-2xl absolute right-5    w-[52px] h-[52px] rounded-full  bg-white  sm:flex"
         />
       <div className="flex items-start gap-[8px] sm:gap-[22px] px-[20px]" >
           {List &&
