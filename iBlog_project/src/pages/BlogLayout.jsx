@@ -64,12 +64,14 @@ export default function BlogLayout() {
         )
     }
     const [showSidebar, setShowSidebar] = useState(false);
+
+    
     return (
         <div className="flex w-full">
         <div>
             <SideBarComponent showSidebar={showSidebar} setShowSidebar={setShowSidebar} />
         </div>
-        <div className="w-full flex flex-col border-l-[1px] border-solid">
+        <div className="sm:w-[79%] w-full flex flex-col border-l-[1px] border-solid">
             <HeaderComponent />
             
             <Outlet />
