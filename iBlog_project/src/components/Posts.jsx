@@ -18,10 +18,11 @@ export default function Posts(props) {
         </h2>
         <Link
           to={{ pathname: `/${props.category}`, state: props }}
-          className="text-gray-600 hidden sm:flex items-center justify-end gap-[11px] px-[14px] py-0 text-center leading-[29px]"
+          className="text-gray-600 flex items-center justify-end gap-[11px] px-[14px] py-0 text-center leading-[29px]"
         >
-          Бүгд
+           <p className="hidden sm:flex">Бүгд</p>
           <svg
+           className=""
             xmlns="http://www.w3.org/2000/svg"
             width="23"
             height="23"
@@ -34,9 +35,10 @@ export default function Posts(props) {
             />
           </svg>
         </Link>
+       
       </div>
-      <div className="flex sm:justify-end items-center pr-3 w-full pb-2 overflow-x-auto">
-        <div className="flex items-start gap-[8px] sm:gap-[22px] px-[20px] sm:flex-wrap">
+      <div className="flex max-sm:justify-center  items-center flex-wrap w-full pb-2 ">
+        <div className="grid grid-cols-2 max-sm:justify-center sm:flex gap-[8px] sm:gap-[22px] flex-wrap ">
           {List &&
             List.map((data, index) => {
               if (index < 8) {
@@ -57,12 +59,7 @@ export default function Posts(props) {
               }
             })}
         </div>
-        <Link
-          to={{ pathname: `/${props.category}`, state: props }} 
-          className="justify-center  flex p-[20px] rounded-full sm:hidden items-center bg-[#E86B02] text-white">
-       <p> Бүгд</p>
-       <IoIosArrowForward className="mt-1"/>
-        </Link>
+        
       </div>
     </div>
   );

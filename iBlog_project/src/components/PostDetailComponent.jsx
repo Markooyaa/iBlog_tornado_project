@@ -31,7 +31,7 @@ export default function PostDetailComponent() {
             </div>}
            
            <div className="flex justify-center">
-           <div className="sm:w-full w-[328px] ">
+           <div className="w-full max-sm:px-[20px]">
             <Profile url={blog[0].profile} username={blog[0].username}/>
             <img src="/Images/Rectangle 2.jpg" className="w-full"/>
             <h2 className="text-[24px] sm:text-[29px] font-semibold leading-[43px]">    {blog[0].title}</h2>
