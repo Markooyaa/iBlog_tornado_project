@@ -4,14 +4,36 @@ import { Link } from "react-router-dom";
 import { BiArrowBack, BiArrowFromBottom, BiArrowFromLeft, BiArrowFromRight, BiArrowToRight } from "react-icons/bi";
 import { TbArrowBarToRight } from "react-icons/tb";
 import { IoIosArrowForward } from "react-icons/io";
+import { useRef, useState } from "react";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 export default function Posts(props) {
   const List = cardsData.filter(
     (cardsData) => cardsData.category === props.category
   );
 
+  const elementRef = useRef(null);
+  const [arrowDisable, setArrowDisable] = useState(true);
+
+
+
+  const handleHorizantalScroll = (element, speed, distance, step) => {
+    let scrollAmount = 0;
+    const slideTimer = setInterval(() => {
+      element.scrollLeft += step;
+      scrollAmount += Math.abs(step);
+      if (scrollAmount >= distance) {
+        clearInterval(slideTimer);
+      }
+      if (element.scrollLeft === 0) {
+        setArrowDisable(true);
+      } else {
+        setArrowDisable(false);
+      }
+    }, speed);
+  };
   return (
-    <div className="flex flex-col flex-wrap gap-[16px] w-full">
+    <div className="relative   flex flex-col flex-wrap gap-[16px] w-full">
       <div className="flex justify-between">
         <h2 className="uppercase font-bold flex items-center gap-[10px] px-[18px] py-[11px] text-[18px] leading-[24px] justify-center">
           {props.category}
@@ -37,11 +59,30 @@ export default function Posts(props) {
         </Link>
        
       </div>
-      <div className="flex max-sm:justify-center  items-center flex-wrap w-full pb-2 ">
-        <div className="grid grid-cols-2 max-sm:justify-center sm:flex gap-[8px] sm:gap-[22px] flex-wrap ">
+      
+       
+
+        
+      <div className="flex   items-center flex-wrap w-full pb-2 overflow-x-auto " ref={elementRef}>
+      <FaChevronLeft
+          onClick={() => {
+            handleHorizantalScroll(elementRef.current, 25, 100, -10);
+          }}
+          
+        className={`text-[#546371] p-[15px] shadow-black shadow-2xl absolute left-5  w-[52px] h-[52px] rounded-full  bg-white ${arrowDisable==true?'hidden':'flex'} `}
+          
+        />
+      <FaChevronRight
+          onClick={() => {
+            handleHorizantalScroll(elementRef.current, 25, 100, 10);  
+          }}
+        
+         className="text-[#546371] p-[15px] shadow-black shadow-2xl absolute right-5    w-[52px] h-[52px] rounded-full  bg-white "
+        />
+      <div className="flex items-start gap-[8px] sm:gap-[22px] px-[20px]" >
           {List &&
             List.map((data, index) => {
-              if (index < 8) {
+              if (index   ) {
                 return (
                   <Card
                     key={index}
