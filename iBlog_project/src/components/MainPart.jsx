@@ -31,7 +31,7 @@ function MainPart() {
          value={text}
          onChange={handleChange}
           placeholder="Текст эсвэл зураг"
-          className={`text-wrap resize-none bg-[#F5F7F9] pr-[24px] w-full pl-[40px] py-[12px] text-[16px] border-2 rounded-2xl`}
+          className={`text-wrap resize-none bg-[#F5F7F9] pr-[24px] w-full pl-[40px] py-[12px] text-[16px]  rounded-2xl`}
         />
         <IoGridOutline className="absolute top-[16.5px] text-[20px] left-[15px]"/>
       </div>

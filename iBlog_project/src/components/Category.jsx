@@ -67,7 +67,7 @@ const SearchableDropdown = ({
   };
 
   return (
-    <div className={`relative bg-[#F5F7F9] cursor-default  sm:w-[247px]  w-full items-center h-[60px] border-2 rounded-xl  text-[16px] font-medium flex justify-between hover:bg-orange-500 hover:text-white`}>
+    <div className={`relative bg-[#F5F7F9] cursor-default  sm:w-[247px]  w-full items-center h-[60px] border rounded-xl  text-[16px] font-medium flex justify-between hover:bg-orange-500 hover:text-white`}>
       <div onClick={()=>setIsOpen(!isOpen)} className="control  w-full items-center hover:text-white flex justify-between mx-[20px]">
         <div className="selected-value  ">
          
