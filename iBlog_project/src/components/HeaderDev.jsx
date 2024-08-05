@@ -5,7 +5,7 @@ import { CiSearch } from "react-icons/ci";
 export default function Login_Create_header({text}){
   const navigate = useNavigate();
     return (
-        <header className="w-full  lg:border-b-[1px] flex items-center    h-[103px]">
+        <header className="w-full  lg:border-b-[1px] flex items-center    max-sm:h-[74px] h-[103px]">
         <div id="computer" className="w-full hidden lg:flex lg:logo  lg:h-[46px] lg:justify-between lg:mx-[50px] lg:items-center  ">
                <Logo></Logo>
                 

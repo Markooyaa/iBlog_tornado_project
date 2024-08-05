@@ -1,15 +1,16 @@
 import { Card } from "./Card";
-import { cardsData } from "../data/data";
+import  data  from "../data/data.json";
 import { Link } from "react-router-dom";
 import { BiArrowBack, BiArrowFromBottom, BiArrowFromLeft, BiArrowFromRight, BiArrowToRight } from "react-icons/bi";
 import { TbArrowBarToRight } from "react-icons/tb";
 import { IoIosArrowForward } from "react-icons/io";
 import { useRef, useState } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { person } from "../data/data";
 
 export default function Posts(props) {
-  const List = cardsData.filter(
-    (cardsData) => cardsData.category === props.category
+  const List = data.filter(
+    (data) => data.category === props.category
   );
 
   const elementRef = useRef(null);
@@ -33,14 +34,14 @@ export default function Posts(props) {
     }, speed);
   };
   return (
-    <div className="relative   flex flex-col flex-wrap gap-[16px] w-full">
+    <div className="relative   flex flex-col flex-wrap gap-2 sm:gap-[16px] w-full">
       <div className="flex justify-between">
-        <h2 className="uppercase font-bold flex items-center gap-[10px] px-[18px] py-[11px] text-[18px] leading-[24px] justify-center">
+        <h2 className="uppercase text-[14px] sm:text-[18px] font-bold flex items-center gap-[10px] px-[18px] py-[11px]  leading-[24px] justify-center">
           {props.category}
         </h2>
         <Link
           to={{ pathname: `/${props.category}`, state: props }}
-          className="text-gray-600 flex items-center justify-end gap-[11px] px-[14px] py-0 text-center leading-[29px]"
+          className="text-gray-600  flex items-center justify-end gap-[11px] px-[14px] py-0 text-center leading-[29px]"
         >
            <p className="hidden sm:flex">Бүгд</p>
           <svg
@@ -82,6 +83,7 @@ export default function Posts(props) {
       <div className="flex items-start gap-[8px] sm:gap-[22px] px-[20px]" >
           {List &&
             List.map((data, index) => {
+              const ppl = person.filter(p => p.userid == data.userid);
               if (index   ) {
                 return (
                   <Card
@@ -89,12 +91,13 @@ export default function Posts(props) {
                     id={data.id}
                     url={data.url}
                     title={data.title}
-                    username={data.username}
+                    username={ppl[0].username}
                     date={data.date}
                     likes={data.likes}
-                    profile={data.profile}
+                    profile={ppl[0].profile}
                     category={data.category}
                     categoryid={data.categoryid}
+                     liked={data.liked}
                   />
                 );
               }

@@ -1,9 +1,9 @@
-import { cardsData } from "../data/data";
+import  data  from "../data/data.json";
 import { Card } from "./Card"
-import LikedCard from "./LikedCard";
+import CardWithCrossLine from "./CardWithCrossLine";
 
 export default function MyPosted({categoryid}){
-    const List = cardsData.filter(cardsData => cardsData.categoryid === categoryid);
+    const List = data.filter(data => data.categoryid === categoryid);
     
     return( 
         <div className="flex flex-col items-start gap-[20px]">
@@ -21,7 +21,7 @@ export default function MyPosted({categoryid}){
                 {List &&
                     List.map((data, index)=>{
                         return(
-                            <LikedCard key={index}
+                            <CardWithCrossLine key={index}
                             id={data.id}
                             url={data.url}
                                     title={data.title}
@@ -30,7 +30,8 @@ export default function MyPosted({categoryid}){
                                     likes={data.likes}
                                     profile={data.profile} 
                                     category={data.category}
-                                    categoryid={data.id} />
+                                    categoryid={data.id} 
+                                    liked={data.liked}/>
                         )
                     })
                     }

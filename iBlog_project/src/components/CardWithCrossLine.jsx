@@ -1,6 +1,7 @@
+import { FaHeart, FaRegHeart } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-function LikedCard(props) {
+function CardWithCrossLine(props) {
   return (
     <>
       <div className="hidden justify-center card sm:flex flex-col gap-[8px] sm:gap-[10px] pb-[10px] sm:p-[10px] shadow-md rounded-[8px] w-[158px] sm:w-[230px]">
@@ -27,7 +28,9 @@ function LikedCard(props) {
           <div className="flex items-center gap-[4px]">
             <p className="text-[16px] leading-[20px]">
               <button>
-                <i className="fa-regular fa-heart"></i>
+              {
+                        props.liked==true?<FaRegHeart className="text-[#E86B02]"/>: <FaRegHeart/>
+                    }
               </button>
               {props.likes}
             </p>
@@ -64,10 +67,12 @@ function LikedCard(props) {
             </div>
             <div className="flex justify-between items-center">
               <div className="flex items-center gap-[4px]">
-                <p className="text-[16px] leading-[20px]">
-                  <button>
-                    <i className="fa-regular fa-heart"></i>
-                  </button>
+                <p className="text-[16px] items-center flex leading-[20px]">
+                <button>
+              {
+                        props.liked==true?<FaRegHeart className="text-[#E86B02]"/>: <FaRegHeart/>
+                    }
+              </button>
                   {props.likes}
                 </p>
               </div>
@@ -84,4 +89,4 @@ function LikedCard(props) {
   );
 }
 
-export default LikedCard;
+export default CardWithCrossLine;

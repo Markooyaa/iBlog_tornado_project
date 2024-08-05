@@ -1,8 +1,12 @@
-import { cardsData } from "../data/data";
-import LikedCard from "./LikedCard";
+import { person } from "../data/data";
+import data from "../data/data.json";
+import CardWithCrossLine from "./CardWithCrossLine";
 
-export default function OthersPosts({categoryid}){
-    const List = cardsData.filter(cardsData => cardsData.categoryid === categoryid);
+export default function OthersPosts({userid,indexcoll}){
+    
+    const List = data.filter(data => data.userid === userid);
+    const ppl=person.filter(data => data.userid === userid)
+    console.log(ppl)
     return(
         <div className="w-full flex flex-col items-start gap-[20px]">
             <div className="border-b-[1px] w-full">
@@ -21,17 +25,18 @@ export default function OthersPosts({categoryid}){
             <div className="max-sm:justify-center flex gap-[8px] sm:gap-[22px] flex-wrap ">
                 {List &&
                     List.map((data, index) => {
-                      
+                     
+
                             return (
 
-                                <LikedCard key={index}
+                                <CardWithCrossLine key={index}
                                     id={data.id}
                                     url={data.url}
                                     title={data.title}
-                                    username={data.username}
+                                    username={ppl[0].username}
                                     date={data.date}
                                     likes={data.likes}
-                                    profile={data.profile}
+                                    profile={ppl[0].profile}
                                     category={data.category}
                                     categoryid={data.categoryid} 
                                 />)

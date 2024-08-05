@@ -12,9 +12,9 @@ import MyProfileLayout from "./pages/MyProfileLayout";
 import AddPost from "./pages/AddPost";
 import EditProfile from "./components/EditProfile";
 import EditProfileMain from "./components/EditProfileMain";
-import OthersProfile from "./pages/OthersProfile";
-import OthersProfilePage from "./pages/OthersProfile";
-import MyPosts from "./pages/MyPosts";
+import OthersProfile from "./pages/OthersProfilePage";
+import OthersProfilePage from "./pages/OthersProfilePage";
+
 import { Fullcategory } from "./components/FullCategory";
 import { Layout } from "./pages/Layout";
 
@@ -106,14 +106,10 @@ const router = createBrowserRouter([
     
   },
   {
-    path: "/othersprofile",
+    path: "/profile/:userid",
     element: <OthersProfilePage />
   },
-  {
-    path: "/myposts",
-    element: <MyPosts />
-  },
- 
+  
 ]);
 
 function App() {

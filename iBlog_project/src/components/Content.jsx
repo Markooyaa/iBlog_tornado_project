@@ -3,6 +3,8 @@
 import { Link, Outlet } from "react-router-dom";
 import SidebarMobile from "./SideBarMobile.jsx";
 import SideBar from "./SideBar.jsx";
+import MyPosted from "./MyPost.jsx";
+
 
 export default function Content() {
   function Buttons() {
@@ -93,6 +95,7 @@ export default function Content() {
      
     </div>
     <div className="w-full h-3/4 flex place-items-center">  <Note /></div>
+    
     <Buttons/>
     </div>
   );

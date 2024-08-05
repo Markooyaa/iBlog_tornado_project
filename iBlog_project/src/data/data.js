@@ -944,5 +944,42 @@ const cardsData = [
     },
 ]
 
-export  {menus ,cardsData}
+
+const person=[
+    {
+        userid: 1,
+        username: "Test1",
+        profile:"/Images/Image 2.jpg",
+        follows:2,
+        followers:15,
+
+    },
+    {
+        userid: 2,
+        username: "Test2",
+        profile:"/Images/Image 2.jpg",
+        follows:1,
+        followers:2,
+
+    },
+    {
+        userid: 3,
+        username: "Test3",
+        profile:"/Images/Image 2.jpg",
+        follows:5,
+        followers:50,
+
+    },
+    {
+        userid: 4,
+        username: "Test4",
+        profile:"/Images/Image 2.jpg",
+        follows:9,
+        followers:30,
+
+    }
+]
+
+
+export  {menus ,cardsData,person}
 

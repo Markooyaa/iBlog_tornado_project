@@ -1,5 +1,5 @@
 import HeaderMyProfile from "../components/HeaderMyProfile";
-import LikedPosts from "../components/LikedPosts";
+
 import { useState } from "react";
 import Footer from "../components/Footer";
 import SidebarMobile from "../components/SideBarMobile";
@@ -10,12 +10,26 @@ import MobileSaveButton from "../components/MobileSaveButton";
 import MobileFooter from "../components/MobileFooter";
 import MobileBottomBtns from "../components/MobileBottomBtns";
 import Login_Create_footer from "../components/FooterDev";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+import { person } from "../data/data";
+import data from "../data/data.json"
+import CardWithCrossLine from "../components/CardWithCrossLine";
 
 export default function OthersProfilePage(){
+  
     const [button, setButton] = useState(false);
     function click() { setButton(false); }
     const [showSidebar, setShowSidebar] = useState(false);
+  
+
+
+
+    const params  = useParams();
+    const ppl=person.filter(c=>c.userid== params.userid)
+    const List = data.filter(data => data.userid === ppl[0].userid);
+   
+
+
     function Buttons(){
         return(
             <div className="sticky bottom-0 flex w-full">
@@ -84,9 +98,48 @@ export default function OthersProfilePage(){
             <div
                 onClick={click}
                 className="w-full h-full sm:pl-12 sm:pt-12 sm:flex pb-[30px] items-start gap-[30px]">
-                <OtherProfile />
+                <OtherProfile profile={ppl[0].profile} username={ppl[0].username} follows={ppl[0].follows} followers={ppl[0].followers} post={List.length}/>
               
-              <OthersPosts categoryid={'hobby'} />
+          
+              
+              <div className="w-full flex flex-col items-start gap-[20px]">
+            <div className="border-b-[1px] w-full">
+                <div className="w-full hidden sm:flex items-center pl-10 gap-[10px] border-b-[2px] border-orange-500">
+                    <p className=" text-[18px] text-start font-bold">
+                    Постууд
+                    </p>
+                </div>
+                <div className="sm:hidden flex font-bold px-[20px] py-[10px] gap-[10px] items-center h-[40px] border-b-[2px] border-orange-500">
+                    Постууд
+                </div>
+            </div>
+            
+
+            <div className="flex max-sm:justify-center  items-center flex-wrap w-full  ">
+            <div className="max-sm:justify-center flex gap-[8px] sm:gap-[22px] flex-wrap ">
+                {List &&
+                    List.map((data, index) => {
+                     
+
+                            return (
+
+                                <CardWithCrossLine key={index}
+                                    id={data.id}
+                                    url={data.url}
+                                    title={data.title}
+                                    username={ppl[0].username}
+                                    date={data.date}
+                                    likes={data.likes}
+                                    profile={ppl[0].profile}
+                                    category={data.category}
+                                    categoryid={data.categoryid} 
+                                />)
+                       
+                    })
+                }
+            </div>
+        </div>
+        </div>
           
             </div>
             <Login_Create_footer/>

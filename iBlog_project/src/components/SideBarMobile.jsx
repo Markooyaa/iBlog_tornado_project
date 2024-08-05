@@ -30,7 +30,7 @@ export default function SidebarMobile() {
                             <i className="fa-solid fa-arrow-left-long"></i>
                         </button>
                         <div className=''>{menus.map((item, index) => {
-                            return <Submenu path={item.path} title={item.title} children={item.children} key={index} />
+                            return <Submenu path={item.path} title={item.title} tap={() => setShowSidebar(false)} children={item.children} key={index} />
                         })}</div>
                         <div className={showSidebar ? "flex flex-col justify-end pb-[50px] h-full" : "hidden w-[245px] h-[42px] px-[15px] items-center gap-[5px]"}>
                             <button onClick={Exit} className="logout   flex w-[250px] h-[42px]  items-center gap-[5px] pt-[150px] ">

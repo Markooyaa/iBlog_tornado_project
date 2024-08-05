@@ -1,38 +1,40 @@
 import { Link, useLocation, useParams } from "react-router-dom"
-import { cardsData } from "../data/data"
+import  data  from "../data/data.json"
+import { person } from "../data/data"
 
 export default function PostDetailComponent() {
 
     const params  = useParams()
-    const blog = cardsData.filter(c => c.id == params.id)
-   
+    const blog = data.filter(c => c.id == params.id)
+    const ppl=person.filter(c=>c.userid== blog[0].userid)
+   console.log(ppl)
     
     
     return (
         
         <div className="content flex flex-col m-auto gap-[16px]  w-full sm:m-[30px] sm:pr-[50px] ">
-            {blog &&  <div className="flex items-center gap-[5px] h-[75px]">
+            {blog &&  <div className="flex items-center gap-[5px] h-[40px] sm:h-[75px]">
                 <div className="flex items-center gap-[5px] px-[16px] py-10px]">
-                    <Link to="/" className="text-[18px] text-gray-600">Нүүр хуудас</Link>
+                    <Link to="/" className="sm:text-[18px] text-[14px] text-gray-600">Нүүр хуудас</Link>
                     <i className="fa-solid fa-angle-right"></i>
                 </div>
                 <div className="flex items-center gap-[5px] pr-[16px] py-10px]">
-                    <Link to={`/${blog[0].category}`} className="text-[18px] text-gray-600 capitalize">{blog[0].category} </Link>
+                    <Link to={`/${blog[0].category}`} className="text-[18px]  max-sm:text-[14px] text-gray-600 capitalize">{blog[0].category} </Link>
                     <i className="fa-solid fa-angle-right"></i>
                 </div>
                 
                 {blog[0].categoryid!=''? <div className="flex items-center gap-[5px] pr-[16px] py-10px]">
-                    <Link to={`/${blog[0].category}/${blog[0].categoryid}`} className="text-[18px] text-gray-600 capitalize">{blog[0].categoryid}</Link>
+                    <Link to={`/${blog[0].category}/${blog[0].categoryid}`} className="sm:text-[18px] text-[14px] text-gray-600 capitalize">{blog[0].categoryid}</Link>
                     <i className="fa-solid fa-angle-right"></i>
                 </div>:''}
                 <div className="hidden sm:flex items-center gap-[5px] pr-[16px] py-10px]">
-                    <p className="text-[18px] font-bold text-gray-600 capitalize">{blog[0].title}</p>
+                    <p className="sm:text-[18px] text-[14px] font-bold text-gray-600 capitalize">{blog[0].title}</p>
                 </div>
             </div>}
            
            <div className="flex justify-center">
            <div className="w-full max-sm:px-[20px]">
-            <Profile url={blog[0].profile} username={blog[0].username}/>
+            <Profile url={ppl[0].profile} username={ppl[0].username} userid={ppl[0].userid}/>
             <img src="/Images/Rectangle 2.jpg" className="w-full"/>
             <h2 className="text-[24px] sm:text-[29px] font-semibold leading-[43px]">    {blog[0].title}</h2>
             <LikeShare like={blog[0].likes} />
@@ -63,12 +65,12 @@ function LikeShare({like}) {
     )
 }
 
-function Profile({url,username}) {
+function Profile({url,username,userid}) {
     return (
         <div className="w-full sm:w-[310px] mb-[10px]">
             <div className="user  flex gap-[56px] items-center">
                
-               <Link to={'/othersprofile'} className="account inline-flex items-center gap-[10px]">
+               <Link to={{ pathname: `/profile/${userid}`,  }} className="account inline-flex items-center gap-[10px]">
                     <img src={url} />
                     <p className="text-[18px] font-semibold text-slate-700">{username}</p>
                 </Link>

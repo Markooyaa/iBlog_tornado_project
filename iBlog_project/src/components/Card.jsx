@@ -1,14 +1,12 @@
 import { Link } from "react-router-dom";
-import { cardsData } from "../data/data";
+
 import React, { useEffect, useState } from "react";
-import data from "../data/data.json"
+import { CiHeart } from "react-icons/ci";
+import { FaHeart, FaRegHeart } from "react-icons/fa";
+
 
 export function Card(props,) {
-    const [deleteDialog,setdeleteDialog]=useState(false);
-    function DeleteDialog() {
-        setdeleteDialog(!deleteDialog)
-    }
-
+    
     
 
     
@@ -32,9 +30,16 @@ export function Card(props,) {
             </div>
             <div className="flex justify-between items-center px-[10px] sm:p-0">
                 <div className="flex items-center gap-[4px]">
-                    <p className="text-[16px] leading-[20px]"><button>
-                        <i className="fa-regular fa-heart"></i>
-                    </button>{props.likes}</p>
+                    <p className="text-[16px] gap-[4px] items-center flex leading-[20px]">
+                   <button>
+                   {
+                        props.liked==true?<FaRegHeart className="text-[#E86B02]"/>: <FaRegHeart/>
+                    }
+                   </button>
+                        
+                   
+                        
+                    {props.likes}</p>
                 </div>
                 <div>
               
