@@ -1,4 +1,4 @@
-export default function UserName(){
+export default function UserName({name}){
     return (
       <div>
         <p className="sm:text-[18px] text-[14px] font-bold mt-[20px] mb-[10px]">
@@ -7,7 +7,7 @@ export default function UserName(){
         <input
           type="text"
           className="w-full h-[50px] border-2 px-[24px] py-[14px] rounded-xl mb-[20px]"
-          placeholder="Хэрэглэгчийн нэр"
+          placeholder={name}
           
         />
       </div>

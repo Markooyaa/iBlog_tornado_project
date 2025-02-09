@@ -1,17 +1,52 @@
 
-import MainPage from "../components/MainPage"
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { onAuthStateChanged } from "firebase/auth";
+import { auth } from '../firebase';
+import Posts from "../components/Posts"
 
 
 
 
 export default function HomePage() {
-  const [showSidebar, setShowSidebar] = useState(false);
+  
+
+const [hide, setHide] = useState(false)
+    function Hide() {
+        setHide(!hide)
+    }
+    
   return (
     <div className="flex w-full">
-      <div className="w-full flex flex-col border-l-[1px] border-solid">
-        <MainPage />
+      <div className="w-full flex flex-col  border-solid">
+        
+        <div className="inline-flex flex-col sm:items-center sm:justify-center gap-[16px] sm:p-[30px] items-start   ">
+      
+            <Posts category='lifestyle' />
+            <Posts category='technology' />
+            <Posts category='health' />
+
+            {hide==false?
+            <div className="hidden sm:flex w-full  justify-center ">
+             <button onClick={Hide} className=" inline-flex px-[20px] py-[12px] justify-center items-center gap-[12px] border-[1px] rounded-[10px]  ">Цааш унших</button> 
+             </div>
+            :null
+
+            }
+             
+            {hide==true ? 
+            <div className="w-full">
+                <Posts category='sport'/>
+                <Posts category='entertainment'/>
+            </div>
+            :null
+        }
+        <div className="flex sm:hidden w-full flex-col">
+                <Posts category='sport'/>
+                <Posts category='entertainment'/>
+            </div>
+        
+        </div>
       </div>
     </div>
   );

@@ -22,7 +22,7 @@ export function Card(props,) {
                 </div>
             </Link>
             <div className="frame flex sm:flex-row items-start sm:items-center px-[10px] sm:p-0 sm:justify-stretch gap-[8px]">
-                <img src={props.profile} className="w-[20px]" />
+                <img src={props.profile} className="w-[20px] rounded-full" />
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between justify-normal flex-grow">
                     <p className="text-[14px] leading-[14px] text-gray-400">{props.username}</p>
                     <p className="text-[12px] leading-[11px] text-gray-400">{props.date}</p>

@@ -3,7 +3,7 @@ import CategoryDetailComponent from "./components/CategoryDetailComponent";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Content from "./components/Content";
 import { LoginPage } from "./pages/LoginPage";
-import { CreateAccount, CreateAccount2 } from "./pages/CreateAccount";
+import {  CreateAccount } from "./pages/CreateAccount";
 import { ChangePassword, ChangePassword2, ChangePassword3 } from "./pages/ChangePassword";
 import PostDetailComponent from "./components/PostDetailComponent";
 import HomePage from "./pages/HomePage";
@@ -12,7 +12,7 @@ import MyProfileLayout from "./pages/MyProfileLayout";
 import AddPost from "./pages/AddPost";
 import EditProfile from "./components/EditProfile";
 import EditProfileMain from "./components/EditProfileMain";
-import OthersProfile from "./pages/OthersProfilePage";
+
 import OthersProfilePage from "./pages/OthersProfilePage";
 
 import { Fullcategory } from "./components/FullCategory";
@@ -72,13 +72,10 @@ const router = createBrowserRouter([
     path: "/login",
     element: <LoginPage />,
   },
+  
   {
     path: "/createAccount",
     element: <CreateAccount />,
-  },
-  {
-    path: "/createAccount_Page2",
-    element: <CreateAccount2 />,
   },
   {
     path: "/changePassword",

@@ -10,6 +10,7 @@ import MobileSaveButton from "./MobileSaveButton";
 import MobileBottomBtns from "./MobileBottomBtns";
 import UserImage from "./UserImage";
 import Login_Create_header from "./HeaderDev";
+import { auth } from "../firebase";
 
 export default function EditProfile() {
   const [show, setShow] = useState(true);
@@ -92,6 +93,13 @@ export default function EditProfile() {
     );
   }
 
+  const user = auth.currentUser;
+  const displayName = user.displayName;
+  const email = user.email;
+  const photoURL = user.photoURL;
+
+  const uid = user.uid;
+
   return (
     <div className="h-full">
       <div className="h-full content sm:w-3/4 w-full  sm:flex-col flex-col-reverse  border-5 border-orange-600 sm:ml-[155px]">
@@ -144,7 +152,7 @@ export default function EditProfile() {
         <div className="flex-col w-full ">
           {show && <EditProfileMain />}
           <div className="sm:hidden flex justify-center">
-            {!show && <UserImage />}
+            {!show && <UserImage URL={photoURL} />}
           </div>
           <div className="sm:hidden flex">
             <button
@@ -189,8 +197,8 @@ export default function EditProfile() {
           <div className="sm:flex flex-col sm:m-0 mx-[5%] full">
             {!show && <EditProfilePass />}
             <div className="sm:hidden">
-              {show && <UserName />}
-              {show && <UserEmail />}
+              {show && <UserName name={displayName} />}
+              {show && <UserEmail mail={email} />}
             </div>
           </div>
         </div>

@@ -26,7 +26,7 @@ function CardWithCrossLine(props) {
         </div>
         <div className="flex justify-between items-center px-[10px] sm:p-0">
           <div className="flex items-center gap-[4px]">
-            <p className="text-[16px] leading-[20px]">
+            <p className="text-[16px] leading-[20px] flex items-center gap-1">
               <button>
               {
                         props.liked==true?<FaRegHeart className="text-[#E86B02]"/>: <FaRegHeart/>
@@ -53,8 +53,8 @@ function CardWithCrossLine(props) {
           <p className="text-[15px] leading-[17px] font-semibold">{props.title}</p>
           <div className="flex flex-col gap-[16px]">
             <div className="flex">
-              <div className="flex items-center gap-[5px]">
-                <img src={props.profile} className="w-[25px]" />
+              <div className="flex items-center gap-[5px] ">
+                <img src={props.profile} className="w-[25px] rounded-full" />
               </div>
               <div className="flex flex-col items-start gap-[4px]">
                 <p className="text-[14px] leading-[14px] text-gray-400">

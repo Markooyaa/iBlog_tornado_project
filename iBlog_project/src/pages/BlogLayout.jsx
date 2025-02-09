@@ -1,11 +1,13 @@
-import { Link, Outlet, useParams } from "react-router-dom";
+import { Link, Outlet, useNavigate, useParams } from "react-router-dom";
 import HeaderComponent from "../components/Header";
 import SideBarComponent from "../components/SideBarComponent";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import SidebarMobile from "../components/SideBarMobile";
 import Footer from "../components/Footer";
 import MobileFooter from "../components/MobileFooter";
 import MobileBottomBtns from "../components/MobileBottomBtns";
+import { onAuthStateChanged, updateProfile } from "firebase/auth";
+import { auth } from "../firebase";
 
 export default function BlogLayout() {
     function Buttons(){
@@ -63,16 +65,32 @@ export default function BlogLayout() {
     </div>
         )
     }
+    const navigate = useNavigate();
     const [showSidebar, setShowSidebar] = useState(false);
-
-
+    const [uid,setUid]=useState('')
+    useEffect(()=>{
+      onAuthStateChanged(auth, (user) => {
+          if (user) {
+            const uid = user.uid;
+            console.log("uid", uid)
+            setUid(uid)
+          } else {
+            console.log("user is logged out")
+            navigate('/login')
+          }
+        });
+       
+  }, [])
+  
+  
+  
     return (
         <div className="flex w-full">
         <div>
             <SideBarComponent showSidebar={showSidebar} setShowSidebar={setShowSidebar} />
         </div>
         <div className="sm:w-[79%] w-full flex flex-col border-l-[1px] border-solid">
-            <HeaderComponent />
+            <HeaderComponent uid={uid}/>
             
             <Outlet />
             <Footer />

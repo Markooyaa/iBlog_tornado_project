@@ -1,11 +1,12 @@
 
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import SideBarComponent from "./SideBarComponent"
 import { useState } from "react";
 import { Logo } from "./Logo";
 import { menus } from "../data/data";
 import { Submenu } from "./Submenu";
 import { RxCross2 } from "react-icons/rx";
+import { auth } from "../firebase";
 
 export default function SidebarMobile() {
     const [exit, setexit] = useState(false)
@@ -13,8 +14,12 @@ export default function SidebarMobile() {
     function Exit() {
         setexit(!exit)
     }
-
-
+    const navigate = useNavigate();
+    function handleLogout() {
+        auth.signOut();
+        localStorage.clear();
+        navigate("/login");
+        }
 
     const [showSidebar, setShowSidebar] = useState(false);
     return (
@@ -54,9 +59,9 @@ export default function SidebarMobile() {
                                 <p className="font-[14px] w-[289px] text-center m-auto mb-[10px] text-black pt-[16px]"><b>Та системээс гарахдаа итгэлтэй байна уу?</b></p>
 
                                 <div className="flex gap-[15px] ">
-                                    <Link to={'/login'} className="text-white place-items-center flex bg-[#E86B02] justify-center lg:rounded-lg rounded-2xl py-[10px] pr-[30px] pl-[30px] w-[50%]   h-[50px] mt-[12px]">
+                                    <button onClick={handleLogout} className="text-white place-items-center flex bg-[#E86B02] justify-center lg:rounded-lg rounded-2xl py-[10px] pr-[30px] pl-[30px] w-[50%]   h-[50px] mt-[12px]">
                                         <p className='text-center'>  Тийм</p>
-                                    </Link>
+                                    </button>
 
                                     <button onClick={Exit} id="closeDialogButton" className="text-[#546371] bg-[#E2E8EE] lg:rounded-lg rounded-2xl  py-[10px] pr-[30px] pl-[30px] w-[50%] h-[50px] mt-[12px]" >Үгүй</button>
                                 </div>

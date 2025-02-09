@@ -1,9 +1,11 @@
 // import Images from ".public/Images";
 
-import { Link, Outlet } from "react-router-dom";
+import { Link, Outlet, useNavigate } from "react-router-dom";
 import SidebarMobile from "./SideBarMobile.jsx";
 import SideBar from "./SideBar.jsx";
 import MyPosted from "./MyPost.jsx";
+import { auth } from "../firebase.js";
+import { useState } from "react";
 
 
 export default function Content() {
@@ -114,6 +116,15 @@ export default function Content() {
 }
 
 function Profile(){
+  const user = auth.currentUser;
+  const displayName = user.displayName;
+  const email = user.email;
+  const photoURL = user.photoURL;
+  const emailVerified = user.emailVerified;
+  const [Name ,setName]=useState('')
+  const [IMG ,setIMG]=useState('')
+  const navigate=useNavigate()
+  
   return(
     <div className="left-container max-sm:flex hidden  w-full  flex-col grow border-5 p-6 sm:gap-5 gap-[16px]">
     <div
@@ -121,14 +132,14 @@ function Profile(){
       ">
       <div className="image sm:h-[90px] h-[60px] sm:w-[90px] [60px] flex items-center ">
         <img
-          src="Images/Profile.jpg"
+          src={photoURL==null?"Images/profile.png":photoURL}
           className="rounded-full sm: w-[60px] "
           alt=""
         />
       </div>
       <div className="profile-name flex items-center w-fit">
         <div className="name w-fit font-normal sm:text-[34px] text-[18px] align-middle">
-          Tracey Willson
+          {displayName}
         </div>
       </div>
     </div>

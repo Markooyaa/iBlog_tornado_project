@@ -1,5 +1,12 @@
 import { Link } from "react-router-dom"
+import { auth } from "../firebase";
+import { useState } from "react";
 export default function SideBar(){
+
+  const user = auth.currentUser;
+  const displayName = user.displayName;
+  const photoURL = user.photoURL;
+
     return (
       <div className="sidebar  sm:flex hidden mr-[30px]">
         <div className=" sm:w-[380px] w-full flex flex-col grow border-5  sm:gap-5 gap-[16px]">
@@ -8,14 +15,14 @@ export default function SideBar(){
             ">
             <div className="image flex items-center ">
               <img
-                src="Images/Profile.jpg"
+                src={photoURL}
                 className="rounded-full  sm:w-[85px] sm:h-[85px] w-[60px] h-[60px] "
                 alt=""
               />
             </div>
             <div className="profile-name flex items-center w-fit">
               <div className="name w-fit font-normal sm:text-[34px] text-[18px] align-middle">
-                Tracey Willson
+                {displayName}
               </div>
             </div>
           </div>

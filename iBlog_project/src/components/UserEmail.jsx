@@ -1,4 +1,4 @@
-export default function UserEmail() {
+export default function UserEmail({mail}) {
   return (
     <>
       <p className="sm:text-[18px] text-[14px] font-bold mb-[10px]">
@@ -7,7 +7,7 @@ export default function UserEmail() {
       <input
         type="text"
         className="w-full h-[50px] border-2 px-[24px] py-[14px] rounded-xl mb-[24px]"
-        placeholder="example@gmail.com"
+        placeholder={mail}
       />
     </>
   );
